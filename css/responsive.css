@@ -1,0 +1,30 @@
+/* ============================================================
+   MobileBuzz — Responsive Breakpoints
+   Mobile-first: base styles (style.css / components.css) already
+   target small Android screens. This file only adds refinements
+   for larger viewports.
+   ============================================================ */
+
+@media (min-width: 480px) {
+  .container { padding: 0 var(--space-5); }
+}
+
+@media (min-width: 768px) {
+  .container { max-width: 860px; }
+  .swatch-grid { grid-template-columns: repeat(3, 1fr); }
+
+  .bottom-nav {
+    max-width: 480px;
+    left: 50%;
+    transform: translateX(-50%);
+    right: auto;
+    border-radius: var(--radius-lg);
+    bottom: var(--space-3);
+    border: 1px solid var(--border);
+  }
+  main { padding-bottom: calc(96px + env(safe-area-inset-bottom, 0px)); }
+}
+
+@media (min-width: 1080px) {
+  .container { max-width: 960px; }
+}
