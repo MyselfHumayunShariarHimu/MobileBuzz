@@ -1,0 +1,10 @@
+{
+  "name": "mobilebuzz",
+  "version": "0.9.0",
+  "private": true,
+  "description": "MobileBuzz — Bangla-first mobile repair diagnostic, learning & multi-AI assistant PWA",
+  "scripts": {
+    "dev": "vercel dev",
+    "check": "for f in $(find . -name '*.js' -not -path './node_modules/*'); do node --check \"$f\" || exit 1; done && echo 'All JS files OK'"
+  }
+}
