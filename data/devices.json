@@ -1,0 +1,89 @@
+{
+  "devices": [
+    {
+      "id": "samsung-galaxy-a52",
+      "brand": "Samsung",
+      "model": "Galaxy A52",
+      "modelNumber": "SM-A525F",
+      "platform": "Android",
+      "chipset": "Snapdragon 720G",
+      "display": { "type": "Super AMOLED", "size": "6.5\"" },
+      "battery": { "capacity_mAh": 4500, "removable": false },
+      "charging": { "wired_W": 25, "wireless": false },
+      "commonProblems": ["phone-not-charging", "screen-flicker-lines"],
+      "repairGuides": [],
+      "diagnosticNotes": {
+        "bn": "এই মডেলে স্ক্রিন replace করার পর touch connector ঢিলা হওয়া একটি পরিচিত সমস্যা।",
+        "en": "A loose touch connector after screen replacement is a known issue on this model."
+      }
+    },
+    {
+      "id": "xiaomi-redmi-note-11",
+      "brand": "Xiaomi",
+      "model": "Redmi Note 11",
+      "modelNumber": "2201117TG",
+      "platform": "Android",
+      "chipset": "Snapdragon 680",
+      "display": { "type": "AMOLED", "size": "6.43\"" },
+      "battery": { "capacity_mAh": 5000, "removable": false },
+      "charging": { "wired_W": 33, "wireless": false },
+      "commonProblems": ["battery-drains-fast", "app-crashing-lag"],
+      "repairGuides": [],
+      "diagnosticNotes": {
+        "bn": "MIUI-এর aggressive battery optimization অনেক সময় background app বন্ধ করে দেয় — battery drain মনে হলেও এটা আলাদা করে যাচাই করা দরকার।",
+        "en": "MIUI's aggressive battery optimization often kills background apps — worth ruling out separately from a genuine battery-health issue."
+      }
+    },
+    {
+      "id": "vivo-y21",
+      "brand": "Vivo",
+      "model": "Y21",
+      "modelNumber": "V2111",
+      "platform": "Android",
+      "chipset": "Helio P35",
+      "display": { "type": "IPS LCD", "size": "6.51\"" },
+      "battery": { "capacity_mAh": 5000, "removable": false },
+      "charging": { "wired_W": 10, "wireless": false },
+      "commonProblems": ["phone-not-charging", "slow-charging"],
+      "repairGuides": [],
+      "diagnosticNotes": {
+        "bn": "এই মডেলে চার্জিং পোর্ট looseness একটি সাধারণভাবে রিপোর্ট করা সমস্যা।",
+        "en": "Charging port looseness is a commonly reported issue on this model."
+      }
+    },
+    {
+      "id": "apple-iphone-11",
+      "brand": "Apple",
+      "model": "iPhone 11",
+      "modelNumber": "A2111",
+      "platform": "iOS",
+      "chipset": "Apple A13 Bionic",
+      "display": { "type": "Liquid Retina LCD", "size": "6.1\"" },
+      "battery": { "capacity_mAh": 3110, "removable": false },
+      "charging": { "wired_W": 18, "wireless": true },
+      "commonProblems": ["battery-drains-fast", "no-display-black-screen"],
+      "repairGuides": [],
+      "diagnosticNotes": {
+        "bn": "iOS-এ Battery Health শতাংশ Settings > Battery > Battery Health-এ সরাসরি দেখা যায়।",
+        "en": "Battery Health percentage is directly visible under Settings > Battery > Battery Health on iOS."
+      }
+    },
+    {
+      "id": "itel-a48",
+      "brand": "itel",
+      "model": "A48",
+      "modelNumber": "itel A48",
+      "platform": "Android",
+      "chipset": "Unisoc SC9832E",
+      "display": { "type": "IPS LCD", "size": "6.088\"" },
+      "battery": { "capacity_mAh": 4000, "removable": false },
+      "charging": { "wired_W": 10, "wireless": false },
+      "commonProblems": ["app-crashing-lag", "touch-not-working"],
+      "repairGuides": [],
+      "diagnosticNotes": {
+        "bn": "এন্ট্রি-লেভেল RAM/storage-এর কারণে অনেক app একসাথে চালালে lag/crash সাধারণ।",
+        "en": "Entry-level RAM/storage makes lag/crashes common when many apps run at once."
+      }
+    }
+  ]
+}

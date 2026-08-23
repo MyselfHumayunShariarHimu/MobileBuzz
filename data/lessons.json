@@ -1,0 +1,126 @@
+{
+  "lessons": [
+    {
+      "id": "mobile-anatomy-101",
+      "level": "beginner",
+      "title": { "bn": "মোবাইলের ভেতরে কী কী থাকে", "en": "What's Inside a Mobile Phone" },
+      "objective": { "bn": "একটি স্মার্টফোনের মূল অংশগুলো চিনতে ও তাদের কাজ বুঝতে পারা।", "en": "Recognize a smartphone's main parts and understand what each does." },
+      "theory": { "bn": "একটি স্মার্টফোনে প্রধানত থাকে: motherboard (মূল সার্কিট বোর্ড), ব্যাটারি, ডিসপ্লে ও টাচ প্যানেল, ক্যামেরা মডিউল, স্পিকার/মাইক্রোফোন, চার্জিং পোর্ট, এবং বিভিন্ন antenna। motherboard-এ থাকে processor, RAM, storage, ও PMIC-এর মতো ছোট ছোট IC।", "en": "A smartphone mainly contains: the motherboard (main circuit board), battery, display and touch panel, camera modules, speaker/microphone, charging port, and various antennas. The motherboard hosts the processor, RAM, storage, and small ICs like the PMIC." },
+      "tools": [],
+      "steps": [
+        { "bn": "একটি teardown ছবি বা ভিডিও দেখে প্রতিটি অংশ চিহ্নিত করার চেষ্টা করুন", "en": "Try identifying each part while looking at a teardown photo or video" },
+        { "bn": "motherboard-এর বড় IC (processor) ও ছোট IC-গুলোর মধ্যে পার্থক্য লক্ষ্য করুন", "en": "Notice the difference between the large IC (processor) and the smaller ICs" }
+      ],
+      "example": { "bn": "যখন ফোন চার্জ হয় না, প্রথমে বোঝা দরকার সমস্যা কোন অংশে — চার্জিং পোর্ট, ব্যাটারি, নাকি motherboard-এর চার্জিং IC।", "en": "When a phone won't charge, you first need to figure out which part is involved — the charging port, the battery, or the motherboard's charging IC." },
+      "commonMistakes": [
+        { "bn": "সব সমস্যাকে 'ব্যাটারি খারাপ' বলে ধরে নেওয়া, root cause খতিয়ে না দেখে", "en": "Assuming every problem is 'a bad battery' without investigating the root cause" }
+      ],
+      "safety": { "bn": "শেখার এই ধাপে ফোন খোলার দরকার নেই — শুধু চেনা ও বোঝাই যথেষ্ট।", "en": "You don't need to open a phone for this lesson — recognition and understanding are enough." },
+      "quiz": [
+        {
+          "question": { "bn": "কোন অংশটি ফোনের ভোল্টেজ নিয়ন্ত্রণ করে?", "en": "Which part regulates the phone's voltage?" },
+          "options": [
+            { "bn": "PMIC", "en": "PMIC" },
+            { "bn": "স্পিকার", "en": "Speaker" },
+            { "bn": "ক্যামেরা মডিউল", "en": "Camera module" }
+          ],
+          "answerIndex": 0
+        }
+      ],
+      "relatedLessons": ["basic-electronics-101"],
+      "aiHelpPromptSeed": "মোবাইলের motherboard-এর মূল অংশগুলো সহজ ভাষায় ব্যাখ্যা করো।"
+    },
+    {
+      "id": "basic-electronics-101",
+      "level": "beginner",
+      "title": { "bn": "বেসিক ইলেকট্রনিক্স: ভোল্টেজ, কারেন্ট, রেজিস্ট্যান্স", "en": "Basic Electronics: Voltage, Current, Resistance" },
+      "objective": { "bn": "Voltage, current, ও resistance-এর মধ্যে সম্পর্ক (Ohm's Law) বুঝতে পারা।", "en": "Understand the relationship between voltage, current, and resistance (Ohm's Law)." },
+      "theory": { "bn": "Ohm's Law অনুযায়ী V = I × R, অর্থাৎ Voltage (ভোল্ট) = Current (অ্যাম্পিয়ার) × Resistance (ওহম)। এই তিনটি রাশির মধ্যে যেকোনো দুটি জানা থাকলে তৃতীয়টি বের করা যায়।", "en": "Ohm's Law states V = I \u00d7 R \u2014 Voltage (volts) equals Current (amps) times Resistance (ohms). Knowing any two of these lets you calculate the third." },
+      "tools": ["multimeter"],
+      "steps": [
+        { "bn": "একটি সাধারণ ব্যাটারির voltage rating (যেমন লিথিয়াম ব্যাটারি ~৩.৭V) মনে রাখুন", "en": "Remember a typical battery's voltage rating (e.g. lithium ~3.7V)" },
+        { "bn": "Tools পেজের Ohm's Law calculator দিয়ে নিজে হিসাব করে দেখুন", "en": "Try the Ohm's Law calculator on the Tools page yourself" }
+      ],
+      "example": { "bn": "যদি resistance ১০ ওহম হয় এবং voltage ৫V হয়, তাহলে current = 5/10 = 0.5A।", "en": "If resistance is 10 ohms and voltage is 5V, current = 5/10 = 0.5A." },
+      "commonMistakes": [
+        { "bn": "Voltage ও current-কে গুলিয়ে ফেলা", "en": "Confusing voltage with current" }
+      ],
+      "safety": { "bn": "এটি একটি হিসাবভিত্তিক ধারণা — বাস্তব measurement নয়।", "en": "This is a calculation-based concept, not a real-world measurement." },
+      "quiz": [
+        {
+          "question": { "bn": "Ohm's Law-এর সূত্র কোনটি?", "en": "What is Ohm's Law?" },
+          "options": [
+            { "bn": "V = I \u00d7 R", "en": "V = I \u00d7 R" },
+            { "bn": "V = I + R", "en": "V = I + R" },
+            { "bn": "V = R / I", "en": "V = R / I" }
+          ],
+          "answerIndex": 0
+        }
+      ],
+      "relatedLessons": ["mobile-anatomy-101", "multimeter-basics"],
+      "aiHelpPromptSeed": "Ohm's Law সহজ উদাহরণ দিয়ে ব্যাখ্যা করো।"
+    },
+    {
+      "id": "multimeter-basics",
+      "level": "intermediate",
+      "title": { "bn": "মাল্টিমিটার ব্যবহারের বেসিক", "en": "Multimeter Basics" },
+      "objective": { "bn": "মাল্টিমিটারের voltage, resistance, ও continuity mode নিরাপদে ব্যবহার করতে শেখা।", "en": "Learn to safely use a multimeter's voltage, resistance, and continuity modes." },
+      "theory": { "bn": "Voltage mode পাওয়ার-অন সার্কিটে ব্যবহার হয়। Continuity/resistance mode সবসময় পাওয়ার-অফ অবস্থায় ব্যবহার করতে হয়, নাহলে ভুল reading বা ক্ষতি হতে পারে।", "en": "Voltage mode is used on powered circuits. Continuity/resistance mode must always be used with power off, or you risk wrong readings or damage." },
+      "tools": ["multimeter"],
+      "steps": [
+        { "bn": "মাল্টিমিটার Voltage (DC) mode-এ সেট করুন", "en": "Set the multimeter to DC Voltage mode" },
+        { "bn": "Red probe (+) ও black probe (-) সঠিক terminal-এ ধরুন", "en": "Hold the red (+) and black (-) probes on the correct terminals" },
+        { "bn": "Reading স্থির হওয়া পর্যন্ত অপেক্ষা করুন", "en": "Wait for the reading to stabilize" }
+      ],
+      "example": { "bn": "একটি সুস্থ লিথিয়াম ব্যাটারিতে সাধারণত ৩.৭V–৪.২V-এর কাছাকাছি reading দেখা উচিত (charge অবস্থা অনুযায়ী)।", "en": "A healthy lithium battery typically reads roughly 3.7V\u20134.2V depending on charge state." },
+      "commonMistakes": [
+        { "bn": "পাওয়ার-অন বোর্ডে continuity mode ব্যবহার করা", "en": "Using continuity mode on a powered-on board" },
+        { "bn": "ভুল range/mode নির্বাচন করে পরিমাপ করা", "en": "Measuring with the wrong range/mode selected" }
+      ],
+      "safety": { "bn": "সবসময় সঠিক mode যাচাই করে নিন এবং ESD-safe workspace ব্যবহার করুন।", "en": "Always double-check the correct mode and use an ESD-safe workspace." },
+      "quiz": [
+        {
+          "question": { "bn": "Continuity mode কখন ব্যবহার করা উচিত?", "en": "When should continuity mode be used?" },
+          "options": [
+            { "bn": "বোর্ড পাওয়ার-অফ অবস্থায়", "en": "When the board is powered off" },
+            { "bn": "বোর্ড পাওয়ার-অন অবস্থায়", "en": "When the board is powered on" },
+            { "bn": "চার্জ দেওয়ার সময়", "en": "While charging" }
+          ],
+          "answerIndex": 0
+        }
+      ],
+      "relatedLessons": ["basic-electronics-101", "board-level-diagnosis-intro"],
+      "aiHelpPromptSeed": "মাল্টিমিটার দিয়ে ফোনের ব্যাটারি ভোল্টেজ কীভাবে নিরাপদে মাপা যায় ব্যাখ্যা করো।"
+    },
+    {
+      "id": "board-level-diagnosis-intro",
+      "level": "advanced",
+      "title": { "bn": "বোর্ড-লেভেল ডায়াগনোসিসের ভূমিকা", "en": "Introduction to Board-Level Diagnosis" },
+      "objective": { "bn": "Power rail, ground, ও common IC-গুলোর concept বুঝে একটি systematic diagnosis approach শেখা।", "en": "Understand power rails, ground, and common ICs to build a systematic diagnosis approach." },
+      "theory": { "bn": "একটি motherboard-এ ব্যাটারি থেকে VBAT rail আসে, যা PMIC-এর মাধ্যমে VCC/অন্যান্য rail-এ ভাগ হয়। Short-circuit থাকলে current-draw অস্বাভাবিক বেড়ে যায়, যা DC power supply-তে observe করা যায় (শিক্ষামূলক concept)।", "en": "On a motherboard, VBAT comes from the battery and is distributed by the PMIC into VCC and other rails. A short-circuit causes abnormal current draw, observable on a DC power supply (educational concept)." },
+      "tools": ["dc-power-supply", "multimeter"],
+      "steps": [
+        { "bn": "Generic block diagram-এ power path অনুসরণ করুন: ব্যাটারি → PMIC → বিভিন্ন rail", "en": "Follow the power path in a generic block diagram: battery \u2192 PMIC \u2192 various rails" },
+        { "bn": "Interactive SVG diagram থেকে charging path ট্যাপ করে component-ভিত্তিক তথ্য দেখুন", "en": "Tap through the interactive SVG diagram's charging path to see component-level info" }
+      ],
+      "example": { "bn": "একটি ফোন dead থাকলে ও current-draw শূন্য দেখালে, সমস্যা সাধারণত power rail-এর শুরুর দিকে (যেমন battery connector বা PMIC input)।", "en": "If a phone is dead and current draw reads zero, the fault is usually early in the power rail (like the battery connector or PMIC input)." },
+      "commonMistakes": [
+        { "bn": "Generic block diagram-কে exact model-specific schematic মনে করা", "en": "Mistaking a generic block diagram for an exact model-specific schematic" }
+      ],
+      "safety": { "bn": "উচ্চ-কারেন্ট পরীক্ষা এড়িয়ে চলুন; এই lesson শুধুমাত্র concept শেখানোর জন্য, বাস্তব board rework-এর প্রতিস্থাপন নয়।", "en": "Avoid high-current tests; this lesson teaches concepts only and is not a substitute for real hands-on board rework training." },
+      "quiz": [
+        {
+          "question": { "bn": "ব্যাটারি থেকে আসা মূল rail-কে কী বলা হয়?", "en": "What is the main rail coming from the battery called?" },
+          "options": [
+            { "bn": "VBAT", "en": "VBAT" },
+            { "bn": "VGA", "en": "VGA" },
+            { "bn": "USB", "en": "USB" }
+          ],
+          "answerIndex": 0
+        }
+      ],
+      "relatedLessons": ["multimeter-basics"],
+      "aiHelpPromptSeed": "একটি ফোন মাদারবোর্ডে পাওয়ার রেইল কীভাবে কাজ করে সহজ ভাষায় বুঝিয়ে বলো।"
+    }
+  ]
+}

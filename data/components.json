@@ -1,0 +1,76 @@
+{
+  "components": [
+    {
+      "id": "pmic",
+      "name": { "bn": "পাওয়ার ম্যানেজমেন্ট আইসি", "en": "PMIC (Power Management IC)" },
+      "symbol": "U_PMIC",
+      "function": { "bn": "ব্যাটারি থেকে বোর্ডের বিভিন্ন অংশে সঠিক ভোল্টেজ সরবরাহ ও নিয়ন্ত্রণ করে।", "en": "Regulates and distributes correct voltage from the battery to different parts of the board." },
+      "usedIn": ["charging-circuit", "power-rail"],
+      "commonFailure": { "bn": "শর্ট-সার্কিট বা পানি প্রবেশের পর PMIC ড্যামেজ হওয়া একটি সাধারণ কারণ যার ফলে ফোন একদম dead হয়ে যায়।", "en": "Damage after a short-circuit or liquid ingress is a common cause of a fully dead phone." },
+      "symptoms": ["phone-not-turning-on"],
+      "testingConcept": { "bn": "মাল্টিমিটার দিয়ে output pin-এ expected voltage আছে কিনা যাচাই করা যায় (শিক্ষামূলক ধারণা — প্রকৃত measurement schematic অনুযায়ী ভিন্ন হতে পারে)।", "en": "A multimeter can check whether output pins carry the expected voltage (educational concept — real measurements vary by schematic)." },
+      "safety": { "bn": "PMIC পরীক্ষার সময় short হওয়া থেকে সাবধান থাকুন; ESD protection ব্যবহার করুন।", "en": "Be careful of shorts while probing the PMIC; use ESD protection." },
+      "relatedComponents": ["battery-connector", "charging-ic"]
+    },
+    {
+      "id": "charging-ic",
+      "name": { "bn": "চার্জিং আইসি", "en": "Charging IC" },
+      "symbol": "U_CHG",
+      "function": { "bn": "চার্জারের ইনপুট পাওয়ার নিয়ন্ত্রণ করে ব্যাটারিকে নিরাপদভাবে চার্জ করে।", "en": "Controls incoming charger power to safely charge the battery." },
+      "usedIn": ["charging-circuit"],
+      "commonFailure": { "bn": "ভুল চার্জার বা surge-এর কারণে ক্ষতিগ্রস্ত হতে পারে, ফলে charging icon আসলেও charge না হওয়া।", "en": "Can be damaged by a bad charger or power surge, causing a charging icon to appear without actual charging." },
+      "symptoms": ["phone-not-charging"],
+      "testingConcept": { "bn": "Input ও output পিনে voltage তুলনা করে conduction/regulation যাচাই করার ধারণা।", "en": "The concept of comparing input vs. output pin voltage to check conduction/regulation." },
+      "safety": { "bn": "কাজ করার আগে ব্যাটারি ডিসকানেক্ট রাখুন।", "en": "Keep the battery disconnected while working." },
+      "relatedComponents": ["pmic", "charging-port"]
+    },
+    {
+      "id": "charging-port",
+      "name": { "bn": "চার্জিং পোর্ট", "en": "Charging Port" },
+      "symbol": "J_USB",
+      "function": { "bn": "কেবলের মাধ্যমে বাহ্যিক পাওয়ার ও ডেটা connection-এর ভৌত সংযোগ।", "en": "The physical connector for external power and data via cable." },
+      "usedIn": ["charging-circuit"],
+      "commonFailure": { "bn": "ধুলো জমা, pin বেঁকে যাওয়া, বা ঘন ঘন ব্যবহারে looseness।", "en": "Dust buildup, bent pins, or looseness from frequent use." },
+      "symptoms": ["phone-not-charging", "slow-charging"],
+      "testingConcept": { "bn": "Continuity mode-এ pin-এর সংযোগ ঠিক আছে কিনা যাচাই করার ধারণা।", "en": "The concept of using continuity mode to check pin connections." },
+      "safety": { "bn": "ধাতব টুল দিয়ে pin-এ জোরে চাপ দেবেন না।", "en": "Don't apply force to pins with metal tools." },
+      "relatedComponents": ["charging-ic"]
+    },
+    {
+      "id": "display-connector",
+      "name": { "bn": "ডিসপ্লে কানেক্টর", "en": "Display Connector (FPC)" },
+      "symbol": "CN_LCD",
+      "function": { "bn": "মাদারবোর্ড থেকে ডিসপ্লে প্যানেলে সিগন্যাল পাঠায়।", "en": "Carries signal from the motherboard to the display panel." },
+      "usedIn": ["display-path"],
+      "commonFailure": { "bn": "স্ক্রিন খোলা/লাগানোর সময় ঢিলা হয়ে যাওয়া সবচেয়ে সাধারণ কারণ।", "en": "Becoming loose during screen removal/reinstallation is the most common cause." },
+      "symptoms": ["no-display-black-screen", "screen-flicker-lines"],
+      "testingConcept": { "bn": "Connector reseat করে সমস্যার পরিবর্তন হয় কিনা লক্ষ্য করার ধারণা।", "en": "The concept of reseating the connector and observing whether the symptom changes." },
+      "safety": { "bn": "FPC connector খুবই ভঙ্গুর — অতিরিক্ত বাঁকাবেন না।", "en": "FPC connectors are fragile — avoid over-flexing." },
+      "relatedComponents": ["touch-ic"]
+    },
+    {
+      "id": "touch-ic",
+      "name": { "bn": "টাচ কন্ট্রোলার আইসি", "en": "Touch Controller IC" },
+      "symbol": "U_TP",
+      "function": { "bn": "টাচ প্যানেলের সিগন্যাল প্রসেস করে প্রসেসরে পাঠায়।", "en": "Processes signals from the touch panel and passes them to the processor." },
+      "usedIn": ["display-path"],
+      "commonFailure": { "bn": "Connector looseness বা IC ড্যামেজের কারণে partial/সম্পূর্ণ টাচ ফেইলিওর।", "en": "Connector looseness or IC damage causing partial/complete touch failure." },
+      "symptoms": ["touch-not-working"],
+      "testingConcept": { "bn": "Screen protector সরিয়ে ও connector reseat করে narrow-down করার ধারণা।", "en": "The concept of narrowing down by removing screen protectors and reseating the connector." },
+      "safety": { "bn": "ESD-safe workspace ব্যবহার করুন।", "en": "Use an ESD-safe workspace." },
+      "relatedComponents": ["display-connector"]
+    },
+    {
+      "id": "battery-connector",
+      "name": { "bn": "ব্যাটারি কানেক্টর", "en": "Battery Connector" },
+      "symbol": "CN_BATT",
+      "function": { "bn": "ব্যাটারি থেকে মাদারবোর্ডে পাওয়ার সরবরাহের সংযোগ।", "en": "Connects the battery's power supply to the motherboard." },
+      "usedIn": ["power-rail"],
+      "commonFailure": { "bn": "Corrosion বা ঢিলা সংযোগের কারণে intermittent power সমস্যা।", "en": "Corrosion or a loose connection causing intermittent power issues." },
+      "symptoms": ["phone-not-turning-on"],
+      "testingConcept": { "bn": "মাল্টিমিটারের voltage mode দিয়ে connector-এ ব্যাটারির voltage পৌঁছাচ্ছে কিনা যাচাই।", "en": "Using a multimeter's voltage mode to confirm battery voltage reaches the connector." },
+      "safety": { "bn": "Short এড়াতে metal tool দিয়ে দুই terminal একসাথে স্পর্শ করবেন না।", "en": "Avoid touching both terminals simultaneously with a metal tool to prevent a short." },
+      "relatedComponents": ["pmic"]
+    }
+  ]
+}

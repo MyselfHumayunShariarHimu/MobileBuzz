@@ -1,0 +1,2187 @@
+{
+  "articles": [
+    {
+      "id": "phone-not-turning-on",
+      "category": "power",
+      "title": {
+        "bn": "মোবাইল একদম অন হচ্ছে না",
+        "en": "Phone Won't Turn On At All"
+      },
+      "difficulty": "beginner",
+      "symptoms": [
+        {
+          "bn": "পাওয়ার বাটন চাপলে কোনো response নেই",
+          "en": "No response when holding the power button"
+        },
+        {
+          "bn": "চার্জারে লাগালেও কোনো charging icon বা vibration আসে না",
+          "en": "No charging icon or vibration even when plugged in"
+        }
+      ],
+      "causes": [
+        {
+          "bn": "ব্যাটারি সম্পূর্ণ discharge (deep discharge)",
+          "en": "Battery fully discharged (deep discharge)"
+        },
+        {
+          "bn": "চার্জিং পোর্ট বা কেবল সমস্যা",
+          "en": "Faulty charging port or cable"
+        },
+        {
+          "bn": "পাওয়ার বাটন বা পাওয়ার আইসি (PMIC)-এর হার্ডওয়্যার সমস্যা",
+          "en": "Power button or PMIC hardware failure"
+        },
+        {
+          "bn": "পানিতে পড়ার পর short-circuit",
+          "en": "Short-circuit after water/liquid exposure"
+        }
+      ],
+      "diagnosticSteps": [
+        {
+          "bn": "আলাদা চার্জার ও কেবল দিয়ে অন্তত ৩০ মিনিট চার্জে রাখুন",
+          "en": "Leave it charging with a different charger and cable for at least 30 minutes"
+        },
+        {
+          "bn": "USB দিয়ে কম্পিউটারে সংযোগ করে detect হয় কিনা দেখুন",
+          "en": "Connect via USB to a computer and check whether it's detected"
+        },
+        {
+          "bn": "চার্জিং পোর্টের ভেতরে ধুলো বা corrosion আছে কিনা flashlight দিয়ে দেখুন",
+          "en": "Inspect the charging port for dust or corrosion with a flashlight"
+        }
+      ],
+      "tools": [
+        "multimeter",
+        "usb-power-meter"
+      ],
+      "solutions": [
+        {
+          "bn": "কমপক্ষে ৩০-৬০ মিনিট চার্জ দিয়ে আবার পাওয়ার বাটন চেপে দেখুন",
+          "en": "Charge for at least 30-60 minutes, then try the power button again"
+        },
+        {
+          "bn": "চার্জিং পোর্ট নরম ব্রাশ দিয়ে সাবধানে পরিষ্কার করুন",
+          "en": "Gently clean the charging port with a soft brush"
+        }
+      ],
+      "warnings": [
+        {
+          "bn": "পানিতে পড়া ফোন সঙ্গে সঙ্গে চার্জে দেবেন না",
+          "en": "Never charge a phone immediately after water exposure"
+        }
+      ],
+      "verification": [
+        {
+          "bn": "চার্জিং আইকন বা vibration আসলে বুঝবেন board পাওয়ার পাচ্ছে",
+          "en": "A charging icon or vibration confirms the board is receiving power"
+        }
+      ]
+    },
+    {
+      "id": "boot-loop",
+      "category": "power",
+      "title": {
+        "bn": "ফোন বুট লুপে আটকে আছে",
+        "en": "Phone Stuck in a Boot Loop"
+      },
+      "difficulty": "intermediate",
+      "symptoms": [
+        {
+          "bn": "লোগো বারবার দেখায়, স্বাভাবিকভাবে চালু হয় না",
+          "en": "Logo appears repeatedly, never fully boots"
+        }
+      ],
+      "causes": [
+        {
+          "bn": "সাম্প্রতিক software update ব্যর্থ হয়েছে",
+          "en": "A recent software update failed"
+        },
+        {
+          "bn": "Corrupted system partition",
+          "en": "Corrupted system partition"
+        },
+        {
+          "bn": "Battery বা storage হার্ডওয়্যার সমস্যা",
+          "en": "Battery or storage hardware fault"
+        }
+      ],
+      "diagnosticSteps": [
+        {
+          "bn": "Recovery mode-এ ঢুকে দেখুন (Volume + Power বাটন combination, device অনুযায়ী ভিন্ন)",
+          "en": "Try entering Recovery Mode (button combination varies by device)"
+        },
+        {
+          "bn": "Safe mode-এ বুট হয় কিনা পরীক্ষা করুন",
+          "en": "Check whether it boots into Safe Mode"
+        }
+      ],
+      "tools": [],
+      "solutions": [
+        {
+          "bn": "Recovery mode থেকে 'Wipe Cache Partition' চেষ্টা করুন (এতে personal data মুছে যায় না)",
+          "en": "Try 'Wipe Cache Partition' from Recovery Mode (does not erase personal data)"
+        },
+        {
+          "bn": "সমস্যা থেকে গেলে factory reset বিবেচনা করুন — আগে ডেটা backup নিন যদি সম্ভব হয়",
+          "en": "If it persists, consider a factory reset — back up data first if at all possible"
+        }
+      ],
+      "warnings": [
+        {
+          "bn": "Factory reset-এ সব ডেটা মুছে যায় — নিশ্চিত না হয়ে করবেন না",
+          "en": "A factory reset erases all data — don't proceed without being sure"
+        }
+      ],
+      "verification": [
+        {
+          "bn": "স্বাভাবিক Home screen পর্যন্ত পৌঁছালে সমস্যা সমাধান হয়েছে ধরা যায়",
+          "en": "Reaching the normal home screen confirms the fix"
+        }
+      ]
+    },
+    {
+      "id": "phone-not-charging",
+      "category": "charging",
+      "title": {
+        "bn": "মোবাইল চার্জ হচ্ছে না",
+        "en": "Phone Not Charging"
+      },
+      "difficulty": "beginner",
+      "symptoms": [
+        {
+          "bn": "চার্জার লাগালে charging icon আসে না",
+          "en": "No charging icon appears when plugged in"
+        },
+        {
+          "bn": "Charging icon আসে কিন্তু percentage বাড়ে না",
+          "en": "Charging icon appears but percentage doesn't increase"
+        }
+      ],
+      "causes": [
+        {
+          "bn": "চার্জিং কেবল বা adapter নষ্ট",
+          "en": "Faulty cable or adapter"
+        },
+        {
+          "bn": "চার্জিং পোর্টে ধুলো বা আর্দ্রতা জমে আছে",
+          "en": "Dust or moisture built up in the charging port"
+        },
+        {
+          "bn": "চার্জিং IC বা battery connector সমস্যা",
+          "en": "Charging IC or battery connector fault"
+        }
+      ],
+      "diagnosticSteps": [
+        {
+          "bn": "প্রথমে চার্জিং পোর্টের physical condition পরীক্ষা করুন",
+          "en": "First inspect the physical condition of the charging port"
+        },
+        {
+          "bn": "অন্য একটি জানা-ভালো কেবল ও adapter দিয়ে চেষ্টা করুন",
+          "en": "Try a different, known-good cable and adapter"
+        },
+        {
+          "bn": "USB power meter দিয়ে port-এ voltage/current আসছে কিনা মাপুন",
+          "en": "Use a USB power meter to check whether voltage/current reaches the port"
+        }
+      ],
+      "tools": [
+        "multimeter",
+        "usb-power-meter"
+      ],
+      "solutions": [
+        {
+          "bn": "পোর্ট পরিষ্কার করে আবার test করুন",
+          "en": "Clean the port and test again"
+        },
+        {
+          "bn": "কেবল/adapter পরিবর্তন করে দেখুন",
+          "en": "Swap the cable/adapter and retest"
+        }
+      ],
+      "warnings": [
+        {
+          "bn": "ধাতব জিনিস দিয়ে পোর্ট খোঁচাখুঁচি করবেন না — pin বেঁকে যেতে পারে",
+          "en": "Don't poke the port with metal objects — pins can bend"
+        }
+      ],
+      "verification": [
+        {
+          "bn": "Charging percentage বাড়তে শুরু করলে সমস্যা সমাধান হয়েছে",
+          "en": "Charging percentage rising confirms the fix"
+        }
+      ]
+    },
+    {
+      "id": "slow-charging",
+      "category": "charging",
+      "title": {
+        "bn": "স্লো চার্জিং সমস্যা",
+        "en": "Slow Charging"
+      },
+      "difficulty": "beginner",
+      "symptoms": [
+        {
+          "bn": "চার্জ হতে স্বাভাবিকের চেয়ে অনেক বেশি সময় লাগছে",
+          "en": "Charging takes noticeably longer than usual"
+        }
+      ],
+      "causes": [
+        {
+          "bn": "কম-ওয়াটের adapter/কেবল ব্যবহার",
+          "en": "Using a low-wattage adapter/cable"
+        },
+        {
+          "bn": "চার্জ দেওয়ার সময় ভারী apps চালু থাকা",
+          "en": "Heavy apps running while charging"
+        },
+        {
+          "bn": "Battery health কমে যাওয়া",
+          "en": "Degraded battery health"
+        }
+      ],
+      "diagnosticSteps": [
+        {
+          "bn": "Device-এর rated fast-charging wattage যাচাই করুন",
+          "en": "Check the device's rated fast-charging wattage"
+        },
+        {
+          "bn": "Charging-এর সময় ফোন কতটা গরম হচ্ছে খেয়াল করুন",
+          "en": "Notice how hot the phone gets while charging"
+        }
+      ],
+      "tools": [
+        "usb-power-meter"
+      ],
+      "solutions": [
+        {
+          "bn": "Original বা compatible fast-charger ব্যবহার করুন",
+          "en": "Use the original or a compatible fast-charger"
+        },
+        {
+          "bn": "চার্জ দেওয়ার সময় ভারী app বন্ধ রাখুন",
+          "en": "Close heavy apps while charging"
+        }
+      ],
+      "warnings": [],
+      "verification": [
+        {
+          "bn": "একই adapter দিয়ে charging-time আগের চেয়ে স্বাভাবিক হলে ঠিক আছে",
+          "en": "Normal charging time with the same adapter confirms the fix"
+        }
+      ]
+    },
+    {
+      "id": "battery-drains-fast",
+      "category": "battery",
+      "title": {
+        "bn": "ব্যাটারি দ্রুত শেষ হয়ে যাচ্ছে",
+        "en": "Battery Draining Too Fast"
+      },
+      "difficulty": "beginner",
+      "symptoms": [
+        {
+          "bn": "পূর্ণ চার্জ দেওয়ার পরও ব্যাটারি দ্রুত কমে যাচ্ছে",
+          "en": "Battery drops quickly even after a full charge"
+        }
+      ],
+      "causes": [
+        {
+          "bn": "Background-এ চলা apps বেশি ব্যাটারি খাচ্ছে",
+          "en": "Background apps consuming excess battery"
+        },
+        {
+          "bn": "Battery health/capacity কমে গেছে (বয়সজনিত)",
+          "en": "Reduced battery health/capacity from age"
+        },
+        {
+          "bn": "দুর্বল network signal-এ signal search করতে বেশি power লাগছে",
+          "en": "Weak signal areas forcing the radio to work harder"
+        }
+      ],
+      "diagnosticSteps": [
+        {
+          "bn": "Settings-এ battery usage per-app চেক করুন",
+          "en": "Check per-app battery usage in Settings"
+        },
+        {
+          "bn": "Battery health percentage আছে কিনা দেখুন (থাকলে)",
+          "en": "Check battery health percentage if available"
+        }
+      ],
+      "tools": [],
+      "solutions": [
+        {
+          "bn": "বেশি ব্যাটারি-খরচকারী app-এর background activity সীমিত করুন",
+          "en": "Restrict background activity for the heaviest battery-draining apps"
+        },
+        {
+          "bn": "Battery health অনেক কমে গেলে replacement বিবেচনা করুন",
+          "en": "Consider a battery replacement if health has dropped significantly"
+        }
+      ],
+      "warnings": [
+        {
+          "bn": "ফোলা (swollen) ব্যাটারি দেখলে সঙ্গে সঙ্গে ব্যবহার বন্ধ করুন",
+          "en": "Stop using the phone immediately if the battery looks swollen"
+        }
+      ],
+      "verification": [
+        {
+          "bn": "একদিন স্বাভাবিক ব্যবহারে battery drain rate কমলে সমাধান হয়েছে",
+          "en": "A normal day's usage showing a lower drain rate confirms the fix"
+        }
+      ]
+    },
+    {
+      "id": "battery-swelling",
+      "category": "battery",
+      "title": {
+        "bn": "ব্যাটারি ফুলে যাওয়া (Battery Swelling)",
+        "en": "Swollen Battery"
+      },
+      "difficulty": "beginner",
+      "symptoms": [
+        {
+          "bn": "ব্যাক প্যানেল বা স্ক্রিন উঁচু হয়ে ফুলে উঠছে",
+          "en": "Back panel or screen bulging upward"
+        },
+        {
+          "bn": "ফোন হাতে নিলে ফোলা অংশ স্পষ্ট বোঝা যায়",
+          "en": "Swelling is clearly felt when holding the phone"
+        }
+      ],
+      "causes": [
+        {
+          "bn": "Lithium battery-এর ভেতরে গ্যাস তৈরি হওয়া (aging বা damage)",
+          "en": "Internal gas buildup in the lithium battery (aging or damage)"
+        }
+      ],
+      "diagnosticSteps": [
+        {
+          "bn": "কোনো চাপ না দিয়ে শুধু চোখে দেখে নিশ্চিত করুন",
+          "en": "Visually confirm without applying any pressure"
+        }
+      ],
+      "tools": [],
+      "solutions": [
+        {
+          "bn": "অবিলম্বে ব্যবহার ও চার্জ দেওয়া বন্ধ করুন",
+          "en": "Stop using and charging the device immediately"
+        },
+        {
+          "bn": "যত দ্রুত সম্ভব পেশাদার টেকনিশিয়ানের কাছে নিয়ে যান",
+          "en": "Take it to a professional technician as soon as possible"
+        }
+      ],
+      "warnings": [
+        {
+          "bn": "ফোলা ব্যাটারি নিজে ছিদ্র বা চাপ দেবেন না — আগুন লাগার ঝুঁকি আছে",
+          "en": "Never puncture or press a swollen battery — this is a fire risk"
+        },
+        {
+          "bn": "ফোলা ব্যাটারি সাধারণ আবর্জনায় ফেলবেন না, e-waste হিসেবে disposal করুন",
+          "en": "Don't dispose of a swollen battery in regular trash — treat it as e-waste"
+        }
+      ],
+      "verification": []
+    },
+    {
+      "id": "no-display-black-screen",
+      "category": "display",
+      "title": {
+        "bn": "ডিসপ্লে আসছে না (Black Screen)",
+        "en": "No Display / Black Screen"
+      },
+      "difficulty": "intermediate",
+      "symptoms": [
+        {
+          "bn": "Power আছে (vibration/sound আসে) কিন্তু স্ক্রিন কালো",
+          "en": "Power is present (vibration/sound works) but the screen stays black"
+        }
+      ],
+      "causes": [
+        {
+          "bn": "Display connector ঢিলা হয়ে গেছে (স্ক্রিন replace/drop-এর পর common)",
+          "en": "Loose display connector (common after a screen replacement or drop)"
+        },
+        {
+          "bn": "LCD/OLED panel damaged",
+          "en": "Damaged LCD/OLED panel"
+        },
+        {
+          "bn": "Display driver IC সমস্যা",
+          "en": "Display driver IC fault"
+        }
+      ],
+      "diagnosticSteps": [
+        {
+          "bn": "ফ্ল্যাশলাইট দিয়ে স্ক্রিনের কাছাকাছি ধরে খুব হালকা image দেখা যায় কিনা দেখুন (backlight-only fault-এর ইঙ্গিত)",
+          "en": "Shine a flashlight close to the screen to check for a faint image (a sign of backlight-only failure)"
+        },
+        {
+          "bn": "Incoming call দিলে vibration/ringtone আসে কিনা পরীক্ষা করুন",
+          "en": "Check whether an incoming call still triggers vibration/ringtone"
+        }
+      ],
+      "tools": [
+        "multimeter"
+      ],
+      "solutions": [
+        {
+          "bn": "স্ক্রিন খুলে display connector পুনরায় ভালোভাবে বসান",
+          "en": "Open the device and reseat the display connector"
+        },
+        {
+          "bn": "Connector ঠিক থাকার পরও সমস্যা থাকলে panel replacement প্রয়োজন হতে পারে",
+          "en": "If the connector is fine and the issue persists, panel replacement may be needed"
+        }
+      ],
+      "warnings": [
+        {
+          "bn": "ফোন খোলার আগে ব্যাটারি ডিসকানেক্ট করুন",
+          "en": "Disconnect the battery before opening the device"
+        }
+      ],
+      "verification": [
+        {
+          "bn": "Home screen স্বাভাবিকভাবে দেখা গেলে ঠিক হয়েছে",
+          "en": "The home screen displaying normally confirms the fix"
+        }
+      ]
+    },
+    {
+      "id": "screen-flicker-lines",
+      "category": "display",
+      "title": {
+        "bn": "স্ক্রিনে দাগ বা ফ্লিকার",
+        "en": "Screen Flicker or Lines"
+      },
+      "difficulty": "intermediate",
+      "symptoms": [
+        {
+          "bn": "স্ক্রিনে horizontal/vertical দাগ দেখা যাচ্ছে",
+          "en": "Horizontal/vertical lines appear on screen"
+        },
+        {
+          "bn": "ছবি মাঝে মাঝে flicker করছে",
+          "en": "Image flickers intermittently"
+        }
+      ],
+      "causes": [
+        {
+          "bn": "Display connector-এ চাপ বা ক্ষতি",
+          "en": "Pressure or damage at the display connector"
+        },
+        {
+          "bn": "Panel-এর নিজস্ব হার্ডওয়্যার ক্ষয়/ক্ষতি",
+          "en": "Hardware degradation/damage within the panel itself"
+        }
+      ],
+      "diagnosticSteps": [
+        {
+          "bn": "ফোনের একটি কোণে হালকা চাপ দিলে দাগ পরিবর্তিত হয় কিনা লক্ষ্য করুন (connector ইঙ্গিত)",
+          "en": "Note whether gentle pressure at a corner changes the lines (a connector clue)"
+        }
+      ],
+      "tools": [],
+      "solutions": [
+        {
+          "bn": "Display connector reseat করে test করুন",
+          "en": "Reseat the display connector and retest"
+        },
+        {
+          "bn": "সমস্যা থেকে গেলে panel replacement প্রয়োজন",
+          "en": "Panel replacement is needed if the issue persists"
+        }
+      ],
+      "warnings": [],
+      "verification": [
+        {
+          "bn": "দাগ/ফ্লিকার সম্পূর্ণ চলে গেলে সমাধান নিশ্চিত",
+          "en": "Lines/flicker fully disappearing confirms the fix"
+        }
+      ]
+    },
+    {
+      "id": "touch-not-working",
+      "category": "touch",
+      "title": {
+        "bn": "টাচ কাজ করছে না",
+        "en": "Touch Not Responding"
+      },
+      "difficulty": "intermediate",
+      "symptoms": [
+        {
+          "bn": "স্ক্রিনের কিছু অংশে বা পুরো স্ক্রিনে টাচ react করছে না",
+          "en": "Part or all of the screen doesn't respond to touch"
+        },
+        {
+          "bn": "স্ক্রিন replace করার পর টাচ সমস্যা শুরু হয়েছে",
+          "en": "Touch issues began after a screen replacement"
+        }
+      ],
+      "causes": [
+        {
+          "bn": "Touch connector ঢিলা বা ক্ষতিগ্রস্ত",
+          "en": "Loose or damaged touch connector"
+        },
+        {
+          "bn": "Screen protector বা কেসের কারণে ঘষা লাগা",
+          "en": "Interference from a screen protector or case"
+        },
+        {
+          "bn": "Touch controller IC সমস্যা",
+          "en": "Touch controller IC fault"
+        }
+      ],
+      "diagnosticSteps": [
+        {
+          "bn": "Screen protector খুলে আবার পরীক্ষা করুন",
+          "en": "Remove any screen protector and retest"
+        },
+        {
+          "bn": "নির্দিষ্ট কোনো অংশে সমস্যা নাকি পুরো স্ক্রিনে তা চিহ্নিত করুন",
+          "en": "Identify whether the issue is localized or affects the entire screen"
+        }
+      ],
+      "tools": [],
+      "solutions": [
+        {
+          "bn": "Touch connector reseat করুন",
+          "en": "Reseat the touch connector"
+        },
+        {
+          "bn": "সমস্যা থেকে গেলে digitizer/touch panel replacement বিবেচনা করুন",
+          "en": "Consider digitizer/touch panel replacement if it persists"
+        }
+      ],
+      "warnings": [],
+      "verification": [
+        {
+          "bn": "পুরো স্ক্রিন জুড়ে touch স্বাভাবিকভাবে কাজ করলে ঠিক হয়েছে",
+          "en": "Touch working normally across the full screen confirms the fix"
+        }
+      ]
+    },
+    {
+      "id": "speaker-not-working",
+      "category": "audio",
+      "title": {
+        "bn": "স্পিকার কাজ করছে না",
+        "en": "Speaker Not Working"
+      },
+      "difficulty": "beginner",
+      "symptoms": [
+        {
+          "bn": "কল বা মিডিয়ার সময় কোনো শব্দ শোনা যাচ্ছে না",
+          "en": "No sound during calls or media playback"
+        },
+        {
+          "bn": "শব্দ আসছে কিন্তু distorted/কম volume-এ",
+          "en": "Sound is present but distorted or very low"
+        }
+      ],
+      "causes": [
+        {
+          "bn": "Speaker grille-এ ধুলো/ময়লা জমা",
+          "en": "Dust/debris blocking the speaker grille"
+        },
+        {
+          "bn": "Volume/media সেটিংস ভুলভাবে সেট করা",
+          "en": "Incorrect volume/media settings"
+        },
+        {
+          "bn": "Speaker হার্ডওয়্যার ক্ষতিগ্রস্ত (বিশেষত পানিতে পড়ার পর)",
+          "en": "Damaged speaker hardware (especially after water exposure)"
+        }
+      ],
+      "diagnosticSteps": [
+        {
+          "bn": "Media volume ও Do Not Disturb সেটিংস যাচাই করুন",
+          "en": "Check media volume and Do Not Disturb settings"
+        },
+        {
+          "bn": "Bluetooth-এ কোনো ডিভাইস connected আছে কিনা দেখুন (audio সেখানে যেতে পারে)",
+          "en": "Check whether a Bluetooth device is connected (audio may be routing there)"
+        }
+      ],
+      "tools": [],
+      "solutions": [
+        {
+          "bn": "Speaker grille নরম ব্রাশ দিয়ে সাবধানে পরিষ্কার করুন",
+          "en": "Gently clean the speaker grille with a soft brush"
+        }
+      ],
+      "warnings": [
+        {
+          "bn": "পানিতে পড়ার পর অবিলম্বে speaker test করবেন না, আগে শুকাতে দিন",
+          "en": "Don't test the speaker immediately after water exposure — let it dry first"
+        }
+      ],
+      "verification": [
+        {
+          "bn": "কল ও মিডিয়া উভয় ক্ষেত্রে স্বাভাবিক শব্দ এলে ঠিক হয়েছে",
+          "en": "Normal sound during both calls and media confirms the fix"
+        }
+      ]
+    },
+    {
+      "id": "camera-not-opening",
+      "category": "camera",
+      "title": {
+        "bn": "ক্যামেরা অ্যাপ খুলছে না বা ক্র্যাশ করছে",
+        "en": "Camera App Won't Open or Crashes"
+      },
+      "difficulty": "beginner",
+      "symptoms": [
+        {
+          "bn": "ক্যামেরা অ্যাপ খোলার সাথে সাথে বন্ধ হয়ে যায়",
+          "en": "Camera app closes immediately after opening"
+        },
+        {
+          "bn": "'Camera failed' বা কালো preview দেখায়",
+          "en": "Shows 'Camera failed' or a black preview"
+        }
+      ],
+      "causes": [
+        {
+          "bn": "অ্যাপ ক্যাশ/ডেটা corrupted",
+          "en": "Corrupted app cache/data"
+        },
+        {
+          "bn": "অন্য কোনো অ্যাপ ক্যামেরা ব্যবহার করে রেখেছে",
+          "en": "Another app is holding the camera resource"
+        },
+        {
+          "bn": "ক্যামেরা মডিউলের হার্ডওয়্যার/connector সমস্যা",
+          "en": "Camera module or connector hardware fault"
+        }
+      ],
+      "diagnosticSteps": [
+        {
+          "bn": "ফোন রিস্টার্ট করে আবার চেষ্টা করুন",
+          "en": "Restart the phone and try again"
+        },
+        {
+          "bn": "Camera অ্যাপের cache clear করে দেখুন",
+          "en": "Clear the camera app's cache and retest"
+        }
+      ],
+      "tools": [],
+      "solutions": [
+        {
+          "bn": "Settings থেকে Camera app-এর Storage > Clear Cache ব্যবহার করুন",
+          "en": "Use Settings > Apps > Camera > Storage > Clear Cache"
+        },
+        {
+          "bn": "সমস্যা থেকে গেলে ক্যামেরা connector/মডিউল পরীক্ষা প্রয়োজন",
+          "en": "If it persists, the camera connector/module needs inspection"
+        }
+      ],
+      "warnings": [],
+      "verification": [
+        {
+          "bn": "Camera অ্যাপ স্বাভাবিকভাবে খুলে preview দেখালে ঠিক হয়েছে",
+          "en": "Camera app opening normally with a live preview confirms the fix"
+        }
+      ]
+    },
+    {
+      "id": "no-signal",
+      "category": "network",
+      "title": {
+        "bn": "নেটওয়ার্ক সিগন্যাল আসছে না",
+        "en": "No Network Signal"
+      },
+      "difficulty": "intermediate",
+      "symptoms": [
+        {
+          "bn": "'No Service' দেখাচ্ছে বা সিগন্যাল bar খুবই দুর্বল",
+          "en": "Shows 'No Service' or signal bars are extremely weak"
+        }
+      ],
+      "causes": [
+        {
+          "bn": "SIM card ঠিকভাবে বসানো নেই বা damaged",
+          "en": "SIM card not seated properly or damaged"
+        },
+        {
+          "bn": "নির্দিষ্ট এলাকায় network coverage সমস্যা",
+          "en": "Network coverage issue in the specific area"
+        },
+        {
+          "bn": "Antenna connector বা RF হার্ডওয়্যার সমস্যা",
+          "en": "Antenna connector or RF hardware fault"
+        }
+      ],
+      "diagnosticSteps": [
+        {
+          "bn": "SIM card খুলে পুনরায় ঠিকভাবে বসান",
+          "en": "Remove and reseat the SIM card properly"
+        },
+        {
+          "bn": "অন্য একটি ফোনে একই SIM দিয়ে সিগন্যাল আসে কিনা পরীক্ষা করুন",
+          "en": "Test the same SIM in another phone to check for signal"
+        },
+        {
+          "bn": "Airplane mode চালু-বন্ধ করে network reset করুন",
+          "en": "Toggle Airplane mode to reset the network connection"
+        }
+      ],
+      "tools": [],
+      "solutions": [
+        {
+          "bn": "SIM অন্য ফোনে কাজ করলে সমস্যা device-এর অ্যান্টেনা/হার্ডওয়্যারে",
+          "en": "If the SIM works in another phone, the fault is in this device's antenna/hardware"
+        },
+        {
+          "bn": "Settings-এ Network Operator manually select করে দেখুন",
+          "en": "Try manually selecting the Network Operator in Settings"
+        }
+      ],
+      "warnings": [
+        {
+          "bn": "IMEI পরিবর্তন বা cloning বৈধ নয় এবং এখানে শেখানো হয় না",
+          "en": "IMEI alteration or cloning is not legal and is not covered here"
+        }
+      ],
+      "verification": [
+        {
+          "bn": "স্বাভাবিক সিগন্যাল bar ও data connectivity ফিরে এলে ঠিক হয়েছে",
+          "en": "Normal signal bars and data connectivity returning confirms the fix"
+        }
+      ]
+    },
+    {
+      "id": "wifi-not-turning-on",
+      "category": "wifi_bt",
+      "title": {
+        "bn": "Wi-Fi অন হচ্ছে না",
+        "en": "Wi-Fi Won't Turn On"
+      },
+      "difficulty": "beginner",
+      "symptoms": [
+        {
+          "bn": "Wi-Fi টগল করলে সাথে সাথে বন্ধ হয়ে যায় বা grey/disabled দেখায়",
+          "en": "Wi-Fi toggle turns off immediately or shows greyed out"
+        }
+      ],
+      "causes": [
+        {
+          "bn": "সফটওয়্যার glitch",
+          "en": "Software glitch"
+        },
+        {
+          "bn": "Wi-Fi/Bluetooth কম্বো chip হার্ডওয়্যার সমস্যা",
+          "en": "Wi-Fi/Bluetooth combo chip hardware fault"
+        }
+      ],
+      "diagnosticSteps": [
+        {
+          "bn": "ফোন রিস্টার্ট করুন",
+          "en": "Restart the phone"
+        },
+        {
+          "bn": "Network settings reset করে দেখুন",
+          "en": "Try resetting network settings"
+        }
+      ],
+      "tools": [],
+      "solutions": [
+        {
+          "bn": "Settings > System > Reset Options > Reset Wi-Fi, Mobile & Bluetooth ব্যবহার করুন",
+          "en": "Use Settings > System > Reset Options > Reset Wi-Fi, Mobile & Bluetooth"
+        },
+        {
+          "bn": "সমস্যা থেকে গেলে Wi-Fi/BT module হার্ডওয়্যার পরীক্ষা প্রয়োজন",
+          "en": "If it persists, the Wi-Fi/BT module hardware needs inspection"
+        }
+      ],
+      "warnings": [],
+      "verification": [
+        {
+          "bn": "Wi-Fi টগল স্বাভাবিকভাবে চালু থেকে নেটওয়ার্কে কানেক্ট করলে ঠিক হয়েছে",
+          "en": "Wi-Fi toggling on normally and connecting to a network confirms the fix"
+        }
+      ]
+    },
+    {
+      "id": "app-crashing-lag",
+      "category": "software",
+      "title": {
+        "bn": "অ্যাপ ক্র্যাশ করছে বা ফোন স্লো হয়ে গেছে",
+        "en": "Apps Crashing or Phone Running Slow"
+      },
+      "difficulty": "beginner",
+      "symptoms": [
+        {
+          "bn": "নির্দিষ্ট অ্যাপ বারবার বন্ধ হয়ে যাচ্ছে",
+          "en": "A specific app keeps closing unexpectedly"
+        },
+        {
+          "bn": "সামগ্রিকভাবে ফোন ব্যবহার করতে lag হচ্ছে",
+          "en": "The phone feels laggy overall"
+        }
+      ],
+      "causes": [
+        {
+          "bn": "Storage প্রায় পূর্ণ হয়ে যাওয়া",
+          "en": "Storage nearly full"
+        },
+        {
+          "bn": "অ্যাপ পুরনো ভার্সনে আছে বা corrupted cache",
+          "en": "Outdated app version or corrupted cache"
+        },
+        {
+          "bn": "একসাথে অনেক background app চালু থাকা",
+          "en": "Too many background apps running simultaneously"
+        }
+      ],
+      "diagnosticSteps": [
+        {
+          "bn": "Settings-এ available storage কতটুকু আছে দেখুন",
+          "en": "Check available storage in Settings"
+        },
+        {
+          "bn": "সমস্যাযুক্ত অ্যাপ আপডেট আছে কিনা যাচাই করুন",
+          "en": "Check whether the problematic app has a pending update"
+        }
+      ],
+      "tools": [],
+      "solutions": [
+        {
+          "bn": "অপ্রয়োজনীয় ফাইল/অ্যাপ মুছে storage খালি করুন",
+          "en": "Free up storage by removing unneeded files/apps"
+        },
+        {
+          "bn": "অ্যাপ আপডেট করুন অথবা cache clear করুন",
+          "en": "Update the app or clear its cache"
+        }
+      ],
+      "warnings": [
+        {
+          "bn": "FRP/Activation Lock বা password bypass করার কোনো পদ্ধতি এখানে দেওয়া হয় না",
+          "en": "No FRP/Activation Lock or password-bypass methods are provided here"
+        }
+      ],
+      "verification": [
+        {
+          "bn": "অ্যাপ স্বাভাবিকভাবে চলা ও ফোনের গতি ঠিক হলে সমাধান নিশ্চিত",
+          "en": "The app running normally and the phone feeling responsive confirms the fix"
+        }
+      ]
+    },
+    {
+      "id": "random-restart",
+      "category": "power",
+      "title": {
+        "bn": "ফোন নিজে নিজে রিস্টার্ট হয়ে যাচ্ছে",
+        "en": "Phone Randomly Restarts"
+      },
+      "difficulty": "intermediate",
+      "symptoms": [
+        {
+          "bn": "ব্যবহারের মাঝে হঠাৎ নিজে থেকে রিস্টার্ট হয়ে যায়",
+          "en": "Restarts unexpectedly on its own during use"
+        }
+      ],
+      "causes": [
+        {
+          "bn": "সফটওয়্যার crash বা corrupted app",
+          "en": "Software crash or a corrupted app"
+        },
+        {
+          "bn": "Overheating থেকে সুরক্ষামূলক shutdown",
+          "en": "Protective shutdown from overheating"
+        },
+        {
+          "bn": "Battery connector-এ intermittent সংযোগ",
+          "en": "Intermittent connection at the battery connector"
+        }
+      ],
+      "diagnosticSteps": [
+        {
+          "bn": "রিস্টার্ট হওয়ার আগে ফোন গরম ছিল কিনা লক্ষ্য করুন",
+          "en": "Notice whether the phone was hot before restarting"
+        },
+        {
+          "bn": "Safe mode-এ কিছুক্ষণ ব্যবহার করে দেখুন সমস্যা থাকে কিনা",
+          "en": "Use Safe Mode for a while to see if the issue persists"
+        }
+      ],
+      "tools": [],
+      "solutions": [
+        {
+          "bn": "Safe mode-এ সমস্যা না থাকলে কোনো third-party app দায়ী",
+          "en": "If Safe Mode is fine, a third-party app is likely responsible"
+        },
+        {
+          "bn": "Heavy app ব্যবহারের সময় ফোন ঠান্ডা জায়গায় রাখুন",
+          "en": "Keep the phone in a cool spot during heavy app use"
+        }
+      ],
+      "warnings": [],
+      "verification": [
+        {
+          "bn": "কয়েকদিন স্বাভাবিক ব্যবহারে রিস্টার্ট না হলে সমাধান হয়েছে",
+          "en": "No restarts over a few days of normal use confirms the fix"
+        }
+      ]
+    },
+    {
+      "id": "overheating",
+      "category": "power",
+      "title": {
+        "bn": "ফোন অতিরিক্ত গরম হয়ে যাচ্ছে",
+        "en": "Phone Overheating"
+      },
+      "difficulty": "beginner",
+      "symptoms": [
+        {
+          "bn": "ব্যবহারের সময় বা চার্জ দেওয়ার সময় অস্বাভাবিক গরম হয়",
+          "en": "Gets unusually hot during use or while charging"
+        }
+      ],
+      "causes": [
+        {
+          "bn": "ভারী app/গেম দীর্ঘক্ষণ চালানো",
+          "en": "Running heavy apps/games for a long time"
+        },
+        {
+          "bn": "সরাসরি রোদে বা গরম পরিবেশে রাখা",
+          "en": "Being left in direct sun or a hot environment"
+        },
+        {
+          "bn": "Battery health খারাপ হয়ে যাওয়া",
+          "en": "Degraded battery health"
+        }
+      ],
+      "diagnosticSteps": [
+        {
+          "bn": "কোন সময় বেশি গরম হয় তা চিহ্নিত করুন (গেম/চার্জ/সাধারণ ব্যবহার)",
+          "en": "Identify when it heats up most (gaming/charging/normal use)"
+        }
+      ],
+      "tools": [],
+      "solutions": [
+        {
+          "bn": "ভারী ব্যবহারের সময় বিরতি দিন এবং case খুলে রাখুন",
+          "en": "Take breaks during heavy use and remove the case"
+        }
+      ],
+      "warnings": [
+        {
+          "bn": "অতিরিক্ত গরম অবস্থায় চার্জ দেওয়া বন্ধ রাখুন",
+          "en": "Don't charge while the phone is very hot"
+        }
+      ],
+      "verification": [
+        {
+          "bn": "তাপমাত্রা স্বাভাবিক পর্যায়ে ফিরে এলে ঠিক আছে",
+          "en": "Temperature returning to normal confirms the fix"
+        }
+      ]
+    },
+    {
+      "id": "charging-port-loose",
+      "category": "charging",
+      "title": {
+        "bn": "চার্জিং পোর্ট ঢিলা হয়ে গেছে",
+        "en": "Loose Charging Port"
+      },
+      "difficulty": "intermediate",
+      "symptoms": [
+        {
+          "bn": "কেবল লাগালে নড়াচড়া করলে চার্জ হওয়া বন্ধ হয়ে যায়",
+          "en": "Charging stops when the cable is nudged"
+        }
+      ],
+      "causes": [
+        {
+          "bn": "দীর্ঘদিন ব্যবহারে port-এর ভেতরের pin ঢিলা হয়ে যাওয়া",
+          "en": "Internal pins loosened from long-term use"
+        }
+      ],
+      "diagnosticSteps": [
+        {
+          "bn": "কেবল বিভিন্ন কোণে ধরে দেখুন কোন অবস্থানে চার্জ হয়",
+          "en": "Try angling the cable to see which position charges"
+        }
+      ],
+      "tools": [],
+      "solutions": [
+        {
+          "bn": "Port replacement প্রয়োজন হতে পারে — এটি soldering-level কাজ",
+          "en": "Port replacement may be needed — this is soldering-level work"
+        }
+      ],
+      "warnings": [],
+      "verification": [
+        {
+          "bn": "যেকোনো কোণে স্থিরভাবে চার্জ হলে সমাধান হয়েছে",
+          "en": "Charging steadily at any angle confirms the fix"
+        }
+      ]
+    },
+    {
+      "id": "wireless-charging-not-working",
+      "category": "charging",
+      "title": {
+        "bn": "ওয়্যারলেস চার্জিং কাজ করছে না",
+        "en": "Wireless Charging Not Working"
+      },
+      "difficulty": "beginner",
+      "symptoms": [
+        {
+          "bn": "ওয়্যারলেস চার্জিং প্যাডে রাখলে চার্জ হয় না",
+          "en": "Doesn't charge when placed on a wireless charging pad"
+        }
+      ],
+      "causes": [
+        {
+          "bn": "ফোন প্যাডের সঠিক জায়গায় নেই (alignment)",
+          "en": "Phone isn't aligned correctly on the pad"
+        },
+        {
+          "bn": "মোটা case ওয়্যারলেস চার্জিং বাধাগ্রস্ত করছে",
+          "en": "A thick case is blocking wireless charging"
+        },
+        {
+          "bn": "ডিভাইসটি wireless charging সাপোর্ট করে না",
+          "en": "The device doesn't support wireless charging"
+        }
+      ],
+      "diagnosticSteps": [
+        {
+          "bn": "Case খুলে সরাসরি প্যাডের মাঝখানে রাখুন",
+          "en": "Remove the case and center it on the pad"
+        }
+      ],
+      "tools": [],
+      "solutions": [
+        {
+          "bn": "Device স্পেসিফিকেশনে wireless charging সাপোর্ট আছে কিনা যাচাই করুন",
+          "en": "Check the device spec for wireless charging support"
+        }
+      ],
+      "warnings": [],
+      "verification": [
+        {
+          "bn": "Alignment ঠিক করার পর charging icon এলে সমাধান হয়েছে",
+          "en": "The charging icon appearing after correcting alignment confirms the fix"
+        }
+      ]
+    },
+    {
+      "id": "charging-overheating",
+      "category": "charging",
+      "title": {
+        "bn": "চার্জ দেওয়ার সময় অতিরিক্ত গরম হয়",
+        "en": "Overheating While Charging"
+      },
+      "difficulty": "beginner",
+      "symptoms": [
+        {
+          "bn": "চার্জ দেওয়ার সময় ফোন ও চার্জার দুটোই গরম হয়ে যায়",
+          "en": "Both the phone and charger get hot while charging"
+        }
+      ],
+      "causes": [
+        {
+          "bn": "Incompatible বা নিম্নমানের চার্জার ব্যবহার",
+          "en": "Using an incompatible or low-quality charger"
+        },
+        {
+          "bn": "চার্জ দেওয়ার সময় ভারী app চালানো",
+          "en": "Running heavy apps while charging"
+        }
+      ],
+      "diagnosticSteps": [
+        {
+          "bn": "Original বা certified চার্জার দিয়ে তুলনা করে দেখুন",
+          "en": "Compare with an original or certified charger"
+        }
+      ],
+      "tools": [
+        "usb-power-meter"
+      ],
+      "solutions": [
+        {
+          "bn": "Certified চার্জার ব্যবহার করুন এবং চার্জের সময় ভারী app এড়িয়ে চলুন",
+          "en": "Use a certified charger and avoid heavy apps while charging"
+        }
+      ],
+      "warnings": [
+        {
+          "bn": "অতিরিক্ত গরম চার্জার সঙ্গে সঙ্গে ব্যবহার বন্ধ করুন",
+          "en": "Stop using a charger immediately if it gets excessively hot"
+        }
+      ],
+      "verification": [
+        {
+          "bn": "স্বাভাবিক তাপমাত্রায় চার্জ হলে ঠিক আছে",
+          "en": "Charging at normal temperature confirms the fix"
+        }
+      ]
+    },
+    {
+      "id": "battery-percentage-jumps",
+      "category": "battery",
+      "title": {
+        "bn": "ব্যাটারি পার্সেন্টেজ হঠাৎ লাফিয়ে ওঠে",
+        "en": "Battery Percentage Jumps Unexpectedly"
+      },
+      "difficulty": "intermediate",
+      "symptoms": [
+        {
+          "bn": "যেমন ২০% থেকে হঠাৎ ৫% বা ১০% থেকে ৪০%-এ চলে যায়",
+          "en": "e.g. jumps from 20% to 5%, or from 10% to 40% suddenly"
+        }
+      ],
+      "causes": [
+        {
+          "bn": "Battery calibration নষ্ট হয়ে গেছে",
+          "en": "Battery calibration has drifted"
+        },
+        {
+          "bn": "Battery health/cell ক্ষয়প্রাপ্ত হয়ে গেছে",
+          "en": "Degraded battery health/cells"
+        }
+      ],
+      "diagnosticSteps": [
+        {
+          "bn": "পুরোপুরি ০% পর্যন্ত ব্যবহার করে তারপর একটানা ১০০% পর্যন্ত চার্জ দিন",
+          "en": "Drain to 0% then charge uninterrupted to 100%"
+        }
+      ],
+      "tools": [],
+      "solutions": [
+        {
+          "bn": "এতে calibration ঠিক হতে পারে; না হলে battery replacement বিবেচনা করুন",
+          "en": "This may fix calibration; otherwise consider a battery replacement"
+        }
+      ],
+      "warnings": [],
+      "verification": [
+        {
+          "bn": "পার্সেন্টেজ স্বাভাবিক ধারাবাহিকভাবে কমলে ঠিক হয়েছে",
+          "en": "The percentage dropping steadily and consistently confirms the fix"
+        }
+      ]
+    },
+    {
+      "id": "battery-not-detected",
+      "category": "battery",
+      "title": {
+        "bn": "ব্যাটারি ডিটেক্ট হচ্ছে না",
+        "en": "Battery Not Detected"
+      },
+      "difficulty": "advanced",
+      "symptoms": [
+        {
+          "bn": "ফোন সম্পূর্ণ dead দেখায়, কোনো battery percentage দেখায় না",
+          "en": "Phone appears completely dead, shows no battery percentage"
+        }
+      ],
+      "causes": [
+        {
+          "bn": "Battery connector-এ সংযোগ বিচ্ছিন্ন",
+          "en": "Disconnected battery connector"
+        },
+        {
+          "bn": "PMIC battery-detection circuit সমস্যা",
+          "en": "PMIC battery-detection circuit fault"
+        }
+      ],
+      "diagnosticSteps": [
+        {
+          "bn": "ফোন খুলে battery connector ভালোভাবে বসানো আছে কিনা দেখুন",
+          "en": "Open the phone and check the battery connector is seated properly"
+        }
+      ],
+      "tools": [
+        "multimeter"
+      ],
+      "solutions": [
+        {
+          "bn": "Connector reseat করুন; সমস্যা থাকলে PMIC পরীক্ষা প্রয়োজন — technician-level",
+          "en": "Reseat the connector; if it persists, PMIC inspection is needed — technician-level"
+        }
+      ],
+      "warnings": [
+        {
+          "bn": "ব্যাটারি connector-এ কাজ করার সময় short এড়াতে সতর্ক থাকুন",
+          "en": "Be careful to avoid shorts while working on the battery connector"
+        }
+      ],
+      "verification": [
+        {
+          "bn": "Battery percentage স্বাভাবিকভাবে দেখালে সমাধান হয়েছে",
+          "en": "Battery percentage displaying normally confirms the fix"
+        }
+      ]
+    },
+    {
+      "id": "dead-pixels",
+      "category": "display",
+      "title": {
+        "bn": "ডেড পিক্সেল",
+        "en": "Dead Pixels"
+      },
+      "difficulty": "intermediate",
+      "symptoms": [
+        {
+          "bn": "স্ক্রিনে একটি নির্দিষ্ট বিন্দুতে সবসময় কালো বা রঙিন দাগ",
+          "en": "A fixed point on the screen is always black or discolored"
+        }
+      ],
+      "causes": [
+        {
+          "bn": "Panel-এর নির্দিষ্ট pixel-এর হার্ডওয়্যার ত্রুটি",
+          "en": "A hardware fault in a specific pixel of the panel"
+        }
+      ],
+      "diagnosticSteps": [
+        {
+          "bn": "সাদা, কালো ও রঙিন background পর্যায়ক্রমে দেখে দাগ যাচাই করুন",
+          "en": "Check with white, black, and colored backgrounds in turn"
+        }
+      ],
+      "tools": [],
+      "solutions": [
+        {
+          "bn": "সাধারণত সফটওয়্যার দিয়ে ঠিক করা যায় না; panel replacement প্রয়োজন হতে পারে",
+          "en": "Usually can't be fixed via software; panel replacement may be needed"
+        }
+      ],
+      "warnings": [],
+      "verification": [
+        {
+          "bn": "সব background-এ দাগ না থাকলে সমাধান হয়েছে",
+          "en": "No spot visible across all backgrounds confirms the fix"
+        }
+      ]
+    },
+    {
+      "id": "screen-burn-in",
+      "category": "display",
+      "title": {
+        "bn": "স্ক্রিন বার্ন-ইন",
+        "en": "Screen Burn-in"
+      },
+      "difficulty": "intermediate",
+      "symptoms": [
+        {
+          "bn": "আগের কোনো UI element-এর হালকা ছাপ স্থায়ীভাবে দেখা যায় (বিশেষত OLED-এ)",
+          "en": "A faint permanent ghost of an old UI element is visible (especially on OLED)"
+        }
+      ],
+      "causes": [
+        {
+          "bn": "দীর্ঘদিন একই static image/UI element একটানা দেখানো",
+          "en": "The same static image/UI element displayed continuously for a long time"
+        }
+      ],
+      "diagnosticSteps": [
+        {
+          "bn": "Solid gray background দেখে burn-in-এর তীব্রতা যাচাই করুন",
+          "en": "View a solid gray background to gauge burn-in severity"
+        }
+      ],
+      "tools": [],
+      "solutions": [
+        {
+          "bn": "হালকা burn-in-এর জন্য pixel-refresh টুল ব্যবহার করা যায়; গুরুতর হলে এটি স্থায়ী",
+          "en": "Light burn-in can improve with a pixel-refresh tool; severe cases are permanent"
+        }
+      ],
+      "warnings": [],
+      "verification": [
+        {
+          "bn": "OLED-এ পুরোপুরি নিরাময় সবসময় সম্ভব না — এটি জেনে রাখা গুরুত্বপূর্ণ",
+          "en": "Full OLED recovery isn't always possible — worth knowing upfront"
+        }
+      ]
+    },
+    {
+      "id": "dim-display-backlight",
+      "category": "display",
+      "title": {
+        "bn": "ডিসপ্লে অস্বাভাবিক ম্লান",
+        "en": "Display Unusually Dim"
+      },
+      "difficulty": "beginner",
+      "symptoms": [
+        {
+          "bn": "Brightness সর্বোচ্চ করলেও স্ক্রিন যথেষ্ট উজ্জ্বল হয় না",
+          "en": "Screen isn't bright enough even at maximum brightness"
+        }
+      ],
+      "causes": [
+        {
+          "bn": "Adaptive brightness সেন্সর ভুল reading দিচ্ছে",
+          "en": "Adaptive brightness sensor giving a wrong reading"
+        },
+        {
+          "bn": "Backlight হার্ডওয়্যার দুর্বল হয়ে যাওয়া",
+          "en": "Weakened backlight hardware"
+        }
+      ],
+      "diagnosticSteps": [
+        {
+          "bn": "Adaptive brightness সাময়িকভাবে বন্ধ করে manual brightness test করুন",
+          "en": "Temporarily disable adaptive brightness and test manual brightness"
+        }
+      ],
+      "tools": [],
+      "solutions": [
+        {
+          "bn": "Sensor এলাকা পরিষ্কার করুন; সমস্যা থাকলে backlight হার্ডওয়্যার পরীক্ষা প্রয়োজন",
+          "en": "Clean the sensor area; if it persists, backlight hardware needs inspection"
+        }
+      ],
+      "warnings": [],
+      "verification": [
+        {
+          "bn": "Manual brightness-এ স্বাভাবিক উজ্জ্বলতা এলে ঠিক আছে",
+          "en": "Normal brightness under manual control confirms the fix"
+        }
+      ]
+    },
+    {
+      "id": "touch-works-no-display",
+      "category": "display",
+      "title": {
+        "bn": "টাচ কাজ করে কিন্তু ডিসপ্লে নেই",
+        "en": "Touch Works But No Display"
+      },
+      "difficulty": "intermediate",
+      "symptoms": [
+        {
+          "bn": "স্ক্রিন কালো, কিন্তু আন্দাজ করে ট্যাপ করলে app খোলে (touch কাজ করছে)",
+          "en": "Screen is black, but tapping by feel still opens apps (touch works)"
+        }
+      ],
+      "causes": [
+        {
+          "bn": "শুধু display connector বা backlight সমস্যা, touch layer আলাদাভাবে ঠিক আছে",
+          "en": "Only the display connector/backlight is affected — the touch layer is separately fine"
+        }
+      ],
+      "diagnosticSteps": [
+        {
+          "bn": "ফ্ল্যাশলাইট দিয়ে খুব হালকা image দেখা যায় কিনা যাচাই করুন",
+          "en": "Check with a flashlight for a very faint image"
+        }
+      ],
+      "tools": [],
+      "solutions": [
+        {
+          "bn": "Display connector reseat করুন; না হলে backlight/panel সমস্যা",
+          "en": "Reseat the display connector; otherwise it's a backlight/panel issue"
+        }
+      ],
+      "warnings": [],
+      "verification": [
+        {
+          "bn": "ছবি স্বাভাবিকভাবে দেখা গেলে সমাধান হয়েছে",
+          "en": "The image displaying normally confirms the fix"
+        }
+      ]
+    },
+    {
+      "id": "ghost-touch",
+      "category": "touch",
+      "title": {
+        "bn": "ঘোস্ট টাচ (নিজে থেকে টাচ হওয়া)",
+        "en": "Ghost Touch (Phantom Touches)"
+      },
+      "difficulty": "intermediate",
+      "symptoms": [
+        {
+          "bn": "স্পর্শ না করা সত্ত্বেও স্ক্রিনে টাচ registered হচ্ছে",
+          "en": "Touch registers on the screen without being touched"
+        }
+      ],
+      "causes": [
+        {
+          "bn": "Screen protector-এর নিচে বাতাস/আর্দ্রতা জমা",
+          "en": "Air/moisture trapped under the screen protector"
+        },
+        {
+          "bn": "চার্জ দেওয়ার সময় নিম্নমানের চার্জার/কেবল থেকে electrical interference",
+          "en": "Electrical interference from a low-quality charger/cable while charging"
+        },
+        {
+          "bn": "Digitizer বা touch IC সমস্যা",
+          "en": "Digitizer or touch IC fault"
+        }
+      ],
+      "diagnosticSteps": [
+        {
+          "bn": "চার্জ দেওয়ার সময় সমস্যা বেশি হয় কিনা লক্ষ্য করুন",
+          "en": "Notice whether it worsens while charging"
+        },
+        {
+          "bn": "Screen protector খুলে test করুন",
+          "en": "Test with the screen protector removed"
+        }
+      ],
+      "tools": [],
+      "solutions": [
+        {
+          "bn": "Certified চার্জার ব্যবহার করুন এবং screen protector পরিবর্তন করুন",
+          "en": "Use a certified charger and replace the screen protector"
+        }
+      ],
+      "warnings": [],
+      "verification": [
+        {
+          "bn": "চার্জ দেওয়ার সময়ও কোনো ভুল টাচ না এলে সমাধান হয়েছে",
+          "en": "No stray touches even while charging confirms the fix"
+        }
+      ]
+    },
+    {
+      "id": "touch-delay",
+      "category": "touch",
+      "title": {
+        "bn": "টাচে দেরি (touch delay/lag)",
+        "en": "Touch Delay / Lag"
+      },
+      "difficulty": "beginner",
+      "symptoms": [
+        {
+          "bn": "ট্যাপ করার পর response আসতে লক্ষণীয় দেরি হয়",
+          "en": "There's a noticeable delay after tapping before it responds"
+        }
+      ],
+      "causes": [
+        {
+          "bn": "System-এ অনেক background process চলা",
+          "en": "Many background processes running"
+        },
+        {
+          "bn": "Touch sampling rate কম হওয়া (device-নির্ভর)",
+          "en": "Low touch sampling rate (device-dependent)"
+        }
+      ],
+      "diagnosticSteps": [
+        {
+          "bn": "অন্য app-এও একই দেরি হয় কিনা যাচাই করুন",
+          "en": "Check whether the delay happens in other apps too"
+        }
+      ],
+      "tools": [],
+      "solutions": [
+        {
+          "bn": "অপ্রয়োজনীয় background app বন্ধ করে ফোন রিস্টার্ট করুন",
+          "en": "Close unneeded background apps and restart the phone"
+        }
+      ],
+      "warnings": [],
+      "verification": [
+        {
+          "bn": "Response দ্রুত ও সামঞ্জস্যপূর্ণ হলে ঠিক আছে",
+          "en": "Fast, consistent response confirms the fix"
+        }
+      ]
+    },
+    {
+      "id": "partial-touch-unresponsive",
+      "category": "touch",
+      "title": {
+        "bn": "স্ক্রিনের একটা অংশে টাচ কাজ করে না",
+        "en": "Part of the Screen Isn't Touch-Responsive"
+      },
+      "difficulty": "intermediate",
+      "symptoms": [
+        {
+          "bn": "স্ক্রিনের একটি নির্দিষ্ট অংশে (যেমন কোনা বা কিনারা) টাচ react করে না",
+          "en": "A specific area (like a corner or edge) doesn't respond to touch"
+        }
+      ],
+      "causes": [
+        {
+          "bn": "Digitizer-এর সেই অংশ ক্ষতিগ্রস্ত (প্রায়ই drop-এর কারণে)",
+          "en": "That section of the digitizer is damaged (often from a drop)"
+        }
+      ],
+      "diagnosticSteps": [
+        {
+          "bn": "কোন নির্দিষ্ট অংশে সমস্যা তা মানচিত্রের মতো চিহ্নিত করুন",
+          "en": "Map out exactly which area is unresponsive"
+        }
+      ],
+      "tools": [],
+      "solutions": [
+        {
+          "bn": "সাধারণত digitizer/screen replacement ছাড়া সমাধান হয় না",
+          "en": "Usually not fixable without a digitizer/screen replacement"
+        }
+      ],
+      "warnings": [],
+      "verification": [
+        {
+          "bn": "চিহ্নিত অংশে টাচ কাজ করলে সমাধান হয়েছে",
+          "en": "Touch working in the previously-dead area confirms the fix"
+        }
+      ]
+    },
+    {
+      "id": "earpiece-not-working",
+      "category": "audio",
+      "title": {
+        "bn": "ইয়ারপিস কাজ করছে না (কল শোনা যায় না)",
+        "en": "Earpiece Not Working (Can't Hear Calls)"
+      },
+      "difficulty": "beginner",
+      "symptoms": [
+        {
+          "bn": "কল করার সময় কানের কাছে ধরলে শব্দ শোনা যায় না, কিন্তু speaker mode-এ শোনা যায়",
+          "en": "No sound near the ear during calls, but speaker mode works"
+        }
+      ],
+      "causes": [
+        {
+          "bn": "Earpiece grille-এ ধুলো জমা",
+          "en": "Dust buildup in the earpiece grille"
+        },
+        {
+          "bn": "Proximity sensor ভুল আচরণ করছে",
+          "en": "Proximity sensor misbehaving"
+        }
+      ],
+      "diagnosticSteps": [
+        {
+          "bn": "Earpiece grille flashlight দিয়ে পরীক্ষা করুন",
+          "en": "Inspect the earpiece grille with a flashlight"
+        }
+      ],
+      "tools": [],
+      "solutions": [
+        {
+          "bn": "নরম ব্রাশ দিয়ে সাবধানে পরিষ্কার করুন",
+          "en": "Gently clean with a soft brush"
+        }
+      ],
+      "warnings": [],
+      "verification": [
+        {
+          "bn": "কানের কাছে ধরলে স্বাভাবিক শব্দ এলে সমাধান হয়েছে",
+          "en": "Normal sound near the ear confirms the fix"
+        }
+      ]
+    },
+    {
+      "id": "microphone-not-working",
+      "category": "audio",
+      "title": {
+        "bn": "মাইক্রোফোন কাজ করছে না",
+        "en": "Microphone Not Working"
+      },
+      "difficulty": "intermediate",
+      "symptoms": [
+        {
+          "bn": "কল বা voice recording-এ অপর পাশ থেকে শোনা যায় না বা রেকর্ডিং silent",
+          "en": "The other party can't hear you on calls, or recordings are silent"
+        }
+      ],
+      "causes": [
+        {
+          "bn": "Microphone port ধুলো/আর্দ্রতায় বন্ধ",
+          "en": "Microphone port blocked by dust/moisture"
+        },
+        {
+          "bn": "App-এর microphone permission বন্ধ",
+          "en": "App's microphone permission disabled"
+        },
+        {
+          "bn": "মাইক হার্ডওয়্যার ক্ষতিগ্রস্ত",
+          "en": "Damaged microphone hardware"
+        }
+      ],
+      "diagnosticSteps": [
+        {
+          "bn": "Voice recorder app দিয়ে সরাসরি test করুন",
+          "en": "Test directly with a voice recorder app"
+        },
+        {
+          "bn": "App permission-এ microphone অনুমতি আছে কিনা যাচাই করুন",
+          "en": "Check whether the app has microphone permission"
+        }
+      ],
+      "tools": [],
+      "solutions": [
+        {
+          "bn": "Microphone port সাবধানে পরিষ্কার করুন এবং permission চালু করুন",
+          "en": "Carefully clean the microphone port and enable the permission"
+        }
+      ],
+      "warnings": [],
+      "verification": [
+        {
+          "bn": "Recording স্পষ্ট শোনা গেলে সমাধান হয়েছে",
+          "en": "A clear recording confirms the fix"
+        }
+      ]
+    },
+    {
+      "id": "distorted-sound",
+      "category": "audio",
+      "title": {
+        "bn": "শব্দ বিকৃত শোনায় (distorted sound)",
+        "en": "Distorted Sound"
+      },
+      "difficulty": "beginner",
+      "symptoms": [
+        {
+          "bn": "মিডিয়া বা কলের শব্দ ভাঙা ভাঙা বা কর্কশ শোনায়",
+          "en": "Media or call audio sounds crackly or harsh"
+        }
+      ],
+      "causes": [
+        {
+          "bn": "Volume সর্বোচ্চ পর্যায়ে speaker-এর সীমা ছাড়িয়ে যাওয়া",
+          "en": "Volume at maximum exceeding the speaker's limit"
+        },
+        {
+          "bn": "Speaker grille-এ ধুলো/ক্ষতি",
+          "en": "Dust/damage in the speaker grille"
+        }
+      ],
+      "diagnosticSteps": [
+        {
+          "bn": "Volume কমিয়ে শব্দ ঠিক হয় কিনা দেখুন",
+          "en": "Check if lowering the volume fixes it"
+        }
+      ],
+      "tools": [],
+      "solutions": [
+        {
+          "bn": "Volume ৮০%-এর নিচে রেখে ব্যবহার করুন; grille পরিষ্কার করুন",
+          "en": "Use below ~80% volume; clean the speaker grille"
+        }
+      ],
+      "warnings": [],
+      "verification": [
+        {
+          "bn": "স্বাভাবিক volume-এ পরিষ্কার শব্দ এলে ঠিক আছে",
+          "en": "Clear sound at normal volume confirms the fix"
+        }
+      ]
+    },
+    {
+      "id": "flash-not-working",
+      "category": "camera",
+      "title": {
+        "bn": "ক্যামেরা ফ্ল্যাশ কাজ করছে না",
+        "en": "Camera Flash Not Working"
+      },
+      "difficulty": "beginner",
+      "symptoms": [
+        {
+          "bn": "ছবি তোলার সময় flash জ্বলে না",
+          "en": "Flash doesn't fire when taking a photo"
+        }
+      ],
+      "causes": [
+        {
+          "bn": "Flash সেটিংস বন্ধ করা আছে",
+          "en": "Flash setting is turned off"
+        },
+        {
+          "bn": "Overheating থেকে সুরক্ষামূলক flash-disable",
+          "en": "Protective flash-disable from overheating"
+        },
+        {
+          "bn": "LED flash হার্ডওয়্যার ক্ষতিগ্রস্ত",
+          "en": "Damaged LED flash hardware"
+        }
+      ],
+      "diagnosticSteps": [
+        {
+          "bn": "Camera app-এ flash mode 'On' বা 'Auto' করা আছে কিনা দেখুন",
+          "en": "Check that flash mode is set to 'On' or 'Auto' in the camera app"
+        },
+        {
+          "bn": "Flashlight (torch) আলাদাভাবে জ্বলছে কিনা পরীক্ষা করুন",
+          "en": "Test whether the flashlight/torch works independently"
+        }
+      ],
+      "tools": [],
+      "solutions": [
+        {
+          "bn": "Torch কাজ করলে camera app সেটিংস সমস্যা; না করলে হার্ডওয়্যার",
+          "en": "If torch works, it's an app-setting issue; if not, it's hardware"
+        }
+      ],
+      "warnings": [],
+      "verification": [
+        {
+          "bn": "ছবি তোলার সময় flash জ্বললে সমাধান হয়েছে",
+          "en": "Flash firing during photo capture confirms the fix"
+        }
+      ]
+    },
+    {
+      "id": "blurry-photos",
+      "category": "camera",
+      "title": {
+        "bn": "ছবি ঝাপসা আসে (focus সমস্যা)",
+        "en": "Blurry Photos (Focus Issue)"
+      },
+      "difficulty": "beginner",
+      "symptoms": [
+        {
+          "bn": "বারবার চেষ্টা করেও ছবি স্পষ্ট আসে না",
+          "en": "Photos stay blurry no matter how many times you try"
+        }
+      ],
+      "causes": [
+        {
+          "bn": "লেন্সে ধুলো বা আঙুলের ছাপ",
+          "en": "Dust or fingerprints on the lens"
+        },
+        {
+          "bn": "Autofocus হার্ডওয়্যার সমস্যা",
+          "en": "Autofocus hardware fault"
+        }
+      ],
+      "diagnosticSteps": [
+        {
+          "bn": "নরম কাপড় দিয়ে লেন্স পরিষ্কার করুন এবং আবার ছবি তুলুন",
+          "en": "Clean the lens with a soft cloth and retake the photo"
+        },
+        {
+          "bn": "স্ক্রিনে ট্যাপ করে manual focus test করুন",
+          "en": "Test manual focus by tapping on the screen"
+        }
+      ],
+      "tools": [],
+      "solutions": [
+        {
+          "bn": "লেন্স পরিষ্কারে কাজ না হলে autofocus module পরীক্ষা প্রয়োজন",
+          "en": "If cleaning doesn't help, the autofocus module needs inspection"
+        }
+      ],
+      "warnings": [],
+      "verification": [
+        {
+          "bn": "স্পষ্ট, sharp ছবি এলে সমাধান হয়েছে",
+          "en": "Sharp, clear photos confirm the fix"
+        }
+      ]
+    },
+    {
+      "id": "camera-black-preview",
+      "category": "camera",
+      "title": {
+        "bn": "ক্যামেরা প্রিভিউ কালো দেখায়",
+        "en": "Camera Preview Shows Black"
+      },
+      "difficulty": "intermediate",
+      "symptoms": [
+        {
+          "bn": "Camera app খোলে কিন্তু preview সম্পূর্ণ কালো",
+          "en": "Camera app opens but the preview is completely black"
+        }
+      ],
+      "causes": [
+        {
+          "bn": "Camera driver সফটওয়্যার crash",
+          "en": "Camera driver software crash"
+        },
+        {
+          "bn": "Camera sensor connector সমস্যা",
+          "en": "Camera sensor connector fault"
+        }
+      ],
+      "diagnosticSteps": [
+        {
+          "bn": "ফ্রন্ট ও ব্যাক দুটো ক্যামেরাতেই সমস্যা কিনা যাচাই করুন",
+          "en": "Check whether both front and back cameras are affected"
+        }
+      ],
+      "tools": [],
+      "solutions": [
+        {
+          "bn": "ফোন রিস্টার্ট করুন; একটিতে সমস্যা হলে connector, দুটোতেই হলে সফটওয়্যার সম্ভাবনা বেশি",
+          "en": "Restart the phone; one camera affected suggests a connector issue, both suggests software"
+        }
+      ],
+      "warnings": [],
+      "verification": [
+        {
+          "bn": "Live preview স্বাভাবিকভাবে দেখা গেলে সমাধান হয়েছে",
+          "en": "A normal live preview confirms the fix"
+        }
+      ]
+    },
+    {
+      "id": "mobile-data-not-working",
+      "category": "network",
+      "title": {
+        "bn": "মোবাইল ডেটা কাজ করছে না",
+        "en": "Mobile Data Not Working"
+      },
+      "difficulty": "beginner",
+      "symptoms": [
+        {
+          "bn": "সিগন্যাল আছে কিন্তু internet browse হয় না",
+          "en": "Signal is present but the internet doesn't load"
+        }
+      ],
+      "causes": [
+        {
+          "bn": "Mobile data টগল বন্ধ আছে",
+          "en": "Mobile data toggle is off"
+        },
+        {
+          "bn": "APN সেটিংস ভুল",
+          "en": "Incorrect APN settings"
+        },
+        {
+          "bn": "Data plan শেষ হয়ে গেছে",
+          "en": "Data plan has run out"
+        }
+      ],
+      "diagnosticSteps": [
+        {
+          "bn": "Settings-এ Mobile Data চালু আছে কিনা দেখুন",
+          "en": "Check whether Mobile Data is enabled in Settings"
+        },
+        {
+          "bn": "Operator-এর কাছে data balance যাচাই করুন",
+          "en": "Check your data balance with the operator"
+        }
+      ],
+      "tools": [],
+      "solutions": [
+        {
+          "bn": "Operator-এর সঠিক APN সেটিংস দিয়ে আবার সেট করুন",
+          "en": "Reconfigure with the operator's correct APN settings"
+        }
+      ],
+      "warnings": [],
+      "verification": [
+        {
+          "bn": "ওয়েবসাইট/অ্যাপ স্বাভাবিকভাবে লোড হলে সমাধান হয়েছে",
+          "en": "Websites/apps loading normally confirms the fix"
+        }
+      ]
+    },
+    {
+      "id": "emergency-calls-only",
+      "category": "network",
+      "title": {
+        "bn": "শুধু 'Emergency Calls Only' দেখাচ্ছে",
+        "en": "Shows Only 'Emergency Calls Only'"
+      },
+      "difficulty": "intermediate",
+      "symptoms": [
+        {
+          "bn": "Normal call/data কাজ করে না, শুধু emergency call অপশন দেখায়",
+          "en": "Normal calls/data don't work, only the emergency call option shows"
+        }
+      ],
+      "causes": [
+        {
+          "bn": "SIM card registration ব্যর্থ হয়েছে",
+          "en": "SIM card registration has failed"
+        },
+        {
+          "bn": "Operator-এর নেটওয়ার্কে সাময়িক সমস্যা",
+          "en": "Temporary issue on the operator's network"
+        }
+      ],
+      "diagnosticSteps": [
+        {
+          "bn": "Airplane mode চালু-বন্ধ করে network re-register করুন",
+          "en": "Toggle Airplane mode to re-register with the network"
+        }
+      ],
+      "tools": [],
+      "solutions": [
+        {
+          "bn": "SIM খুলে পুনরায় বসান; সমস্যা থাকলে operator-এর সাথে যোগাযোগ করুন",
+          "en": "Remove and reseat the SIM; contact the operator if it persists"
+        }
+      ],
+      "warnings": [],
+      "verification": [
+        {
+          "bn": "স্বাভাবিক call/data ফিরে এলে সমাধান হয়েছে",
+          "en": "Normal calls/data returning confirms the fix"
+        }
+      ]
+    },
+    {
+      "id": "volte-not-working",
+      "category": "network",
+      "title": {
+        "bn": "VoLTE কাজ করছে না",
+        "en": "VoLTE Not Working"
+      },
+      "difficulty": "advanced",
+      "symptoms": [
+        {
+          "bn": "4G থাকা সত্ত্বেও HD Voice/VoLTE কল হচ্ছে না",
+          "en": "HD Voice/VoLTE calls don't work despite having 4G"
+        }
+      ],
+      "causes": [
+        {
+          "bn": "Settings-এ VoLTE টগল বন্ধ",
+          "en": "VoLTE toggle disabled in Settings"
+        },
+        {
+          "bn": "Operator-এর দিক থেকে VoLTE activation বাকি আছে",
+          "en": "VoLTE activation pending on the operator's side"
+        }
+      ],
+      "diagnosticSteps": [
+        {
+          "bn": "Settings-এ Network > VoLTE চালু আছে কিনা যাচাই করুন",
+          "en": "Check whether Network > VoLTE is enabled in Settings"
+        }
+      ],
+      "tools": [],
+      "solutions": [
+        {
+          "bn": "VoLTE চালু করুন; সমস্যা থাকলে operator-এর কাছে activation যাচাই করুন",
+          "en": "Enable VoLTE; check activation with the operator if it persists"
+        }
+      ],
+      "warnings": [],
+      "verification": [
+        {
+          "bn": "HD Voice আইকন সহ কল সংযুক্ত হলে সমাধান হয়েছে",
+          "en": "A call connecting with the HD Voice icon confirms the fix"
+        }
+      ]
+    },
+    {
+      "id": "wifi-keeps-disconnecting",
+      "category": "wifi_bt",
+      "title": {
+        "bn": "Wi-Fi বারবার ডিসকানেক্ট হয়ে যাচ্ছে",
+        "en": "Wi-Fi Keeps Disconnecting"
+      },
+      "difficulty": "beginner",
+      "symptoms": [
+        {
+          "bn": "Wi-Fi-তে সংযুক্ত থাকা অবস্থায় হঠাৎ disconnect হয়ে যায়",
+          "en": "Disconnects unexpectedly while connected to Wi-Fi"
+        }
+      ],
+      "causes": [
+        {
+          "bn": "Router-এর দুর্বল সিগন্যাল বা দূরত্ব বেশি",
+          "en": "Weak router signal or too much distance"
+        },
+        {
+          "bn": "Power-saving mode Wi-Fi বন্ধ করে দিচ্ছে",
+          "en": "Power-saving mode is turning off Wi-Fi"
+        }
+      ],
+      "diagnosticSteps": [
+        {
+          "bn": "Router-এর কাছাকাছি গিয়ে একই সমস্যা হয় কিনা দেখুন",
+          "en": "Check whether it still happens near the router"
+        }
+      ],
+      "tools": [],
+      "solutions": [
+        {
+          "bn": "Wi-Fi-এর জন্য battery optimization বন্ধ করুন",
+          "en": "Disable battery optimization for Wi-Fi"
+        }
+      ],
+      "warnings": [],
+      "verification": [
+        {
+          "bn": "দীর্ঘক্ষণ সংযুক্ত থাকলে সমাধান হয়েছে",
+          "en": "Staying connected for an extended period confirms the fix"
+        }
+      ]
+    },
+    {
+      "id": "bluetooth-pairing-failed",
+      "category": "wifi_bt",
+      "title": {
+        "bn": "ব্লুটুথ পেয়ারিং ব্যর্থ হচ্ছে",
+        "en": "Bluetooth Pairing Fails"
+      },
+      "difficulty": "beginner",
+      "symptoms": [
+        {
+          "bn": "নতুন ডিভাইসের সাথে পেয়ার করার চেষ্টা করলে ব্যর্থ হয়",
+          "en": "Fails when trying to pair with a new device"
+        }
+      ],
+      "causes": [
+        {
+          "bn": "দুটো ডিভাইসই আগে থেকে অন্য কিছুর সাথে connected",
+          "en": "Both devices are already connected to something else"
+        },
+        {
+          "bn": "পুরনো pairing তথ্য conflict করছে",
+          "en": "Old pairing data is conflicting"
+        }
+      ],
+      "diagnosticSteps": [
+        {
+          "bn": "দুই ডিভাইসেই Bluetooth settings থেকে 'Forget' করে আবার চেষ্টা করুন",
+          "en": "'Forget' the device on both sides in Bluetooth settings, then retry"
+        }
+      ],
+      "tools": [],
+      "solutions": [
+        {
+          "bn": "দুটো ডিভাইস কাছাকাছি রেখে নতুন করে pair করুন",
+          "en": "Keep both devices close together and pair fresh"
+        }
+      ],
+      "warnings": [],
+      "verification": [
+        {
+          "bn": "সফলভাবে connected দেখালে সমাধান হয়েছে",
+          "en": "Showing 'Connected' successfully confirms the fix"
+        }
+      ]
+    },
+    {
+      "id": "hotspot-not-working",
+      "category": "wifi_bt",
+      "title": {
+        "bn": "মোবাইল হটস্পট কাজ করছে না",
+        "en": "Mobile Hotspot Not Working"
+      },
+      "difficulty": "beginner",
+      "symptoms": [
+        {
+          "bn": "Hotspot চালু করলেও অন্য ডিভাইস connect হতে পারে না",
+          "en": "Other devices can't connect even when hotspot is turned on"
+        }
+      ],
+      "causes": [
+        {
+          "bn": "Mobile data বন্ধ থাকা",
+          "en": "Mobile data is turned off"
+        },
+        {
+          "bn": "Hotspot-এর জন্য ভুল password দেওয়া",
+          "en": "Wrong password entered for the hotspot"
+        }
+      ],
+      "diagnosticSteps": [
+        {
+          "bn": "Mobile data চালু আছে কিনা নিশ্চিত করুন",
+          "en": "Confirm mobile data is turned on"
+        }
+      ],
+      "tools": [],
+      "solutions": [
+        {
+          "bn": "Hotspot password রিসেট করে আবার চেষ্টা করুন",
+          "en": "Reset the hotspot password and try again"
+        }
+      ],
+      "warnings": [],
+      "verification": [
+        {
+          "bn": "অন্য ডিভাইস সফলভাবে internet ব্যবহার করতে পারলে সমাধান হয়েছে",
+          "en": "Another device successfully browsing confirms the fix"
+        }
+      ]
+    },
+    {
+      "id": "system-update-failed",
+      "category": "software",
+      "title": {
+        "bn": "সিস্টেম আপডেট ব্যর্থ হচ্ছে",
+        "en": "System Update Fails"
+      },
+      "difficulty": "intermediate",
+      "symptoms": [
+        {
+          "bn": "Software update ডাউনলোড বা install করার সময় বারবার ব্যর্থ হয়",
+          "en": "The software update repeatedly fails during download or install"
+        }
+      ],
+      "causes": [
+        {
+          "bn": "Storage-এ যথেষ্ট জায়গা নেই",
+          "en": "Not enough storage space"
+        },
+        {
+          "bn": "Wi-Fi সংযোগ অস্থির",
+          "en": "Unstable Wi-Fi connection"
+        }
+      ],
+      "diagnosticSteps": [
+        {
+          "bn": "Available storage কমপক্ষে ২ GB আছে কিনা যাচাই করুন",
+          "en": "Check for at least 2 GB of available storage"
+        }
+      ],
+      "tools": [],
+      "solutions": [
+        {
+          "bn": "Storage খালি করুন এবং স্থিতিশীল Wi-Fi-তে আবার চেষ্টা করুন",
+          "en": "Free up storage and retry on a stable Wi-Fi connection"
+        }
+      ],
+      "warnings": [],
+      "verification": [
+        {
+          "bn": "Update সফলভাবে install হলে সমাধান হয়েছে",
+          "en": "The update installing successfully confirms the fix"
+        }
+      ]
+    },
+    {
+      "id": "storage-full-warning",
+      "category": "software",
+      "title": {
+        "bn": "স্টোরেজ পূর্ণ হয়ে গেছে সতর্কতা",
+        "en": "Storage Full Warning"
+      },
+      "difficulty": "beginner",
+      "symptoms": [
+        {
+          "bn": "বারবার 'Storage Almost Full' notification আসছে",
+          "en": "Repeated 'Storage Almost Full' notifications"
+        }
+      ],
+      "causes": [
+        {
+          "bn": "অপ্রয়োজনীয় ফাইল, ক্যাশ, বা ডুপ্লিকেট মিডিয়া জমে যাওয়া",
+          "en": "Buildup of unneeded files, cache, or duplicate media"
+        }
+      ],
+      "diagnosticSteps": [
+        {
+          "bn": "Settings-এ কোন ধরনের ফাইল সবচেয়ে বেশি জায়গা নিচ্ছে দেখুন",
+          "en": "Check in Settings which file type takes up the most space"
+        }
+      ],
+      "tools": [],
+      "solutions": [
+        {
+          "bn": "বড় ফাইল/অব্যবহৃত app মুছুন, ক্লাউডে backup নিন",
+          "en": "Delete large files/unused apps, back up to cloud storage"
+        }
+      ],
+      "warnings": [],
+      "verification": [
+        {
+          "bn": "Notification আর না এলে সমাধান হয়েছে",
+          "en": "The notification no longer appearing confirms the fix"
+        }
+      ]
+    }
+  ]
+}
