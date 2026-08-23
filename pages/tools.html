@@ -1,0 +1,24 @@
+<section class="container">
+  <h1 data-i18n="common.menu_tools">Tools</h1>
+
+  <h2>Ohm's Law Calculator</h2>
+  <p class="phase-status" style="margin-top:0;">এটি একটি হিসাবভিত্তিক estimate; বাস্তব measurement নয়।</p>
+  <div class="demo-row">
+    <input type="number" id="ohmVoltage" placeholder="Voltage (V)" class="calc-input">
+    <input type="number" id="ohmCurrent" placeholder="Current (A)" class="calc-input">
+    <input type="number" id="ohmResistance" placeholder="Resistance (\u03a9)" class="calc-input">
+  </div>
+  <button class="btn btn-primary" id="ohmCalcBtn" type="button">Calculate (any 2 of 3)</button>
+  <p id="ohmResult" class="mono" style="margin-top:var(--space-3);"></p>
+
+  <h2>Battery Runtime Estimate</h2>
+  <div class="demo-row">
+    <input type="number" id="battCapacity" placeholder="Capacity (mAh)" class="calc-input">
+    <input type="number" id="battDraw" placeholder="Avg draw (mA)" class="calc-input">
+  </div>
+  <button class="btn btn-primary" id="battCalcBtn" type="button">Estimate</button>
+  <p id="battResult" class="mono" style="margin-top:var(--space-3);"></p>
+
+  <h2 data-i18n="common.menu_tools">Tool Database</h2>
+  <div id="toolList" class="card-grid"></div>
+</section>

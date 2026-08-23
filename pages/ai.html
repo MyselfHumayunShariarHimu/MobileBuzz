@@ -1,0 +1,18 @@
+<section class="container">
+  <h1 data-i18n="ai.chat_title">MobileBuzz AI</h1>
+
+  <div class="demo-row demo-row--tight" style="margin-bottom:var(--space-3);">
+    <select id="aiProviderSelect" class="calc-input" style="flex:1;"></select>
+    <select id="aiModelSelect" class="calc-input" style="flex:1;"></select>
+  </div>
+
+  <div id="aiChatLog" class="ai-chat-log"></div>
+
+  <form id="aiChatForm" class="search-box" style="margin-top:var(--space-3);">
+    <input type="text" id="aiChatInput" data-i18n-attr="placeholder:ai.input_placeholder" placeholder="আপনার মোবাইল সমস্যা লিখুন...">
+    <button class="btn btn-primary" type="submit" data-i18n="common.save">Send</button>
+  </form>
+  <div class="demo-row demo-row--tight" style="margin-top:var(--space-2);">
+    <button class="btn btn-secondary" id="aiNewChatBtn" type="button" data-i18n="ai.new_chat">New chat</button>
+  </div>
+</section>
