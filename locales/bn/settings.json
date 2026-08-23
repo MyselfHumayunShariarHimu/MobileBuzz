@@ -1,0 +1,12 @@
+{
+  "title": "সেটিংস",
+  "language": "ভাষা",
+  "theme": "থিম",
+  "theme_dark": "ডার্ক",
+  "theme_light": "লাইট",
+  "font_size": "ফন্ট সাইজ",
+  "learning_mode": "লার্নিং মোড",
+  "ai_provider_default": "ডিফল্ট AI Provider",
+  "ai_fallback_toggle": "Provider না পাওয়া গেলে অন্য provider ব্যবহার করুন",
+  "data_preferences": "ডেটা প্রেফারেন্স"
+}
