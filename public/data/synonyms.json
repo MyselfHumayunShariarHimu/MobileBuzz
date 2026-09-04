@@ -1,0 +1,16 @@
+{
+  "charging_not_working": ["চার্জ হচ্ছে না", "চার্জ হয় না", "charge hocche na", "charging hocche na", "charge hoy na", "phone not charging", "not charging", "চার্জিং সমস্যা"],
+  "slow_charging": ["স্লো চার্জ", "আস্তে চার্জ হচ্ছে", "slow charging", "charging slow", "dheere charge hocche"],
+  "phone_dead": ["ফোন অন হচ্ছে না", "phone on hocche na", "phone not turning on", "মোবাইল বন্ধ হয়ে গেছে", "phone dead", "phone off hoye gese"],
+  "battery_drain": ["ব্যাটারি দ্রুত শেষ", "battery druto sesh", "battery drain", "charge takena", "চার্জ থাকে না"],
+  "battery_swollen": ["ব্যাটারি ফুলে গেছে", "battery fule gese", "battery swollen", "battery phule geche"],
+  "no_display": ["স্ক্রিন কালো", "screen black", "display asche na", "ডিসপ্লে আসছে না", "no display", "black screen"],
+  "screen_lines": ["স্ক্রিনে দাগ", "screen e dag", "screen lines", "flicker", "ফ্লিকার"],
+  "touch_not_working": ["টাচ কাজ করছে না", "touch kaj korche na", "touch not working", "টাচ সমস্যা"],
+  "speaker_issue": ["স্পিকার কাজ করছে না", "speaker kaj korche na", "sound asche na", "শব্দ আসছে না", "speaker not working"],
+  "camera_issue": ["ক্যামেরা খুলছে না", "camera khulche na", "camera not opening", "camera crash"],
+  "no_signal": ["নেটওয়ার্ক নেই", "network nai", "no signal", "no service", "সিগন্যাল আসছে না"],
+  "wifi_issue": ["ওয়াইফাই অন হচ্ছে না", "wifi on hocche na", "wifi not working", "wifi problem"],
+  "app_crash": ["অ্যাপ ক্র্যাশ করছে", "app crash korche", "app not opening", "phone slow hoye gese", "ফোন স্লো হয়ে গেছে"],
+  "boot_loop": ["বুট লুপ", "boot loop", "logo te atke ache", "লোগোতে আটকে আছে"]
+}

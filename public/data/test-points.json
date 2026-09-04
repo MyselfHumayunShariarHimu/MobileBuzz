@@ -1,0 +1,82 @@
+{
+  "testPoints": [
+    {
+      "id": "battery-vbat",
+      "label": { "bn": "ব্যাটারি VBAT (+ টার্মিনাল)", "en": "Battery VBAT (+ terminal)" },
+      "componentId": "battery-connector",
+      "readings": {
+        "voltage": {
+          "simulatedValue": "3.85V",
+          "normalRange": { "bn": "৩.৭V–৪.২V (charge অবস্থার উপর নির্ভর করে)", "en": "3.7V–4.2V (depends on charge state)" },
+          "interpretation": {
+            "bn": "এই রেঞ্জে থাকলে ব্যাটারি সরবরাহ স্বাভাবিক। ০V দেখালে battery connector বা ব্যাটারি নিজেই সন্দেহজনক।",
+            "en": "Within this range means normal battery supply. Reading 0V would point to the battery connector or the battery itself."
+          }
+        },
+        "continuity": {
+          "simulatedValue": { "bn": "কোনো বিপ নেই (open)", "en": "No beep (open)" },
+          "normalRange": { "bn": "N/A — এটি একটি live voltage source, continuity mode-এ পরীক্ষা করা হয় না", "en": "N/A — this is a live voltage source, not tested in continuity mode" },
+          "interpretation": { "bn": "সতর্কতা: পাওয়ার-অন সোর্সে continuity mode ব্যবহার করবেন না।", "en": "Caution: never use continuity mode on a powered/live source." }
+        }
+      }
+    },
+    {
+      "id": "ground-point",
+      "label": { "bn": "গ্রাউন্ড (GND)", "en": "Ground (GND)" },
+      "componentId": null,
+      "readings": {
+        "voltage": {
+          "simulatedValue": "0V",
+          "normalRange": { "bn": "সবসময় ০V (রেফারেন্স পয়েন্ট)", "en": "Always 0V (reference point)" },
+          "interpretation": { "bn": "GND-এ কোনো voltage measure হওয়া উচিত না। কিছু measure হলে সার্কিটে সমস্যা আছে ধরে নেওয়া যায়।", "en": "GND should never measure any voltage. A nonzero reading suggests a circuit fault." }
+        },
+        "continuity": {
+          "simulatedValue": { "bn": "বিপ শোনা যায় (continuous)", "en": "Beeps (continuous)" },
+          "normalRange": { "bn": "দুটো GND পয়েন্টের মধ্যে সবসময় continuity থাকা উচিত", "en": "Continuity should always exist between two GND points" },
+          "interpretation": { "bn": "বিপ না শোনালে board-এর কোথাও ground path ভেঙে গেছে — গুরুতর সংকেত।", "en": "No beep means the ground path is broken somewhere on the board — a serious sign." }
+        }
+      }
+    },
+    {
+      "id": "charging-port-vbus",
+      "label": { "bn": "চার্জিং পোর্ট VBUS পিন", "en": "Charging Port VBUS Pin" },
+      "componentId": "charging-port",
+      "readings": {
+        "voltage": {
+          "simulatedValue": { "bn": "৫V (চার্জার সংযুক্ত থাকলে), ০V (সংযুক্ত না থাকলে)", "en": "5V (charger connected), 0V (charger not connected)" },
+          "normalRange": { "bn": "চার্জার সংযুক্ত অবস্থায় ~৫V (বা fast-charging protocol-এ বেশি)", "en": "~5V while a charger is connected (or higher under a fast-charging protocol)" },
+          "interpretation": { "bn": "চার্জার লাগানো অবস্থায় ০V দেখালে সমস্যা port, কেবল, বা adapter-এ — chain ধরে ধরে narrow down করুন।", "en": "0V while a charger is plugged in points to the port, cable, or adapter — narrow it down step by step." }
+        },
+        "continuity": {
+          "simulatedValue": { "bn": "বিপ শোনা যায় (connector পিন থেকে board পর্যন্ত)", "en": "Beeps (from connector pin through to the board)" },
+          "normalRange": { "bn": "Port pin থেকে charging IC পর্যন্ত continuity থাকা উচিত", "en": "Continuity should exist from the port pin through to the charging IC" },
+          "interpretation": { "bn": "বিপ না শোনালে port-এর soldering joint ভেঙে গেছে হতে পারে।", "en": "No beep may mean a broken solder joint at the port." }
+        }
+      }
+    },
+    {
+      "id": "pmic-logic-rail",
+      "label": { "bn": "PMIC আউটপুট (লজিক রেইল)", "en": "PMIC Output (Logic Rail)" },
+      "componentId": "pmic",
+      "readings": {
+        "voltage": {
+          "simulatedValue": "3.3V",
+          "normalRange": { "bn": "সাধারণত ~৩.৩V অনেক লজিক সার্কিটের জন্য (device-ভেদে ভিন্ন হতে পারে)", "en": "Typically ~3.3V for many logic circuits (varies by device)" },
+          "interpretation": { "bn": "০V মানে PMIC এই rail-এ output দিচ্ছে না — PMIC বা তার input-এর সমস্যা সন্দেহ করা যায়।", "en": "0V means the PMIC isn't outputting on this rail — suspect the PMIC or its input." }
+        }
+      }
+    },
+    {
+      "id": "display-connector-pin",
+      "label": { "bn": "ডিসপ্লে কানেক্টর পিন", "en": "Display Connector Pin" },
+      "componentId": "display-connector",
+      "readings": {
+        "continuity": {
+          "simulatedValue": { "bn": "বিপ শোনা যায় (connector সঠিকভাবে বসানো থাকলে)", "en": "Beeps (when the connector is properly seated)" },
+          "normalRange": { "bn": "প্রতিটা পিনে continuity থাকা উচিত connector থেকে display driver IC পর্যন্ত", "en": "Every pin should show continuity from the connector to the display driver IC" },
+          "interpretation": { "bn": "কোনো একটা পিনে বিপ না শোনালে connector ঢিলা বা ক্ষতিগ্রস্ত — এটাই no-display সমস্যার সবচেয়ে সাধারণ কারণ।", "en": "No beep on any single pin suggests a loose or damaged connector — the most common cause of a no-display issue." }
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,850 @@
+{
+  "lessons": [
+    {
+      "id": "mobile-anatomy-101",
+      "level": "beginner",
+      "title": {
+        "bn": "মোবাইলের ভেতরে কী কী থাকে",
+        "en": "What's Inside a Mobile Phone"
+      },
+      "objective": {
+        "bn": "একটি স্মার্টফোনের মূল অংশগুলো চিনতে ও তাদের কাজ বুঝতে পারা।",
+        "en": "Recognize a smartphone's main parts and understand what each does."
+      },
+      "theory": {
+        "bn": "একটি স্মার্টফোনে প্রধানত থাকে: motherboard (মূল সার্কিট বোর্ড), ব্যাটারি, ডিসপ্লে ও টাচ প্যানেল, ক্যামেরা মডিউল, স্পিকার/মাইক্রোফোন, চার্জিং পোর্ট, এবং বিভিন্ন antenna। motherboard-এ থাকে processor, RAM, storage, ও PMIC-এর মতো ছোট ছোট IC।",
+        "en": "A smartphone mainly contains: the motherboard (main circuit board), battery, display and touch panel, camera modules, speaker/microphone, charging port, and various antennas. The motherboard hosts the processor, RAM, storage, and small ICs like the PMIC."
+      },
+      "tools": [],
+      "steps": [
+        {
+          "bn": "একটি teardown ছবি বা ভিডিও দেখে প্রতিটি অংশ চিহ্নিত করার চেষ্টা করুন",
+          "en": "Try identifying each part while looking at a teardown photo or video"
+        },
+        {
+          "bn": "motherboard-এর বড় IC (processor) ও ছোট IC-গুলোর মধ্যে পার্থক্য লক্ষ্য করুন",
+          "en": "Notice the difference between the large IC (processor) and the smaller ICs"
+        }
+      ],
+      "example": {
+        "bn": "যখন ফোন চার্জ হয় না, প্রথমে বোঝা দরকার সমস্যা কোন অংশে — চার্জিং পোর্ট, ব্যাটারি, নাকি motherboard-এর চার্জিং IC।",
+        "en": "When a phone won't charge, you first need to figure out which part is involved — the charging port, the battery, or the motherboard's charging IC."
+      },
+      "commonMistakes": [
+        {
+          "bn": "সব সমস্যাকে 'ব্যাটারি খারাপ' বলে ধরে নেওয়া, root cause খতিয়ে না দেখে",
+          "en": "Assuming every problem is 'a bad battery' without investigating the root cause"
+        }
+      ],
+      "safety": {
+        "bn": "শেখার এই ধাপে ফোন খোলার দরকার নেই — শুধু চেনা ও বোঝাই যথেষ্ট।",
+        "en": "You don't need to open a phone for this lesson — recognition and understanding are enough."
+      },
+      "quiz": [
+        {
+          "question": {
+            "bn": "কোন অংশটি ফোনের ভোল্টেজ নিয়ন্ত্রণ করে?",
+            "en": "Which part regulates the phone's voltage?"
+          },
+          "options": [
+            {
+              "bn": "PMIC",
+              "en": "PMIC"
+            },
+            {
+              "bn": "স্পিকার",
+              "en": "Speaker"
+            },
+            {
+              "bn": "ক্যামেরা মডিউল",
+              "en": "Camera module"
+            }
+          ],
+          "answerIndex": 0
+        }
+      ],
+      "relatedLessons": [
+        "basic-electronics-101"
+      ],
+      "aiHelpPromptSeed": "মোবাইলের motherboard-এর মূল অংশগুলো সহজ ভাষায় ব্যাখ্যা করো।"
+    },
+    {
+      "id": "basic-electronics-101",
+      "level": "beginner",
+      "title": {
+        "bn": "বেসিক ইলেকট্রনিক্স: ভোল্টেজ, কারেন্ট, রেজিস্ট্যান্স",
+        "en": "Basic Electronics: Voltage, Current, Resistance"
+      },
+      "objective": {
+        "bn": "Voltage, current, ও resistance-এর মধ্যে সম্পর্ক (Ohm's Law) বুঝতে পারা।",
+        "en": "Understand the relationship between voltage, current, and resistance (Ohm's Law)."
+      },
+      "theory": {
+        "bn": "Ohm's Law অনুযায়ী V = I × R, অর্থাৎ Voltage (ভোল্ট) = Current (অ্যাম্পিয়ার) × Resistance (ওহম)। এই তিনটি রাশির মধ্যে যেকোনো দুটি জানা থাকলে তৃতীয়টি বের করা যায়।",
+        "en": "Ohm's Law states V = I × R — Voltage (volts) equals Current (amps) times Resistance (ohms). Knowing any two of these lets you calculate the third."
+      },
+      "tools": [
+        "multimeter"
+      ],
+      "steps": [
+        {
+          "bn": "একটি সাধারণ ব্যাটারির voltage rating (যেমন লিথিয়াম ব্যাটারি ~৩.৭V) মনে রাখুন",
+          "en": "Remember a typical battery's voltage rating (e.g. lithium ~3.7V)"
+        },
+        {
+          "bn": "Tools পেজের Ohm's Law calculator দিয়ে নিজে হিসাব করে দেখুন",
+          "en": "Try the Ohm's Law calculator on the Tools page yourself"
+        }
+      ],
+      "example": {
+        "bn": "যদি resistance ১০ ওহম হয় এবং voltage ৫V হয়, তাহলে current = 5/10 = 0.5A।",
+        "en": "If resistance is 10 ohms and voltage is 5V, current = 5/10 = 0.5A."
+      },
+      "commonMistakes": [
+        {
+          "bn": "Voltage ও current-কে গুলিয়ে ফেলা",
+          "en": "Confusing voltage with current"
+        }
+      ],
+      "safety": {
+        "bn": "এটি একটি হিসাবভিত্তিক ধারণা — বাস্তব measurement নয়।",
+        "en": "This is a calculation-based concept, not a real-world measurement."
+      },
+      "quiz": [
+        {
+          "question": {
+            "bn": "Ohm's Law-এর সূত্র কোনটি?",
+            "en": "What is Ohm's Law?"
+          },
+          "options": [
+            {
+              "bn": "V = I × R",
+              "en": "V = I × R"
+            },
+            {
+              "bn": "V = I + R",
+              "en": "V = I + R"
+            },
+            {
+              "bn": "V = R / I",
+              "en": "V = R / I"
+            }
+          ],
+          "answerIndex": 0
+        }
+      ],
+      "relatedLessons": [
+        "mobile-anatomy-101",
+        "multimeter-basics"
+      ],
+      "aiHelpPromptSeed": "Ohm's Law সহজ উদাহরণ দিয়ে ব্যাখ্যা করো।"
+    },
+    {
+      "id": "multimeter-basics",
+      "level": "intermediate",
+      "title": {
+        "bn": "মাল্টিমিটার ব্যবহারের বেসিক",
+        "en": "Multimeter Basics"
+      },
+      "objective": {
+        "bn": "মাল্টিমিটারের voltage, resistance, ও continuity mode নিরাপদে ব্যবহার করতে শেখা।",
+        "en": "Learn to safely use a multimeter's voltage, resistance, and continuity modes."
+      },
+      "theory": {
+        "bn": "Voltage mode পাওয়ার-অন সার্কিটে ব্যবহার হয়। Continuity/resistance mode সবসময় পাওয়ার-অফ অবস্থায় ব্যবহার করতে হয়, নাহলে ভুল reading বা ক্ষতি হতে পারে।",
+        "en": "Voltage mode is used on powered circuits. Continuity/resistance mode must always be used with power off, or you risk wrong readings or damage."
+      },
+      "tools": [
+        "multimeter"
+      ],
+      "steps": [
+        {
+          "bn": "মাল্টিমিটার Voltage (DC) mode-এ সেট করুন",
+          "en": "Set the multimeter to DC Voltage mode"
+        },
+        {
+          "bn": "Red probe (+) ও black probe (-) সঠিক terminal-এ ধরুন",
+          "en": "Hold the red (+) and black (-) probes on the correct terminals"
+        },
+        {
+          "bn": "Reading স্থির হওয়া পর্যন্ত অপেক্ষা করুন",
+          "en": "Wait for the reading to stabilize"
+        }
+      ],
+      "example": {
+        "bn": "একটি সুস্থ লিথিয়াম ব্যাটারিতে সাধারণত ৩.৭V–৪.২V-এর কাছাকাছি reading দেখা উচিত (charge অবস্থা অনুযায়ী)।",
+        "en": "A healthy lithium battery typically reads roughly 3.7V–4.2V depending on charge state."
+      },
+      "commonMistakes": [
+        {
+          "bn": "পাওয়ার-অন বোর্ডে continuity mode ব্যবহার করা",
+          "en": "Using continuity mode on a powered-on board"
+        },
+        {
+          "bn": "ভুল range/mode নির্বাচন করে পরিমাপ করা",
+          "en": "Measuring with the wrong range/mode selected"
+        }
+      ],
+      "safety": {
+        "bn": "সবসময় সঠিক mode যাচাই করে নিন এবং ESD-safe workspace ব্যবহার করুন।",
+        "en": "Always double-check the correct mode and use an ESD-safe workspace."
+      },
+      "quiz": [
+        {
+          "question": {
+            "bn": "Continuity mode কখন ব্যবহার করা উচিত?",
+            "en": "When should continuity mode be used?"
+          },
+          "options": [
+            {
+              "bn": "বোর্ড পাওয়ার-অফ অবস্থায়",
+              "en": "When the board is powered off"
+            },
+            {
+              "bn": "বোর্ড পাওয়ার-অন অবস্থায়",
+              "en": "When the board is powered on"
+            },
+            {
+              "bn": "চার্জ দেওয়ার সময়",
+              "en": "While charging"
+            }
+          ],
+          "answerIndex": 0
+        }
+      ],
+      "relatedLessons": [
+        "basic-electronics-101",
+        "board-level-diagnosis-intro"
+      ],
+      "aiHelpPromptSeed": "মাল্টিমিটার দিয়ে ফোনের ব্যাটারি ভোল্টেজ কীভাবে নিরাপদে মাপা যায় ব্যাখ্যা করো।"
+    },
+    {
+      "id": "board-level-diagnosis-intro",
+      "level": "advanced",
+      "title": {
+        "bn": "বোর্ড-লেভেল ডায়াগনোসিসের ভূমিকা",
+        "en": "Introduction to Board-Level Diagnosis"
+      },
+      "objective": {
+        "bn": "Power rail, ground, ও common IC-গুলোর concept বুঝে একটি systematic diagnosis approach শেখা।",
+        "en": "Understand power rails, ground, and common ICs to build a systematic diagnosis approach."
+      },
+      "theory": {
+        "bn": "একটি motherboard-এ ব্যাটারি থেকে VBAT rail আসে, যা PMIC-এর মাধ্যমে VCC/অন্যান্য rail-এ ভাগ হয়। Short-circuit থাকলে current-draw অস্বাভাবিক বেড়ে যায়, যা DC power supply-তে observe করা যায় (শিক্ষামূলক concept)।",
+        "en": "On a motherboard, VBAT comes from the battery and is distributed by the PMIC into VCC and other rails. A short-circuit causes abnormal current draw, observable on a DC power supply (educational concept)."
+      },
+      "tools": [
+        "dc-power-supply",
+        "multimeter"
+      ],
+      "steps": [
+        {
+          "bn": "Generic block diagram-এ power path অনুসরণ করুন: ব্যাটারি → PMIC → বিভিন্ন rail",
+          "en": "Follow the power path in a generic block diagram: battery → PMIC → various rails"
+        },
+        {
+          "bn": "Interactive SVG diagram থেকে charging path ট্যাপ করে component-ভিত্তিক তথ্য দেখুন",
+          "en": "Tap through the interactive SVG diagram's charging path to see component-level info"
+        }
+      ],
+      "example": {
+        "bn": "একটি ফোন dead থাকলে ও current-draw শূন্য দেখালে, সমস্যা সাধারণত power rail-এর শুরুর দিকে (যেমন battery connector বা PMIC input)।",
+        "en": "If a phone is dead and current draw reads zero, the fault is usually early in the power rail (like the battery connector or PMIC input)."
+      },
+      "commonMistakes": [
+        {
+          "bn": "Generic block diagram-কে exact model-specific schematic মনে করা",
+          "en": "Mistaking a generic block diagram for an exact model-specific schematic"
+        }
+      ],
+      "safety": {
+        "bn": "উচ্চ-কারেন্ট পরীক্ষা এড়িয়ে চলুন; এই lesson শুধুমাত্র concept শেখানোর জন্য, বাস্তব board rework-এর প্রতিস্থাপন নয়।",
+        "en": "Avoid high-current tests; this lesson teaches concepts only and is not a substitute for real hands-on board rework training."
+      },
+      "quiz": [
+        {
+          "question": {
+            "bn": "ব্যাটারি থেকে আসা মূল rail-কে কী বলা হয়?",
+            "en": "What is the main rail coming from the battery called?"
+          },
+          "options": [
+            {
+              "bn": "VBAT",
+              "en": "VBAT"
+            },
+            {
+              "bn": "VGA",
+              "en": "VGA"
+            },
+            {
+              "bn": "USB",
+              "en": "USB"
+            }
+          ],
+          "answerIndex": 0
+        }
+      ],
+      "relatedLessons": [
+        "multimeter-basics"
+      ],
+      "aiHelpPromptSeed": "একটি ফোন মাদারবোর্ডে পাওয়ার রেইল কীভাবে কাজ করে সহজ ভাষায় বুঝিয়ে বলো।"
+    },
+    {
+      "id": "battery-safety-101",
+      "level": "beginner",
+      "title": {
+        "bn": "লিথিয়াম ব্যাটারি নিরাপত্তা",
+        "en": "Lithium Battery Safety"
+      },
+      "objective": {
+        "bn": "লিথিয়াম ব্যাটারি নিয়ে কাজ করার সময় ঝুঁকি ও নিরাপদ পদ্ধতি চেনা।",
+        "en": "Recognize the risks and safe practices when working with lithium batteries."
+      },
+      "theory": {
+        "bn": "লিথিয়াম-আয়ন ব্যাটারি punctured, overcharged, বা অতিরিক্ত গরম হলে আগুন ধরতে পারে। ফোলা (swollen) ব্যাটারি সবচেয়ে বড় সতর্কতা সংকেত।",
+        "en": "Lithium-ion batteries can catch fire if punctured, overcharged, or overheated. A swollen battery is the biggest warning sign."
+      },
+      "tools": [],
+      "steps": [
+        {
+          "bn": "ব্যাটারি খোলার আগে সবসময় ফোলা আছে কিনা পরীক্ষা করুন",
+          "en": "Always check for swelling before opening a battery compartment"
+        },
+        {
+          "bn": "ছিদ্র বা কাটা এড়াতে plastic tool ব্যবহার করুন",
+          "en": "Use plastic tools to avoid punctures or cuts"
+        }
+      ],
+      "example": {
+        "bn": "একটি ফোলা ব্যাটারি pry করার সময় ভুলভাবে চাপ দিলে তা প্রজ্বলিত হতে পারে — তাই ফোলা ব্যাটারি দেখলে সঙ্গে সঙ্গে কাজ বন্ধ করে technician-এর কাছে পাঠানো উচিত।",
+        "en": "Applying incorrect pressure while prying a swollen battery can ignite it — so work should stop immediately and the device sent to a technician."
+      },
+      "commonMistakes": [
+        {
+          "bn": "ধাতব টুল দিয়ে ব্যাটারি area-তে কাজ করা",
+          "en": "Working around the battery area with metal tools"
+        }
+      ],
+      "safety": {
+        "bn": "ফোলা ব্যাটারি দেখলে কখনো চাপ দেবেন না বা ছিদ্র করবেন না।",
+        "en": "Never press on or puncture a swollen battery."
+      },
+      "quiz": [
+        {
+          "question": {
+            "bn": "ব্যাটারি ফোলা থাকলে প্রথম কাজ কী হওয়া উচিত?",
+            "en": "What should be the first action if a battery is swollen?"
+          },
+          "options": [
+            {
+              "bn": "ব্যবহার/চার্জ বন্ধ করে technician-এর কাছে নেওয়া",
+              "en": "Stop use/charging and take it to a technician"
+            },
+            {
+              "bn": "চাপ দিয়ে গ্যাস বের করে দেওয়া",
+              "en": "Press it to release the gas"
+            },
+            {
+              "bn": "আরও জোরে চার্জ দেওয়া",
+              "en": "Charge it more aggressively"
+            }
+          ],
+          "answerIndex": 0
+        }
+      ],
+      "relatedLessons": [
+        "mobile-anatomy-101"
+      ],
+      "aiHelpPromptSeed": "লিথিয়াম ব্যাটারি ফোলা থাকলে কী করা উচিত এবং কী করা উচিত নয় ব্যাখ্যা করো।"
+    },
+    {
+      "id": "charging-basics-101",
+      "level": "beginner",
+      "title": {
+        "bn": "চার্জিং সিস্টেম বেসিক",
+        "en": "Charging System Basics"
+      },
+      "objective": {
+        "bn": "চার্জিং পোর্ট, কেবল, adapter, ও চার্জিং IC কীভাবে একসাথে কাজ করে তা বোঝা।",
+        "en": "Understand how the charging port, cable, adapter, and charging IC work together."
+      },
+      "theory": {
+        "bn": "চার্জার থেকে power প্রথমে port দিয়ে ঢোকে, তারপর charging IC voltage/current নিয়ন্ত্রণ করে ব্যাটারিতে নিরাপদভাবে পাঠায়। যেকোনো একটি অংশ ব্যর্থ হলে পুরো চেইন ব্যর্থ হতে পারে।",
+        "en": "Power from the charger enters through the port first, then the charging IC regulates voltage/current to safely deliver it to the battery. If any one part fails, the whole chain can fail."
+      },
+      "tools": [
+        "usb-power-meter"
+      ],
+      "steps": [
+        {
+          "bn": "USB power meter দিয়ে port-এ voltage/current দেখুন",
+          "en": "Check voltage/current at the port with a USB power meter"
+        },
+        {
+          "bn": "Cable বদলে ফলাফল তুলনা করুন",
+          "en": "Swap the cable and compare results"
+        }
+      ],
+      "example": {
+        "bn": "চার্জিং icon আসা মানেই charging IC কাজ করছে — কিন্তু percentage না বাড়া মানে সমস্যা আরও গভীরে হতে পারে।",
+        "en": "A charging icon appearing means the charging IC is working — but the percentage not rising means the issue may run deeper."
+      },
+      "commonMistakes": [
+        {
+          "bn": "শুধু কেবল বদলে দেখা, adapter আলাদা করে test না করা",
+          "en": "Only swapping the cable without separately testing the adapter"
+        }
+      ],
+      "safety": {
+        "bn": "চার্জিং টেস্ট করার সময় adapter অতিরিক্ত গরম হলে সঙ্গে সঙ্গে সরিয়ে ফেলুন।",
+        "en": "Remove the adapter immediately if it gets excessively hot during testing."
+      },
+      "quiz": [
+        {
+          "question": {
+            "bn": "চার্জিং চেইনে power কোন ক্রমে যায়?",
+            "en": "In what order does power flow through the charging chain?"
+          },
+          "options": [
+            {
+              "bn": "Adapter → Cable → Port → Charging IC → Battery",
+              "en": "Adapter → Cable → Port → Charging IC → Battery"
+            },
+            {
+              "bn": "Battery → Charging IC → Port",
+              "en": "Battery → Charging IC → Port"
+            },
+            {
+              "bn": "Port → Adapter → Battery",
+              "en": "Port → Adapter → Battery"
+            }
+          ],
+          "answerIndex": 0
+        }
+      ],
+      "relatedLessons": [
+        "multimeter-basics"
+      ],
+      "aiHelpPromptSeed": "চার্জিং সিস্টেমের প্রতিটি অংশ কীভাবে একসাথে কাজ করে তা ধাপে ধাপে ব্যাখ্যা করো।"
+    },
+    {
+      "id": "tools-overview-101",
+      "level": "beginner",
+      "title": {
+        "bn": "টুলবক্স পরিচিতি",
+        "en": "Toolbox Overview"
+      },
+      "objective": {
+        "bn": "একটি বেসিক মোবাইল রিপেয়ার টুলকিটে কী কী থাকে তা চেনা।",
+        "en": "Recognize what belongs in a basic mobile repair toolkit."
+      },
+      "theory": {
+        "bn": "একজন beginner-এর শুরুতে দরকার: precision screwdriver set, plastic spudger, ESD wrist strap, ও একটি multimeter। Advanced কাজের জন্য soldering iron ও hot air station পরে যোগ হয়।",
+        "en": "A beginner needs, to start: a precision screwdriver set, plastic spudger, ESD wrist strap, and a multimeter. A soldering iron and hot air station come later for advanced work."
+      },
+      "tools": [
+        "precision-screwdriver-set",
+        "plastic-spudger",
+        "esd-wrist-strap",
+        "multimeter"
+      ],
+      "steps": [
+        {
+          "bn": "Tools পেজে গিয়ে প্রতিটি টুলের 'কেন ব্যবহার হয়' অংশ পড়ুন",
+          "en": "Go to the Tools page and read the 'why' section for each tool"
+        }
+      ],
+      "example": {
+        "bn": "একজন নতুন টেকনিশিয়ান প্রায়ই ধাতব টুল দিয়ে ফোন খুলতে গিয়ে শর্ট-সার্কিট করে ফেলেন — তাই plastic spudger দিয়ে শুরু করা উচিত।",
+        "en": "A new technician often causes a short-circuit by opening a phone with a metal tool — starting with a plastic spudger avoids this."
+      },
+      "commonMistakes": [
+        {
+          "bn": "ESD wrist strap ছাড়াই sensitive IC স্পর্শ করা",
+          "en": "Touching sensitive ICs without an ESD wrist strap"
+        }
+      ],
+      "safety": {
+        "bn": "সঠিক bit না মেলালে screw-head স্ট্রিপ হয়ে যেতে পারে।",
+        "en": "Using the wrong bit size can strip the screw head."
+      },
+      "quiz": [
+        {
+          "question": {
+            "bn": "কোন টুল দিয়ে ফোন খোলা সবচেয়ে নিরাপদ?",
+            "en": "Which tool is safest for opening a phone?"
+          },
+          "options": [
+            {
+              "bn": "Plastic spudger",
+              "en": "Plastic spudger"
+            },
+            {
+              "bn": "ধাতব ছুরি",
+              "en": "A metal knife"
+            },
+            {
+              "bn": "হাতুড়ি",
+              "en": "A hammer"
+            }
+          ],
+          "answerIndex": 0
+        }
+      ],
+      "relatedLessons": [
+        "multimeter-basics"
+      ],
+      "aiHelpPromptSeed": "একজন beginner-এর প্রথম টুলকিটে কী কী থাকা উচিত পরামর্শ দাও।"
+    },
+    {
+      "id": "dc-power-supply-basics",
+      "level": "intermediate",
+      "title": {
+        "bn": "ডিসি পাওয়ার সাপ্লাই বেসিক",
+        "en": "DC Power Supply Basics"
+      },
+      "objective": {
+        "bn": "Current-limit সহ নিরাপদভাবে DC power supply ব্যবহার করতে শেখা।",
+        "en": "Learn to safely use a DC power supply with a current limit set."
+      },
+      "theory": {
+        "bn": "Current-limit ফিচার একটি সুরক্ষা ব্যবস্থা: short-circuit থাকলে current একটি নির্দিষ্ট সীমার বেশি উঠবে না, ফলে component পুড়ে যাওয়া থেকে রক্ষা পায়।",
+        "en": "The current-limit feature is a safety mechanism: if there's a short-circuit, current won't rise above a set threshold, protecting components from burning out."
+      },
+      "tools": [
+        "dc-power-supply",
+        "multimeter"
+      ],
+      "steps": [
+        {
+          "bn": "Current-limit কম (যেমন ০.৫A) সেট করুন",
+          "en": "Set a low current limit (e.g. 0.5A)"
+        },
+        {
+          "bn": "Voltage আস্তে আস্তে বাড়িয়ে board-এর normal current-draw লক্ষ্য করুন",
+          "en": "Slowly raise voltage and observe the board's normal current draw"
+        }
+      ],
+      "example": {
+        "bn": "যদি current তৎক্ষণাৎ limit-এ পৌঁছে যায় এবং voltage না বাড়ে, এটি একটি short-circuit-এর সংকেত।",
+        "en": "If current immediately hits the limit and voltage won't rise, that's a sign of a short-circuit."
+      },
+      "commonMistakes": [
+        {
+          "bn": "Current-limit বেশি রেখে board-এ power দেওয়া",
+          "en": "Powering a board with the current limit set too high"
+        }
+      ],
+      "safety": {
+        "bn": "Short-circuit সন্দেহ হলে current-limit সবসময় কম রাখুন।",
+        "en": "Always keep the current limit low if a short-circuit is suspected."
+      },
+      "quiz": [
+        {
+          "question": {
+            "bn": "Current-limit ফিচারের কাজ কী?",
+            "en": "What does the current-limit feature do?"
+          },
+          "options": [
+            {
+              "bn": "Current একটি নির্দিষ্ট সীমার বেশি উঠতে বাধা দেয়",
+              "en": "Prevents current from rising above a set threshold"
+            },
+            {
+              "bn": "Voltage বাড়িয়ে দেয়",
+              "en": "Increases voltage"
+            },
+            {
+              "bn": "ব্যাটারি চার্জ করে",
+              "en": "Charges the battery"
+            }
+          ],
+          "answerIndex": 0
+        }
+      ],
+      "relatedLessons": [
+        "multimeter-basics",
+        "board-level-diagnosis-intro"
+      ],
+      "aiHelpPromptSeed": "DC power supply-তে current-limit কীভাবে short-circuit ডায়াগনোসিসে সাহায্য করে ব্যাখ্যা করো।"
+    },
+    {
+      "id": "connector-troubleshooting",
+      "level": "intermediate",
+      "title": {
+        "bn": "কানেক্টর ট্রাবলশুটিং",
+        "en": "Connector Troubleshooting"
+      },
+      "objective": {
+        "bn": "Display, battery, ও touch connector-এর সাধারণ সমস্যা চিহ্নিত ও সমাধান করতে শেখা।",
+        "en": "Learn to identify and fix common issues with display, battery, and touch connectors."
+      },
+      "theory": {
+        "bn": "FPC (Flexible Printed Circuit) connector-গুলো ভঙ্গুর এবং screen replacement বা drop-এর পর ঢিলা হয়ে যাওয়া সবচেয়ে সাধারণ কারণ।",
+        "en": "FPC (Flexible Printed Circuit) connectors are fragile, and becoming loose after a screen replacement or drop is the most common cause of issues."
+      },
+      "tools": [
+        "plastic-spudger"
+      ],
+      "steps": [
+        {
+          "bn": "Connector-এর চারপাশে ধুলো/corrosion আছে কিনা দেখুন",
+          "en": "Check for dust/corrosion around the connector"
+        },
+        {
+          "bn": "সাবধানে connector খুলে আবার শক্তভাবে বসান",
+          "en": "Carefully disconnect and firmly reseat the connector"
+        }
+      ],
+      "example": {
+        "bn": "Screen replacement-এর পর touch/display সমস্যা হলে প্রথমেই connector reseat করে দেখা উচিত, নতুন panel অর্ডার করার আগে।",
+        "en": "After a screen replacement, if touch/display issues appear, reseat the connector first before ordering a new panel."
+      },
+      "commonMistakes": [
+        {
+          "bn": "খুব জোরে connector টানা, যা pin বাঁকিয়ে দিতে পারে",
+          "en": "Pulling a connector too hard, which can bend the pins"
+        }
+      ],
+      "safety": {
+        "bn": "FPC connector-এ অতিরিক্ত বাঁকানো এড়িয়ে চলুন।",
+        "en": "Avoid over-flexing FPC connectors."
+      },
+      "quiz": [
+        {
+          "question": {
+            "bn": "Screen replacement-এর পর সবচেয়ে সাধারণ সমস্যা কী?",
+            "en": "What's the most common issue after a screen replacement?"
+          },
+          "options": [
+            {
+              "bn": "Connector ঢিলা হয়ে যাওয়া",
+              "en": "A loosened connector"
+            },
+            {
+              "bn": "Battery ফুলে যাওয়া",
+              "en": "Battery swelling"
+            },
+            {
+              "bn": "SIM card সমস্যা",
+              "en": "SIM card issue"
+            }
+          ],
+          "answerIndex": 0
+        }
+      ],
+      "relatedLessons": [
+        "board-level-diagnosis-intro"
+      ],
+      "aiHelpPromptSeed": "Screen replacement-এর পর display/touch connector কীভাবে পরীক্ষা করতে হয় ধাপে ধাপে বলো।"
+    },
+    {
+      "id": "firmware-concepts-101",
+      "level": "intermediate",
+      "title": {
+        "bn": "ফার্মওয়্যার ও বুটলোডার ধারণা",
+        "en": "Firmware & Bootloader Concepts"
+      },
+      "objective": {
+        "bn": "Firmware, bootloader, ও recovery mode-এর ভূমিকা বোঝা।",
+        "en": "Understand the role of firmware, the bootloader, and recovery mode."
+      },
+      "theory": {
+        "bn": "Bootloader হলো প্রথম কোড যা ফোন চালু হওয়ার সময় চলে, এটি operating system load করে। Firmware update ব্যর্থ হলে bootloader প্রায়ই recovery mode-এ নিয়ে যায়।",
+        "en": "The bootloader is the first code that runs when a phone powers on, and it loads the operating system. When a firmware update fails, the bootloader often drops into recovery mode."
+      },
+      "tools": [],
+      "steps": [
+        {
+          "bn": "Device-নির্দিষ্ট recovery mode key-combination খুঁজে বের করুন",
+          "en": "Look up the device-specific recovery mode key combination"
+        },
+        {
+          "bn": "Recovery mode-এর মেনু অপশনগুলো (wipe cache, factory reset) পড়ুন",
+          "en": "Read through the recovery mode menu options (wipe cache, factory reset)"
+        }
+      ],
+      "example": {
+        "bn": "একটি ফোন boot loop-এ থাকলে, recovery mode থেকে 'wipe cache' করাটাই প্রথম নিরাপদ পদক্ষেপ — এতে ব্যক্তিগত ডেটা মুছে যায় না।",
+        "en": "If a phone is in a boot loop, 'wipe cache' from recovery mode is the first safe step — it doesn't erase personal data."
+      },
+      "commonMistakes": [
+        {
+          "bn": "বোঝা ছাড়াই সরাসরি factory reset করা",
+          "en": "Going straight to a factory reset without understanding what it does"
+        }
+      ],
+      "safety": {
+        "bn": "Factory reset করার আগে সবসময় ডেটা backup নেওয়ার চেষ্টা করুন যদি সম্ভব হয়।",
+        "en": "Always try to back up data before a factory reset if at all possible."
+      },
+      "quiz": [
+        {
+          "question": {
+            "bn": "Recovery mode-এ 'wipe cache' করলে কী হয় না?",
+            "en": "What does NOT happen when you 'wipe cache' in recovery mode?"
+          },
+          "options": [
+            {
+              "bn": "ব্যক্তিগত ডেটা মুছে যায় না",
+              "en": "Personal data is not erased"
+            },
+            {
+              "bn": "ফোন রিস্টার্ট হয়",
+              "en": "The phone restarts"
+            },
+            {
+              "bn": "Cache clear হয়",
+              "en": "Cache is cleared"
+            }
+          ],
+          "answerIndex": 0
+        }
+      ],
+      "relatedLessons": [
+        "board-level-diagnosis-intro"
+      ],
+      "aiHelpPromptSeed": "Boot loop সমস্যায় recovery mode-এর কোন অপশনগুলো নিরাপদ এবং কোনগুলো ঝুঁকিপূর্ণ ব্যাখ্যা করো।"
+    },
+    {
+      "id": "pmic-diagnosis",
+      "level": "advanced",
+      "title": {
+        "bn": "PMIC ডায়াগনোসিস ধারণা",
+        "en": "PMIC Diagnosis Concepts"
+      },
+      "objective": {
+        "bn": "PMIC ব্যর্থতার লক্ষণ চেনা ও একটি systematic testing approach শেখা।",
+        "en": "Recognize the signs of PMIC failure and learn a systematic testing approach."
+      },
+      "theory": {
+        "bn": "PMIC ব্যর্থ হলে সাধারণত ফোন সম্পূর্ণ dead দেখায় এবং current-draw প্রায় শূন্য থাকে (যেহেতু কোনো rail-ই power পায় না)। এটি short-circuit থেকে ভিন্ন, যেখানে current অস্বাভাবিক বেশি হয়।",
+        "en": "A failed PMIC typically shows a fully dead phone with near-zero current draw (since no rail gets power at all). This differs from a short-circuit, where current is abnormally high."
+      },
+      "tools": [
+        "dc-power-supply",
+        "multimeter"
+      ],
+      "steps": [
+        {
+          "bn": "DC power supply দিয়ে battery-connector-এ power দিন, current-draw লক্ষ্য করুন",
+          "en": "Power the battery connector via a DC power supply and observe current draw"
+        },
+        {
+          "bn": "Zero draw vs high draw দিয়ে PMIC failure vs short-circuit আলাদা করুন",
+          "en": "Distinguish PMIC failure from a short-circuit using zero draw vs. high draw"
+        }
+      ],
+      "example": {
+        "bn": "একটি ফোনে zero current-draw মানে board কোনো power-ই টানছে না — এটি প্রায়ই PMIC বা তার input path-এর সমস্যা নির্দেশ করে।",
+        "en": "Zero current draw on a board means it's pulling no power at all — this often points to the PMIC or its input path."
+      },
+      "commonMistakes": [
+        {
+          "bn": "Zero-draw ও high-draw উভয় অবস্থাকে একই কারণ ধরে নেওয়া",
+          "en": "Assuming zero-draw and high-draw situations have the same cause"
+        }
+      ],
+      "safety": {
+        "bn": "এই ধারণাগুলো শুধু শেখার জন্য — প্রকৃত board rework পেশাদার প্রশিক্ষণের বিকল্প নয়।",
+        "en": "These concepts are for learning only — not a substitute for real professional board-rework training."
+      },
+      "quiz": [
+        {
+          "question": {
+            "bn": "Zero current-draw সাধারণত কী নির্দেশ করে?",
+            "en": "What does zero current draw typically indicate?"
+          },
+          "options": [
+            {
+              "bn": "Board কোনো power-ই টানছে না (PMIC/input path সমস্যা)",
+              "en": "The board is drawing no power at all (PMIC/input path issue)"
+            },
+            {
+              "bn": "Short-circuit",
+              "en": "A short-circuit"
+            },
+            {
+              "bn": "Battery পূর্ণ চার্জ",
+              "en": "A fully charged battery"
+            }
+          ],
+          "answerIndex": 0
+        }
+      ],
+      "relatedLessons": [
+        "board-level-diagnosis-intro",
+        "dc-power-supply-basics"
+      ],
+      "aiHelpPromptSeed": "PMIC failure আর short-circuit-এর current-draw pattern কীভাবে আলাদা তা ব্যাখ্যা করো।"
+    },
+    {
+      "id": "schematic-reading-intro",
+      "level": "advanced",
+      "title": {
+        "bn": "স্কিম্যাটিক পড়ার ভূমিকা",
+        "en": "Introduction to Reading Schematics"
+      },
+      "objective": {
+        "bn": "একটি schematic-এ common symbol ও power-flow কীভাবে পড়তে হয় তার বেসিক ধারণা।",
+        "en": "Get a basic sense of how to read common symbols and power flow in a schematic."
+      },
+      "theory": {
+        "bn": "Schematic-এ প্রতিটি component-এর একটি প্রতীক (যেমন resistor একটি জিগজ্যাগ লাইন, capacitor দুটো সমান্তরাল লাইন) থাকে, এবং লাইনগুলো তাদের মধ্যে electrical connection দেখায়।",
+        "en": "Every component in a schematic has a symbol (e.g. a resistor is a zigzag line, a capacitor is two parallel lines), and the lines between them show electrical connections."
+      },
+      "tools": [],
+      "steps": [
+        {
+          "bn": "একটি generic block diagram-এ VBAT থেকে PMIC পর্যন্ত লাইন অনুসরণ করুন",
+          "en": "Follow the line from VBAT to the PMIC in a generic block diagram"
+        },
+        {
+          "bn": "Ground (GND) সিম্বল চিনতে শিখুন",
+          "en": "Learn to recognize the ground (GND) symbol"
+        }
+      ],
+      "example": {
+        "bn": "যদি একটি component-এর একটি পিন সরাসরি GND-এর সাথে যুক্ত দেখা যায়, সেটি measure করার সময় সবসময় শূন্যের কাছাকাছি resistance দেখানো উচিত।",
+        "en": "If a component's pin connects directly to GND, measuring it should always show resistance close to zero."
+      },
+      "commonMistakes": [
+        {
+          "bn": "Generic diagram-কে exact model-specific schematic মনে করা",
+          "en": "Mistaking a generic diagram for an exact model-specific schematic"
+        }
+      ],
+      "safety": {
+        "bn": "প্রকৃত board-এ কাজ করার আগে সবসময় ওই exact model-এর official schematic/boardview যাচাই করুন।",
+        "en": "Always verify the exact model's official schematic/boardview before working on a real board."
+      },
+      "quiz": [
+        {
+          "question": {
+            "bn": "Schematic-এ ground pin measure করলে সাধারণত resistance কেমন হওয়া উচিত?",
+            "en": "What should resistance typically read when measuring a ground pin?"
+          },
+          "options": [
+            {
+              "bn": "শূন্যের কাছাকাছি",
+              "en": "Close to zero"
+            },
+            {
+              "bn": "অসীম (infinite)",
+              "en": "Infinite"
+            },
+            {
+              "bn": "ঠিক ৫০ ওহম",
+              "en": "Exactly 50 ohms"
+            }
+          ],
+          "answerIndex": 0
+        }
+      ],
+      "relatedLessons": [
+        "pmic-diagnosis"
+      ],
+      "aiHelpPromptSeed": "একটি generic power-path block diagram কীভাবে পড়তে হয় শুরু থেকে ব্যাখ্যা করো।"
+    }
+  ]
+}

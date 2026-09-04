@@ -1,0 +1,48 @@
+<section class="hero container">
+  <svg class="hero-trace" viewBox="0 0 400 120" preserveAspectRatio="none" aria-hidden="true">
+    <path d="M0 90 L60 90 L80 30 L100 105 L120 60 L140 90 L400 90"/>
+  </svg>
+  <p class="hero__eyebrow">Diagnose · Learn · Repair</p>
+  <h1 class="hero__title" data-i18n="common.app_name">MobileBuzz</h1>
+  <p data-i18n="repair.home_subtitle">আপনার মোবাইল রিপেয়ার শেখার ও সমস্যা নির্ণয়ের সম্পূর্ণ বাংলা সহায়ক।</p>
+</section>
+
+<section class="container">
+  <form id="homeSearchForm" role="search" class="search-box">
+    <input type="search" id="homeSearchInput" data-i18n-attr="placeholder:common.search_placeholder" placeholder="আপনার মোবাইলে কী সমস্যা হচ্ছে?">
+    <button class="btn btn-primary" type="submit" data-i18n="common.nav_search">সার্চ</button>
+  </form>
+
+  <div class="quick-actions">
+    <a class="quick-action" href="#/diagnose">
+      <span class="quick-action__icon">🩺</span>
+      <span data-i18n="repair.action_diagnose">সমস্যা নির্ণয় করুন</span>
+    </a>
+    <a class="quick-action" href="#/ai">
+      <span class="quick-action__icon">🤖</span>
+      <span data-i18n="common.nav_ai">AI Assistant</span>
+    </a>
+    <a class="quick-action" href="#/learn">
+      <span class="quick-action__icon">📚</span>
+      <span data-i18n="common.nav_learn">শিখুন</span>
+    </a>
+    <a class="quick-action" href="#/tools">
+      <span class="quick-action__icon">🧰</span>
+      <span data-i18n="common.menu_tools">Tools</span>
+    </a>
+  </div>
+
+  <h2 data-i18n="repair.popular_problems">জনপ্রিয় সমস্যা</h2>
+  <div id="homePopularProblems" class="card-grid"></div>
+
+  <div id="homeSavedSection" hidden>
+    <h2 data-i18n="repair.saved_items">সংরক্ষিত</h2>
+    <div id="homeSavedList" class="card-grid"></div>
+  </div>
+
+  <h2 data-i18n="repair.beginner_learning">Beginner Learning</h2>
+  <div id="homeBeginnerLessons" class="card-grid"></div>
+
+  <h2 data-i18n="repair.device_database">Device Database</h2>
+  <div id="homeDevicePreview" class="card-grid"></div>
+</section>

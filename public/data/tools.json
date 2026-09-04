@@ -1,0 +1,76 @@
+{
+  "tools": [
+    {
+      "id": "multimeter",
+      "name": { "bn": "মাল্টিমিটার", "en": "Multimeter" },
+      "what": { "bn": "ভোল্টেজ, রেজিস্ট্যান্স, কন্টিনিউইটি ও কারেন্ট মাপার যন্ত্র।", "en": "A device that measures voltage, resistance, continuity, and current." },
+      "why": { "bn": "পাওয়ার/চার্জিং সমস্যার root cause নির্ণয়ে সবচেয়ে বেশি ব্যবহৃত টুল।", "en": "The most commonly used tool for diagnosing power/charging problems." },
+      "basicUse": { "bn": "Voltage mode-এ red probe (+) ও black probe (-) সঠিক terminal-এ স্পর্শ করান।", "en": "In voltage mode, touch the red probe (+) and black probe (-) to the correct terminals." },
+      "safety": { "bn": "সঠিক range/mode নির্বাচন না করে পরিমাপ করলে মিটার বা board ক্ষতিগ্রস্ত হতে পারে।", "en": "Measuring without selecting the correct range/mode can damage the meter or the board." },
+      "beginnerMistakes": { "bn": "Continuity mode-এ পাওয়ার-অন বোর্ড পরীক্ষা করা একটি সাধারণ ভুল।", "en": "Testing a powered-on board in continuity mode is a common beginner mistake." }
+    },
+    {
+      "id": "dc-power-supply",
+      "name": { "bn": "ডিসি পাওয়ার সাপ্লাই", "en": "DC Power Supply" },
+      "what": { "bn": "নির্দিষ্ট ভোল্টেজ ও current-limit সহ বোর্ডে controlled power দেওয়ার যন্ত্র।", "en": "A bench device that supplies controlled power at a set voltage and current limit." },
+      "why": { "bn": "Short-circuit ধরনের সমস্যা নিরাপদে নির্ণয় করতে current-draw পর্যবেক্ষণ করা যায়।", "en": "Lets you safely observe current draw to identify short-circuit type faults." },
+      "basicUse": { "bn": "কম current-limit সেট করে ধীরে ধীরে voltage বাড়ানো একটি নিরাপদ practice (শিক্ষামূলক)।", "en": "Setting a low current limit and slowly increasing voltage is a safe educational practice." },
+      "safety": { "bn": "উচ্চ-কারেন্ট পদ্ধতি ছাড়াই ব্যবহার করুন — এটি শুধুমাত্র নিরাপদ ডায়াগনস্টিক শিক্ষার জন্য।", "en": "Use without high-current procedures — this is for safe diagnostic learning only." },
+      "beginnerMistakes": { "bn": "Current-limit খুব বেশি রেখে board পাওয়ার-অন করা।", "en": "Leaving the current limit too high when powering on a board." }
+    },
+    {
+      "id": "usb-power-meter",
+      "name": { "bn": "ইউএসবি পাওয়ার মিটার", "en": "USB Power Meter" },
+      "what": { "bn": "USB পোর্টে voltage ও current দেখানোর ছোট ইনলাইন যন্ত্র।", "en": "A small inline device that displays voltage and current at a USB port." },
+      "why": { "bn": "চার্জিং সমস্যায় adapter/কেবল সঠিক পাওয়ার দিচ্ছে কিনা দ্রুত যাচাই করা যায়।", "en": "Quickly verifies whether an adapter/cable is delivering correct power for charging issues." },
+      "basicUse": { "bn": "কেবল ও ফোনের মাঝে বসিয়ে চার্জ দেওয়ার সময় reading দেখুন।", "en": "Place it inline between the cable and phone, then read the values while charging." },
+      "safety": { "bn": "নির্দিষ্ট voltage/current rating-এর বাইরে ব্যবহার করবেন না।", "en": "Don't use it beyond its rated voltage/current." },
+      "beginnerMistakes": { "bn": "শুধু voltage দেখে current না দেখে সিদ্ধান্ত নেওয়া।", "en": "Judging from voltage alone without also checking current." }
+    },
+    {
+      "id": "soldering-iron",
+      "name": { "bn": "সোল্ডারিং আয়রন", "en": "Soldering Iron" },
+      "what": { "bn": "তাপ দিয়ে সোল্ডার গলিয়ে ইলেকট্রনিক কম্পোনেন্ট জোড়া লাগানোর টুল।", "en": "A heated tool that melts solder to join electronic components." },
+      "why": { "bn": "কানেক্টর, ক্যাপাসিটর, ছোট কম্পোনেন্ট রিপ্লেসমেন্টে ব্যবহৃত হয়।", "en": "Used for connector, capacitor, and small component replacement." },
+      "basicUse": { "bn": "সঠিক temperature সেট করে tip পরিষ্কার (tinned) রাখা জরুরি।", "en": "Set the correct temperature and keep the tip clean (tinned)." },
+      "safety": { "bn": "উচ্চ তাপমাত্রা থেকে পোড়া ও ধোঁয়ার ঝুঁকি — ভালো ventilation প্রয়োজন।", "en": "Burn risk from high heat and fume exposure — good ventilation is required." },
+      "beginnerMistakes": { "bn": "Board-এ অতিরিক্ত সময় তাপ ধরে রাখা, যার ফলে pad ক্ষতিগ্রস্ত হয়।", "en": "Holding heat on the board too long, which damages pads." }
+    },
+    {
+      "id": "hot-air-station",
+      "name": { "bn": "হট এয়ার স্টেশন", "en": "Hot Air Rework Station" },
+      "what": { "bn": "গরম বাতাস দিয়ে SMD কম্পোনেন্ট গলানো/খোলার যন্ত্র।", "en": "A device that uses hot air to melt/remove SMD components." },
+      "why": { "bn": "IC replacement বা board-level rework-এর জন্য প্রয়োজন।", "en": "Needed for IC replacement or board-level rework." },
+      "basicUse": { "bn": "সঠিক airflow ও temperature সেট করে nearby component-কে heat shield দিয়ে সুরক্ষিত রাখুন।", "en": "Set correct airflow/temperature and shield nearby components from heat." },
+      "safety": { "bn": "প্লাস্টিক পার্টস গলে যাওয়া রোধে heat-sensitive অংশ ঢেকে রাখুন।", "en": "Cover heat-sensitive parts to prevent melting plastic components." },
+      "beginnerMistakes": { "bn": "Airflow খুব বেশি রেখে আশেপাশের ছোট কম্পোনেন্ট উড়িয়ে ফেলা।", "en": "Using excessive airflow that blows away nearby small components." }
+    },
+    {
+      "id": "esd-wrist-strap",
+      "name": { "bn": "ইএসডি রিস্ট স্ট্র্যাপ", "en": "ESD Wrist Strap" },
+      "what": { "bn": "শরীরের static charge গ্রাউন্ড করার জন্য পরিধানযোগ্য ব্যান্ড।", "en": "A wearable band that grounds static charge from your body." },
+      "why": { "bn": "স্ট্যাটিক ডিসচার্জ থেকে sensitive IC-কে সুরক্ষা দেয়।", "en": "Protects sensitive ICs from electrostatic discharge damage." },
+      "basicUse": { "bn": "একটি ESD mat বা গ্রাউন্ডেড পয়েন্টের সাথে ক্লিপ সংযুক্ত করুন।", "en": "Clip it to an ESD mat or a properly grounded point." },
+      "safety": { "bn": "লাইভ AC পাওয়ার সোর্সের সাথে সরাসরি সংযোগ করবেন না।", "en": "Never connect it directly to a live AC power source." },
+      "beginnerMistakes": { "bn": "ব্যবহারের আগে গ্রাউন্ড connection যাচাই না করা।", "en": "Not verifying the ground connection before use." }
+    },
+    {
+      "id": "precision-screwdriver-set",
+      "name": { "bn": "প্রিসিশন স্ক্রুড্রাইভার সেট", "en": "Precision Screwdriver Set" },
+      "what": { "bn": "ছোট মোবাইল স্ক্রুর জন্য বিভিন্ন মাপের স্ক্রুড্রাইভারের সেট (Phillips, Torx, Pentalobe)।", "en": "A set of small screwdrivers (Phillips, Torx, Pentalobe) sized for phone screws." },
+      "why": { "bn": "ফোন খোলার প্রথম ও সবচেয়ে বেশি ব্যবহৃত টুল।", "en": "The first and most frequently used tool for opening a phone." },
+      "basicUse": { "bn": "স্ক্রুর মাপ ও ধরনের সাথে মিলিয়ে সঠিক bit নির্বাচন করুন।", "en": "Match the bit type and size correctly to the screw." },
+      "safety": { "bn": "ভুল সাইজের bit ব্যবহার করলে স্ক্রু-হেড নষ্ট হতে পারে (stripped screw)।", "en": "Using the wrong bit size can strip the screw head." },
+      "beginnerMistakes": { "bn": "কোন স্ক্রু কোথা থেকে খোলা হয়েছে তা ট্র্যাক না রাখা।", "en": "Not tracking which screw came from where." }
+    },
+    {
+      "id": "plastic-spudger",
+      "name": { "bn": "প্লাস্টিক স্পাজার", "en": "Plastic Spudger / Opening Tool" },
+      "what": { "bn": "ফোনের কেসিং বা কানেক্টর নিরাপদে আলাদা করার প্লাস্টিক টুল।", "en": "A plastic prying tool for safely separating phone casings or connectors." },
+      "why": { "bn": "ধাতব টুলের বদলে ব্যবহার করলে shorting বা scratch এড়ানো যায়।", "en": "Using it instead of metal tools avoids shorting components or scratching parts." },
+      "basicUse": { "bn": "Adhesive seam বরাবর আস্তে আস্তে চাপ দিয়ে ঢোকান।", "en": "Insert gently along adhesive seams, applying gradual pressure." },
+      "safety": { "bn": "অতিরিক্ত জোরে চাপ দিলে ফ্লেক্স ক্যাবল ছিঁড়ে যেতে পারে।", "en": "Excessive force can tear flex cables." },
+      "beginnerMistakes": { "bn": "ব্যাটারির উপর সরাসরি চাপ দিয়ে pry করা।", "en": "Prying directly over the battery." }
+    }
+  ]
+}

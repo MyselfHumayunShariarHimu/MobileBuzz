@@ -1,0 +1,1337 @@
+{
+  "trees": {
+    "charging": {
+      "startNode": "chg-01",
+      "nodes": {
+        "chg-01": {
+          "question": {
+            "bn": "চার্জার লাগালে charging icon বা vibration আসে?",
+            "en": "Does a charging icon or vibration appear when you plug in the charger?"
+          },
+          "answers": [
+            {
+              "label": {
+                "bn": "হ্যাঁ",
+                "en": "Yes"
+              },
+              "next": "chg-02"
+            },
+            {
+              "label": {
+                "bn": "না",
+                "en": "No"
+              },
+              "next": "chg-03"
+            }
+          ]
+        },
+        "chg-02": {
+          "question": {
+            "bn": "Charging percentage কি আদৌ বাড়ছে (ধীরে হলেও)?",
+            "en": "Is the charging percentage increasing at all (even slowly)?"
+          },
+          "answers": [
+            {
+              "label": {
+                "bn": "হ্যাঁ, কিন্তু ধীরে",
+                "en": "Yes, but slowly"
+              },
+              "conclusion": "concl-slow-charging"
+            },
+            {
+              "label": {
+                "bn": "না, একদম বাড়ছে না",
+                "en": "No, not increasing at all"
+              },
+              "conclusion": "concl-charging-ic"
+            }
+          ]
+        },
+        "chg-03": {
+          "question": {
+            "bn": "অন্য একটি ভালো কেবল ও adapter দিয়ে চেষ্টা করেছেন?",
+            "en": "Have you tried a different, known-good cable and adapter?"
+          },
+          "answers": [
+            {
+              "label": {
+                "bn": "না, এখনো চেষ্টা করিনি",
+                "en": "No, haven't tried yet"
+              },
+              "conclusion": "concl-try-other-cable"
+            },
+            {
+              "label": {
+                "bn": "হ্যাঁ, তাতেও একই সমস্যা",
+                "en": "Yes, same issue persists"
+              },
+              "next": "chg-04"
+            }
+          ]
+        },
+        "chg-04": {
+          "question": {
+            "bn": "চার্জিং পোর্টের ভেতরে ধুলো/ময়লা দেখা যাচ্ছে?",
+            "en": "Is there visible dust/debris inside the charging port?"
+          },
+          "answers": [
+            {
+              "label": {
+                "bn": "হ্যাঁ",
+                "en": "Yes"
+              },
+              "conclusion": "concl-clean-port"
+            },
+            {
+              "label": {
+                "bn": "না, পরিষ্কার দেখাচ্ছে",
+                "en": "No, it looks clean"
+              },
+              "conclusion": "concl-charging-hardware"
+            }
+          ]
+        }
+      },
+      "conclusions": {
+        "concl-slow-charging": {
+          "possibleCauses": [
+            {
+              "bn": "কম-ওয়াটের adapter/কেবল, বা battery health কমে যাওয়া",
+              "en": "Low-wattage adapter/cable, or reduced battery health"
+            }
+          ],
+          "nextTests": [
+            {
+              "bn": "USB power meter দিয়ে actual wattage মাপুন",
+              "en": "Measure actual wattage with a USB power meter"
+            }
+          ],
+          "tools": [
+            "usb-power-meter"
+          ],
+          "repairCategory": "charging",
+          "confidence": "medium"
+        },
+        "concl-charging-ic": {
+          "possibleCauses": [
+            {
+              "bn": "চার্জিং IC বা battery connector সমস্যা",
+              "en": "Charging IC or battery connector fault"
+            }
+          ],
+          "nextTests": [
+            {
+              "bn": "মাল্টিমিটার দিয়ে port-এ voltage আছে কিনা যাচাই করুন",
+              "en": "Check with a multimeter whether voltage reaches the port"
+            }
+          ],
+          "tools": [
+            "multimeter"
+          ],
+          "repairCategory": "charging",
+          "confidence": "low"
+        },
+        "concl-try-other-cable": {
+          "possibleCauses": [
+            {
+              "bn": "বর্তমান কেবল/adapter নষ্ট থাকতে পারে",
+              "en": "The current cable/adapter may be faulty"
+            }
+          ],
+          "nextTests": [
+            {
+              "bn": "ভিন্ন known-good কেবল ও adapter দিয়ে test করুন",
+              "en": "Test with a different known-good cable and adapter"
+            }
+          ],
+          "tools": [],
+          "repairCategory": "charging",
+          "confidence": "medium"
+        },
+        "concl-clean-port": {
+          "possibleCauses": [
+            {
+              "bn": "চার্জিং পোর্টে জমে থাকা ধুলো সংযোগ বাধাগ্রস্ত করছে",
+              "en": "Dust buildup in the charging port is blocking the connection"
+            }
+          ],
+          "nextTests": [
+            {
+              "bn": "নরম ব্রাশ দিয়ে সাবধানে পরিষ্কার করে আবার test করুন",
+              "en": "Gently clean with a soft brush and retest"
+            }
+          ],
+          "tools": [],
+          "repairCategory": "charging",
+          "confidence": "high"
+        },
+        "concl-charging-hardware": {
+          "possibleCauses": [
+            {
+              "bn": "চার্জিং পোর্ট বা তার সাথে যুক্ত সোল্ডার জয়েন্টের হার্ডওয়্যার সমস্যা",
+              "en": "Hardware fault in the charging port or its solder joints"
+            }
+          ],
+          "nextTests": [
+            {
+              "bn": "মাল্টিমিটার continuity mode দিয়ে port pin-এর সংযোগ যাচাই করুন",
+              "en": "Check port pin continuity with a multimeter's continuity mode"
+            }
+          ],
+          "tools": [
+            "multimeter"
+          ],
+          "repairCategory": "charging",
+          "confidence": "low"
+        }
+      }
+    },
+    "power": {
+      "startNode": "pwr-01",
+      "nodes": {
+        "pwr-01": {
+          "question": {
+            "bn": "চার্জ দিলে কোনো charging icon, vibration, বা LED আসে?",
+            "en": "Does plugging in a charger produce any charging icon, vibration, or LED?"
+          },
+          "answers": [
+            {
+              "label": {
+                "bn": "হ্যাঁ",
+                "en": "Yes"
+              },
+              "next": "pwr-02"
+            },
+            {
+              "label": {
+                "bn": "না, একদমই কিছু না",
+                "en": "No, absolutely nothing"
+              },
+              "next": "pwr-03"
+            }
+          ]
+        },
+        "pwr-02": {
+          "question": {
+            "bn": "পাওয়ার বাটন দীর্ঘক্ষণ চেপে ধরলে কি বুট হওয়ার চেষ্টা করে (লোগো/vibration)?",
+            "en": "Does holding the power button long make it try to boot (logo/vibration)?"
+          },
+          "answers": [
+            {
+              "label": {
+                "bn": "হ্যাঁ, কিন্তু লোগোতে আটকে যায়",
+                "en": "Yes, but it gets stuck at the logo"
+              },
+              "conclusion": "concl-boot-loop"
+            },
+            {
+              "label": {
+                "bn": "না, বুট হওয়ার চেষ্টাই করে না",
+                "en": "No, it doesn't try to boot at all"
+              },
+              "conclusion": "concl-power-button"
+            }
+          ]
+        },
+        "pwr-03": {
+          "question": {
+            "bn": "ফোনটি কি সম্প্রতি পানিতে পড়েছিল বা মেঝেতে পড়ে গিয়েছিল?",
+            "en": "Has the phone recently been dropped in water or on the ground?"
+          },
+          "answers": [
+            {
+              "label": {
+                "bn": "হ্যাঁ, পানিতে পড়েছিল",
+                "en": "Yes, water exposure"
+              },
+              "conclusion": "concl-water-damage"
+            },
+            {
+              "label": {
+                "bn": "হ্যাঁ, পড়ে গিয়েছিল (drop)",
+                "en": "Yes, dropped"
+              },
+              "conclusion": "concl-drop-damage"
+            },
+            {
+              "label": {
+                "bn": "না, কিছুই হয়নি",
+                "en": "No, nothing happened"
+              },
+              "conclusion": "concl-deep-discharge"
+            }
+          ]
+        }
+      },
+      "conclusions": {
+        "concl-boot-loop": {
+          "possibleCauses": [
+            {
+              "bn": "Software update ব্যর্থ হওয়া বা corrupted system partition",
+              "en": "Failed software update or corrupted system partition"
+            }
+          ],
+          "nextTests": [
+            {
+              "bn": "Recovery mode থেকে wipe cache partition চেষ্টা করুন",
+              "en": "Try 'wipe cache partition' from Recovery Mode"
+            }
+          ],
+          "tools": [],
+          "repairCategory": "power",
+          "confidence": "medium"
+        },
+        "concl-power-button": {
+          "possibleCauses": [
+            {
+              "bn": "পাওয়ার বাটন হার্ডওয়্যার বা PMIC সমস্যা",
+              "en": "Power button hardware or PMIC fault"
+            }
+          ],
+          "nextTests": [
+            {
+              "bn": "USB দিয়ে কম্পিউটারে connect করে detect হয় কিনা দেখুন",
+              "en": "Connect via USB to a computer to check if it's detected"
+            }
+          ],
+          "tools": [
+            "multimeter"
+          ],
+          "repairCategory": "power",
+          "confidence": "low"
+        },
+        "concl-water-damage": {
+          "possibleCauses": [
+            {
+              "bn": "পানির কারণে শর্ট-সার্কিট বা corrosion",
+              "en": "Short-circuit or corrosion from liquid exposure"
+            }
+          ],
+          "nextTests": [
+            {
+              "bn": "অবিলম্বে চার্জে না দিয়ে সম্পূর্ণ শুকাতে দিন, প্রয়োজনে টেকনিশিয়ানের কাছে নিন",
+              "en": "Do not charge it — let it fully dry, and consider a technician"
+            }
+          ],
+          "tools": [],
+          "repairCategory": "power",
+          "confidence": "medium",
+          "safetyStop": {
+            "bn": "⚠️ থামুন — অবিলম্বে চার্জে দেবেন না বা চালু করার চেষ্টা করবেন না। সম্পূর্ণ শুকাতে দিন, প্রয়োজনে পেশাদার টেকনিশিয়ানের কাছে নিন।",
+            "en": "⚠️ STOP — do not charge or try to power it on right away. Let it fully dry, and see a professional technician if in doubt."
+          }
+        },
+        "concl-drop-damage": {
+          "possibleCauses": [
+            {
+              "bn": "Drop-এর কারণে connector ঢিলা হওয়া বা internal ক্ষতি",
+              "en": "A loosened connector or internal damage from the drop"
+            }
+          ],
+          "nextTests": [
+            {
+              "bn": "ফোন খুলে ব্যাটারি ও অন্যান্য connector reseat করা প্রয়োজন হতে পারে",
+              "en": "Opening the phone to reseat the battery and other connectors may be needed"
+            }
+          ],
+          "tools": [],
+          "repairCategory": "power",
+          "confidence": "low"
+        },
+        "concl-deep-discharge": {
+          "possibleCauses": [
+            {
+              "bn": "ব্যাটারি সম্পূর্ণ discharge হয়ে temporarily response না দেওয়া",
+              "en": "Battery fully discharged and temporarily unresponsive"
+            }
+          ],
+          "nextTests": [
+            {
+              "bn": "কমপক্ষে ৩০-৬০ মিনিট চার্জে রেখে আবার চেষ্টা করুন",
+              "en": "Charge for at least 30-60 minutes, then retry"
+            }
+          ],
+          "tools": [],
+          "repairCategory": "power",
+          "confidence": "high"
+        }
+      }
+    },
+    "display": {
+      "startNode": "dsp-01",
+      "nodes": {
+        "dsp-01": {
+          "question": {
+            "bn": "Incoming call দিলে vibration/ringtone আসে (মানে ফোন চালু আছে)?",
+            "en": "Does an incoming call still trigger vibration/ringtone (meaning the phone is powered on)?"
+          },
+          "answers": [
+            {
+              "label": {
+                "bn": "হ্যাঁ",
+                "en": "Yes"
+              },
+              "next": "dsp-02"
+            },
+            {
+              "label": {
+                "bn": "না",
+                "en": "No"
+              },
+              "conclusion": "concl-check-power-first"
+            }
+          ]
+        },
+        "dsp-02": {
+          "question": {
+            "bn": "সম্প্রতি স্ক্রিন replace বা ফোন খোলা হয়েছিল?",
+            "en": "Was the screen recently replaced or the phone recently opened?"
+          },
+          "answers": [
+            {
+              "label": {
+                "bn": "হ্যাঁ",
+                "en": "Yes"
+              },
+              "conclusion": "concl-reseat-connector"
+            },
+            {
+              "label": {
+                "bn": "না",
+                "en": "No"
+              },
+              "conclusion": "concl-panel-fault"
+            }
+          ]
+        }
+      },
+      "conclusions": {
+        "concl-check-power-first": {
+          "possibleCauses": [
+            {
+              "bn": "এটি display সমস্যা নাও হতে পারে — আগে power সমস্যা যাচাই করুন",
+              "en": "This may not be a display issue — check power problems first"
+            }
+          ],
+          "nextTests": [
+            {
+              "bn": "Power ক্যাটাগরির ডায়াগনস্টিক ব্যবহার করুন",
+              "en": "Use the Power category diagnostic instead"
+            }
+          ],
+          "tools": [],
+          "repairCategory": "power",
+          "confidence": "medium"
+        },
+        "concl-reseat-connector": {
+          "possibleCauses": [
+            {
+              "bn": "Display connector ঢিলা হয়ে গেছে",
+              "en": "The display connector has come loose"
+            }
+          ],
+          "nextTests": [
+            {
+              "bn": "ফোন খুলে connector পুনরায় ভালোভাবে বসান",
+              "en": "Open the phone and reseat the connector properly"
+            }
+          ],
+          "tools": [],
+          "repairCategory": "display",
+          "confidence": "high"
+        },
+        "concl-panel-fault": {
+          "possibleCauses": [
+            {
+              "bn": "LCD/OLED panel বা display driver IC ক্ষতিগ্রস্ত",
+              "en": "Damaged LCD/OLED panel or display driver IC"
+            }
+          ],
+          "nextTests": [
+            {
+              "bn": "ফ্ল্যাশলাইট দিয়ে হালকা image আছে কিনা যাচাই করুন (backlight-only fault)",
+              "en": "Check with a flashlight for a faint image (backlight-only fault)"
+            }
+          ],
+          "tools": [],
+          "repairCategory": "display",
+          "confidence": "low"
+        }
+      }
+    },
+    "battery": {
+      "startNode": "bat-01",
+      "nodes": {
+        "bat-01": {
+          "question": {
+            "bn": "ব্যাক প্যানেল বা স্ক্রিন কোথাও ফুলে/উঁচু হয়ে আছে?",
+            "en": "Is the back panel or screen bulging/raised anywhere?"
+          },
+          "answers": [
+            {
+              "label": {
+                "bn": "হ্যাঁ",
+                "en": "Yes"
+              },
+              "conclusion": "concl-swelling"
+            },
+            {
+              "label": {
+                "bn": "না",
+                "en": "No"
+              },
+              "next": "bat-02"
+            }
+          ]
+        },
+        "bat-02": {
+          "question": {
+            "bn": "পূর্ণ চার্জ দেওয়ার পরও কি ব্যাটারি অস্বাভাবিক দ্রুত কমে যাচ্ছে?",
+            "en": "Does the battery drop unusually fast even after a full charge?"
+          },
+          "answers": [
+            {
+              "label": {
+                "bn": "হ্যাঁ",
+                "en": "Yes"
+              },
+              "next": "bat-03"
+            },
+            {
+              "label": {
+                "bn": "না, স্বাভাবিক মনে হয়",
+                "en": "No, seems normal"
+              },
+              "conclusion": "concl-battery-ok"
+            }
+          ]
+        },
+        "bat-03": {
+          "question": {
+            "bn": "Settings-এ কোনো একটা app কি অস্বাভাবিক বেশি battery ব্যবহার করছে?",
+            "en": "Does any one app show unusually high battery usage in Settings?"
+          },
+          "answers": [
+            {
+              "label": {
+                "bn": "হ্যাঁ",
+                "en": "Yes"
+              },
+              "conclusion": "concl-app-drain"
+            },
+            {
+              "label": {
+                "bn": "না, সব normal দেখাচ্ছে",
+                "en": "No, everything looks normal"
+              },
+              "conclusion": "concl-battery-health"
+            }
+          ]
+        }
+      },
+      "conclusions": {
+        "concl-swelling": {
+          "possibleCauses": [
+            {
+              "bn": "Lithium battery-এর ভেতরে গ্যাস তৈরি হয়েছে — এটি একটি নিরাপত্তা ঝুঁকি",
+              "en": "Internal gas buildup in the lithium battery — this is a safety risk"
+            }
+          ],
+          "nextTests": [
+            {
+              "bn": "এখনই ব্যবহার ও চার্জ বন্ধ করুন, পেশাদার টেকনিশিয়ানের কাছে নিন",
+              "en": "Stop using/charging immediately and take it to a professional technician"
+            }
+          ],
+          "tools": [],
+          "repairCategory": "battery",
+          "confidence": "high",
+          "safetyStop": {
+            "bn": "⚠️ থামুন — ব্যবহার ও চার্জ এখনই বন্ধ করুন। ফোলা ব্যাটারিতে চাপ বা ছিদ্র করবেন না। দ্রুত একজন পেশাদার টেকনিশিয়ানের কাছে নিয়ে যান।",
+            "en": "⚠️ STOP — stop use and charging immediately. Do not press or puncture a swollen battery. Take it to a professional technician promptly."
+          }
+        },
+        "concl-app-drain": {
+          "possibleCauses": [
+            {
+              "bn": "একটি নির্দিষ্ট app background-এ বেশি resource ব্যবহার করছে",
+              "en": "A specific app is consuming excess resources in the background"
+            }
+          ],
+          "nextTests": [
+            {
+              "bn": "সেই app-এর background activity সীমিত করুন",
+              "en": "Restrict that app's background activity"
+            }
+          ],
+          "tools": [],
+          "repairCategory": "battery",
+          "confidence": "high"
+        },
+        "concl-battery-health": {
+          "possibleCauses": [
+            {
+              "bn": "Battery health/capacity বয়সজনিত কারণে কমে গেছে",
+              "en": "Battery health/capacity has degraded with age"
+            }
+          ],
+          "nextTests": [
+            {
+              "bn": "Battery health percentage চেক করুন (available থাকলে)",
+              "en": "Check battery health percentage if available"
+            }
+          ],
+          "tools": [],
+          "repairCategory": "battery",
+          "confidence": "medium"
+        },
+        "concl-battery-ok": {
+          "possibleCauses": [
+            {
+              "bn": "বর্তমান ব্যবহার pattern অনুযায়ী এটি স্বাভাবিক পরিসরে আছে",
+              "en": "This falls within a normal range for the current usage pattern"
+            }
+          ],
+          "nextTests": [
+            {
+              "bn": "কয়েকদিন পর্যবেক্ষণ চালিয়ে যান",
+              "en": "Continue monitoring for a few more days"
+            }
+          ],
+          "tools": [],
+          "repairCategory": "battery",
+          "confidence": "medium"
+        }
+      }
+    },
+    "touch": {
+      "startNode": "tch-01",
+      "nodes": {
+        "tch-01": {
+          "question": {
+            "bn": "স্ক্রিনে কোনো screen protector বা case লাগানো আছে?",
+            "en": "Is there a screen protector or case on the screen?"
+          },
+          "answers": [
+            {
+              "label": {
+                "bn": "হ্যাঁ",
+                "en": "Yes"
+              },
+              "conclusion": "concl-remove-protector"
+            },
+            {
+              "label": {
+                "bn": "না",
+                "en": "No"
+              },
+              "next": "tch-02"
+            }
+          ]
+        },
+        "tch-02": {
+          "question": {
+            "bn": "সম্প্রতি স্ক্রিন replace বা ফোন খোলা হয়েছিল?",
+            "en": "Was the screen recently replaced or the phone recently opened?"
+          },
+          "answers": [
+            {
+              "label": {
+                "bn": "হ্যাঁ",
+                "en": "Yes"
+              },
+              "conclusion": "concl-touch-connector"
+            },
+            {
+              "label": {
+                "bn": "না",
+                "en": "No"
+              },
+              "next": "tch-03"
+            }
+          ]
+        },
+        "tch-03": {
+          "question": {
+            "bn": "পুরো স্ক্রিন জুড়ে সমস্যা, নাকি নির্দিষ্ট একটা অংশে?",
+            "en": "Is the issue across the whole screen, or just one area?"
+          },
+          "answers": [
+            {
+              "label": {
+                "bn": "নির্দিষ্ট একটা অংশে",
+                "en": "Just one area"
+              },
+              "conclusion": "concl-touch-ic-partial"
+            },
+            {
+              "label": {
+                "bn": "পুরো স্ক্রিন জুড়ে",
+                "en": "The whole screen"
+              },
+              "conclusion": "concl-touch-ic-full"
+            }
+          ]
+        }
+      },
+      "conclusions": {
+        "concl-remove-protector": {
+          "possibleCauses": [
+            {
+              "bn": "নিম্নমানের screen protector/case টাচ সংবেদনশীলতা বাধাগ্রস্ত করছে",
+              "en": "A low-quality screen protector/case is interfering with touch sensitivity"
+            }
+          ],
+          "nextTests": [
+            {
+              "bn": "Screen protector খুলে আবার পরীক্ষা করুন",
+              "en": "Remove it and retest"
+            }
+          ],
+          "tools": [],
+          "repairCategory": "touch",
+          "confidence": "high"
+        },
+        "concl-touch-connector": {
+          "possibleCauses": [
+            {
+              "bn": "Touch connector ঢিলা হয়ে গেছে",
+              "en": "The touch connector has come loose"
+            }
+          ],
+          "nextTests": [
+            {
+              "bn": "ফোন খুলে connector পুনরায় বসান",
+              "en": "Open the phone and reseat the connector"
+            }
+          ],
+          "tools": [],
+          "repairCategory": "touch",
+          "confidence": "high"
+        },
+        "concl-touch-ic-partial": {
+          "possibleCauses": [
+            {
+              "bn": "Digitizer-এর নির্দিষ্ট অংশ ক্ষতিগ্রস্ত",
+              "en": "A specific section of the digitizer is damaged"
+            }
+          ],
+          "nextTests": [
+            {
+              "bn": "Touch controller IC পরীক্ষা প্রয়োজন হতে পারে",
+              "en": "The touch controller IC may need inspection"
+            }
+          ],
+          "tools": [],
+          "repairCategory": "touch",
+          "confidence": "low"
+        },
+        "concl-touch-ic-full": {
+          "possibleCauses": [
+            {
+              "bn": "Touch controller IC সম্পূর্ণ ব্যর্থ হয়েছে",
+              "en": "The touch controller IC has failed entirely"
+            }
+          ],
+          "nextTests": [
+            {
+              "bn": "Digitizer/touch panel replacement বিবেচনা করুন",
+              "en": "Consider digitizer/touch panel replacement"
+            }
+          ],
+          "tools": [],
+          "repairCategory": "touch",
+          "confidence": "low"
+        }
+      }
+    },
+    "audio": {
+      "startNode": "aud-01",
+      "nodes": {
+        "aud-01": {
+          "question": {
+            "bn": "Media volume ও Do Not Disturb ঠিকভাবে সেট করা আছে?",
+            "en": "Are media volume and Do Not Disturb set correctly?"
+          },
+          "answers": [
+            {
+              "label": {
+                "bn": "না, সমস্যা থাকতে পারে",
+                "en": "No, might be the issue"
+              },
+              "conclusion": "concl-check-settings"
+            },
+            {
+              "label": {
+                "bn": "হ্যাঁ, ঠিকই আছে",
+                "en": "Yes, already correct"
+              },
+              "next": "aud-02"
+            }
+          ]
+        },
+        "aud-02": {
+          "question": {
+            "bn": "Bluetooth-এ অন্য কোনো ডিভাইস connected আছে?",
+            "en": "Is another device connected via Bluetooth?"
+          },
+          "answers": [
+            {
+              "label": {
+                "bn": "হ্যাঁ",
+                "en": "Yes"
+              },
+              "conclusion": "concl-bt-routing"
+            },
+            {
+              "label": {
+                "bn": "না",
+                "en": "No"
+              },
+              "next": "aud-03"
+            }
+          ]
+        },
+        "aud-03": {
+          "question": {
+            "bn": "ফোনটি সম্প্রতি পানিতে পড়েছিল বা speaker grille-এ ধুলো দেখা যাচ্ছে?",
+            "en": "Was the phone recently exposed to water, or is there visible dust in the speaker grille?"
+          },
+          "answers": [
+            {
+              "label": {
+                "bn": "হ্যাঁ",
+                "en": "Yes"
+              },
+              "conclusion": "concl-clean-speaker"
+            },
+            {
+              "label": {
+                "bn": "না, কিছুই দেখা যাচ্ছে না",
+                "en": "No, nothing visible"
+              },
+              "conclusion": "concl-speaker-hardware"
+            }
+          ]
+        }
+      },
+      "conclusions": {
+        "concl-check-settings": {
+          "possibleCauses": [
+            {
+              "bn": "Volume/DND সেটিংস ভুলভাবে সেট করা",
+              "en": "Incorrect volume/DND settings"
+            }
+          ],
+          "nextTests": [
+            {
+              "bn": "Media volume বাড়ান ও DND বন্ধ করুন",
+              "en": "Raise media volume and turn off DND"
+            }
+          ],
+          "tools": [],
+          "repairCategory": "audio",
+          "confidence": "high"
+        },
+        "concl-bt-routing": {
+          "possibleCauses": [
+            {
+              "bn": "Audio Bluetooth ডিভাইসে যাচ্ছে, ফোনের স্পিকারে না",
+              "en": "Audio is routing to the Bluetooth device, not the phone speaker"
+            }
+          ],
+          "nextTests": [
+            {
+              "bn": "Bluetooth disconnect করে আবার test করুন",
+              "en": "Disconnect Bluetooth and retest"
+            }
+          ],
+          "tools": [],
+          "repairCategory": "audio",
+          "confidence": "high"
+        },
+        "concl-clean-speaker": {
+          "possibleCauses": [
+            {
+              "bn": "Speaker grille-এ ধুলো/আর্দ্রতা জমে শব্দ আটকে দিচ্ছে",
+              "en": "Dust/moisture in the speaker grille is blocking sound"
+            }
+          ],
+          "nextTests": [
+            {
+              "bn": "নরম ব্রাশ দিয়ে সাবধানে পরিষ্কার করুন (পানিতে পড়লে আগে শুকাতে দিন)",
+              "en": "Gently clean with a soft brush (let it dry first if water-exposed)"
+            }
+          ],
+          "tools": [],
+          "repairCategory": "audio",
+          "confidence": "medium"
+        },
+        "concl-speaker-hardware": {
+          "possibleCauses": [
+            {
+              "bn": "স্পিকার হার্ডওয়্যার নিজেই ক্ষতিগ্রস্ত",
+              "en": "The speaker hardware itself is damaged"
+            }
+          ],
+          "nextTests": [
+            {
+              "bn": "Speaker replacement প্রয়োজন হতে পারে",
+              "en": "Speaker replacement may be needed"
+            }
+          ],
+          "tools": [],
+          "repairCategory": "audio",
+          "confidence": "low"
+        }
+      }
+    },
+    "camera": {
+      "startNode": "cam-01",
+      "nodes": {
+        "cam-01": {
+          "question": {
+            "bn": "ফোন রিস্টার্ট করে আবার camera app খুলেছেন?",
+            "en": "Have you restarted the phone and tried the camera app again?"
+          },
+          "answers": [
+            {
+              "label": {
+                "bn": "না, এখনো চেষ্টা করিনি",
+                "en": "No, haven't tried yet"
+              },
+              "conclusion": "concl-restart-first"
+            },
+            {
+              "label": {
+                "bn": "হ্যাঁ, তাতেও একই সমস্যা",
+                "en": "Yes, same issue persists"
+              },
+              "next": "cam-02"
+            }
+          ]
+        },
+        "cam-02": {
+          "question": {
+            "bn": "Camera app-এর cache clear করে দেখেছেন?",
+            "en": "Have you tried clearing the camera app's cache?"
+          },
+          "answers": [
+            {
+              "label": {
+                "bn": "না",
+                "en": "No"
+              },
+              "conclusion": "concl-clear-cache"
+            },
+            {
+              "label": {
+                "bn": "হ্যাঁ, তাতেও কাজ হয়নি",
+                "en": "Yes, that didn't help either"
+              },
+              "conclusion": "concl-camera-hardware"
+            }
+          ]
+        }
+      },
+      "conclusions": {
+        "concl-restart-first": {
+          "possibleCauses": [
+            {
+              "bn": "অন্য কোনো app ক্যামেরা resource ধরে রেখেছে (সাময়িক)",
+              "en": "Another app is temporarily holding the camera resource"
+            }
+          ],
+          "nextTests": [
+            {
+              "bn": "ফোন রিস্টার্ট করে আবার চেষ্টা করুন",
+              "en": "Restart the phone and try again"
+            }
+          ],
+          "tools": [],
+          "repairCategory": "camera",
+          "confidence": "high"
+        },
+        "concl-clear-cache": {
+          "possibleCauses": [
+            {
+              "bn": "Camera app-এর cache/data corrupted হয়ে থাকতে পারে",
+              "en": "The camera app's cache/data may be corrupted"
+            }
+          ],
+          "nextTests": [
+            {
+              "bn": "Settings > Apps > Camera > Storage > Clear Cache ব্যবহার করুন",
+              "en": "Use Settings > Apps > Camera > Storage > Clear Cache"
+            }
+          ],
+          "tools": [],
+          "repairCategory": "camera",
+          "confidence": "medium"
+        },
+        "concl-camera-hardware": {
+          "possibleCauses": [
+            {
+              "bn": "ক্যামেরা মডিউল বা connector হার্ডওয়্যার সমস্যা",
+              "en": "Camera module or connector hardware fault"
+            }
+          ],
+          "nextTests": [
+            {
+              "bn": "ক্যামেরা connector/মডিউল পরীক্ষা প্রয়োজন",
+              "en": "The camera connector/module needs inspection"
+            }
+          ],
+          "tools": [],
+          "repairCategory": "camera",
+          "confidence": "low"
+        }
+      }
+    },
+    "network": {
+      "startNode": "net-01",
+      "nodes": {
+        "net-01": {
+          "question": {
+            "bn": "SIM card খুলে পুনরায় ঠিকভাবে বসিয়ে দেখেছেন?",
+            "en": "Have you removed and reseated the SIM card properly?"
+          },
+          "answers": [
+            {
+              "label": {
+                "bn": "না, এখনো করিনি",
+                "en": "No, haven't yet"
+              },
+              "conclusion": "concl-reseat-sim"
+            },
+            {
+              "label": {
+                "bn": "হ্যাঁ, তাতেও একই সমস্যা",
+                "en": "Yes, same issue persists"
+              },
+              "next": "net-02"
+            }
+          ]
+        },
+        "net-02": {
+          "question": {
+            "bn": "একই SIM অন্য একটি ফোনে ভালোভাবে কাজ করে?",
+            "en": "Does the same SIM work fine in another phone?"
+          },
+          "answers": [
+            {
+              "label": {
+                "bn": "হ্যাঁ, অন্য ফোনে ঠিক আছে",
+                "en": "Yes, works fine elsewhere"
+              },
+              "conclusion": "concl-device-hardware"
+            },
+            {
+              "label": {
+                "bn": "সেখানেও একই সমস্যা",
+                "en": "Same issue there too"
+              },
+              "conclusion": "concl-sim-or-coverage"
+            }
+          ]
+        }
+      },
+      "conclusions": {
+        "concl-reseat-sim": {
+          "possibleCauses": [
+            {
+              "bn": "SIM card ঠিকভাবে বসানো নেই",
+              "en": "SIM card is not seated properly"
+            }
+          ],
+          "nextTests": [
+            {
+              "bn": "SIM খুলে আবার সঠিকভাবে বসান",
+              "en": "Remove and reseat the SIM correctly"
+            }
+          ],
+          "tools": [],
+          "repairCategory": "network",
+          "confidence": "high"
+        },
+        "concl-device-hardware": {
+          "possibleCauses": [
+            {
+              "bn": "এই ডিভাইসের অ্যান্টেনা/RF হার্ডওয়্যারে সমস্যা",
+              "en": "This device's antenna/RF hardware has a fault"
+            }
+          ],
+          "nextTests": [
+            {
+              "bn": "Antenna connector পরীক্ষা প্রয়োজন — technician-level কাজ",
+              "en": "The antenna connector needs inspection — technician-level work"
+            }
+          ],
+          "tools": [],
+          "repairCategory": "network",
+          "confidence": "low"
+        },
+        "concl-sim-or-coverage": {
+          "possibleCauses": [
+            {
+              "bn": "SIM card damaged, অথবা এলাকায় network coverage সমস্যা",
+              "en": "Damaged SIM card, or a network coverage issue in this area"
+            }
+          ],
+          "nextTests": [
+            {
+              "bn": "Operator-এর কাছে SIM replacement বা coverage নিয়ে জিজ্ঞাসা করুন",
+              "en": "Ask your operator about a SIM replacement or coverage in this area"
+            }
+          ],
+          "tools": [],
+          "repairCategory": "network",
+          "confidence": "medium"
+        }
+      }
+    },
+    "wifi_bt": {
+      "startNode": "wifi-01",
+      "nodes": {
+        "wifi-01": {
+          "question": {
+            "bn": "ফোন রিস্টার্ট করে Wi-Fi আবার চালু করার চেষ্টা করেছেন?",
+            "en": "Have you restarted the phone and tried Wi-Fi again?"
+          },
+          "answers": [
+            {
+              "label": {
+                "bn": "না",
+                "en": "No"
+              },
+              "conclusion": "concl-restart-wifi"
+            },
+            {
+              "label": {
+                "bn": "হ্যাঁ, তাতেও একই সমস্যা",
+                "en": "Yes, same issue persists"
+              },
+              "next": "wifi-02"
+            }
+          ]
+        },
+        "wifi-02": {
+          "question": {
+            "bn": "Network settings reset করে দেখেছেন?",
+            "en": "Have you tried resetting network settings?"
+          },
+          "answers": [
+            {
+              "label": {
+                "bn": "না",
+                "en": "No"
+              },
+              "conclusion": "concl-reset-network"
+            },
+            {
+              "label": {
+                "bn": "হ্যাঁ, তাতেও কাজ হয়নি",
+                "en": "Yes, that didn't help either"
+              },
+              "conclusion": "concl-wifi-hardware"
+            }
+          ]
+        }
+      },
+      "conclusions": {
+        "concl-restart-wifi": {
+          "possibleCauses": [
+            {
+              "bn": "সাময়িক সফটওয়্যার glitch",
+              "en": "A temporary software glitch"
+            }
+          ],
+          "nextTests": [
+            {
+              "bn": "ফোন রিস্টার্ট করুন",
+              "en": "Restart the phone"
+            }
+          ],
+          "tools": [],
+          "repairCategory": "wifi_bt",
+          "confidence": "high"
+        },
+        "concl-reset-network": {
+          "possibleCauses": [
+            {
+              "bn": "Network configuration কোথাও corrupted হয়ে থাকতে পারে",
+              "en": "Network configuration may be corrupted somewhere"
+            }
+          ],
+          "nextTests": [
+            {
+              "bn": "Settings > System > Reset Options > Reset Wi-Fi, Mobile & Bluetooth ব্যবহার করুন",
+              "en": "Use Settings > System > Reset Options > Reset Wi-Fi, Mobile & Bluetooth"
+            }
+          ],
+          "tools": [],
+          "repairCategory": "wifi_bt",
+          "confidence": "medium"
+        },
+        "concl-wifi-hardware": {
+          "possibleCauses": [
+            {
+              "bn": "Wi-Fi/Bluetooth কম্বো chip হার্ডওয়্যার সমস্যা",
+              "en": "Wi-Fi/Bluetooth combo chip hardware fault"
+            }
+          ],
+          "nextTests": [
+            {
+              "bn": "Wi-Fi/BT module পরীক্ষা প্রয়োজন — technician-level কাজ",
+              "en": "The Wi-Fi/BT module needs inspection — technician-level work"
+            }
+          ],
+          "tools": [],
+          "repairCategory": "wifi_bt",
+          "confidence": "low"
+        }
+      }
+    },
+    "software": {
+      "startNode": "sw-01",
+      "nodes": {
+        "sw-01": {
+          "question": {
+            "bn": "সমস্যাটি একটি নির্দিষ্ট app-এ, নাকি পুরো ফোন জুড়ে?",
+            "en": "Is the issue with one specific app, or across the whole phone?"
+          },
+          "answers": [
+            {
+              "label": {
+                "bn": "একটি নির্দিষ্ট app-এ",
+                "en": "One specific app"
+              },
+              "next": "sw-02"
+            },
+            {
+              "label": {
+                "bn": "পুরো ফোন জুড়ে স্লো",
+                "en": "The whole phone feels slow"
+              },
+              "next": "sw-03"
+            }
+          ]
+        },
+        "sw-02": {
+          "question": {
+            "bn": "সেই app-এর কোনো আপডেট available আছে?",
+            "en": "Is there an update available for that app?"
+          },
+          "answers": [
+            {
+              "label": {
+                "bn": "হ্যাঁ",
+                "en": "Yes"
+              },
+              "conclusion": "concl-update-app"
+            },
+            {
+              "label": {
+                "bn": "না, আগে থেকেই latest",
+                "en": "No, already latest"
+              },
+              "conclusion": "concl-clear-app-cache"
+            }
+          ]
+        },
+        "sw-03": {
+          "question": {
+            "bn": "Storage প্রায় পূর্ণ হয়ে গেছে কি?",
+            "en": "Is storage nearly full?"
+          },
+          "answers": [
+            {
+              "label": {
+                "bn": "হ্যাঁ",
+                "en": "Yes"
+              },
+              "conclusion": "concl-free-storage"
+            },
+            {
+              "label": {
+                "bn": "না, যথেষ্ট জায়গা আছে",
+                "en": "No, plenty of space left"
+              },
+              "conclusion": "concl-too-many-apps"
+            }
+          ]
+        }
+      },
+      "conclusions": {
+        "concl-update-app": {
+          "possibleCauses": [
+            {
+              "bn": "App-এর পুরনো ভার্সনে bug থাকতে পারে",
+              "en": "The outdated app version may have a bug"
+            }
+          ],
+          "nextTests": [
+            {
+              "bn": "Play Store/App Store থেকে app আপডেট করুন",
+              "en": "Update the app from the Play Store/App Store"
+            }
+          ],
+          "tools": [],
+          "repairCategory": "software",
+          "confidence": "high"
+        },
+        "concl-clear-app-cache": {
+          "possibleCauses": [
+            {
+              "bn": "App cache/data corrupted হয়ে থাকতে পারে",
+              "en": "The app's cache/data may be corrupted"
+            }
+          ],
+          "nextTests": [
+            {
+              "bn": "App-এর cache clear করুন, প্রয়োজনে reinstall করুন",
+              "en": "Clear the app's cache, or reinstall it if needed"
+            }
+          ],
+          "tools": [],
+          "repairCategory": "software",
+          "confidence": "medium"
+        },
+        "concl-free-storage": {
+          "possibleCauses": [
+            {
+              "bn": "Storage পূর্ণ হয়ে গেলে পুরো সিস্টেম স্লো হয়ে যায়",
+              "en": "A nearly-full storage slows the entire system down"
+            }
+          ],
+          "nextTests": [
+            {
+              "bn": "অপ্রয়োজনীয় ফাইল/অ্যাপ মুছে storage খালি করুন",
+              "en": "Free up storage by removing unneeded files/apps"
+            }
+          ],
+          "tools": [],
+          "repairCategory": "software",
+          "confidence": "high"
+        },
+        "concl-too-many-apps": {
+          "possibleCauses": [
+            {
+              "bn": "একসাথে অনেক background app চালু থাকা RAM-এ চাপ ফেলছে",
+              "en": "Too many background apps running at once is straining RAM"
+            }
+          ],
+          "nextTests": [
+            {
+              "bn": "Recent apps থেকে অপ্রয়োজনীয় app বন্ধ করুন",
+              "en": "Close unneeded apps from Recents"
+            }
+          ],
+          "tools": [],
+          "repairCategory": "software",
+          "confidence": "medium"
+        }
+      }
+    }
+  }
+}

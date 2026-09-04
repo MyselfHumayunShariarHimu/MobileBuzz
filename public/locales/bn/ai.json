@@ -1,0 +1,16 @@
+{
+  "chat_title": "MobileBuzz AI",
+  "provider_label": "AI Provider",
+  "model_label": "Model",
+  "new_chat": "নতুন চ্যাট",
+  "clear_chat": "চ্যাট মুছুন",
+  "copy": "কপি করুন",
+  "regenerate": "আবার তৈরি করুন",
+  "translate_response": "উত্তর অনুবাদ করুন",
+  "share": "শেয়ার করুন",
+  "confidence_question": "এই উত্তরটি কতটা নিশ্চিত?",
+  "input_placeholder": "আপনার মোবাইল সমস্যা লিখুন...",
+  "fallback_notice": "এই উত্তরটি {provider} থেকে প্রদান করা হয়েছে।",
+  "demo_notice": "এটি একটি DEMO RESPONSE \u2014 API key যোগ করলে real AI উত্তর পাবেন।",
+  "rate_limited": "একটু ধীরে \u2014 কিছুক্ষণ পর আবার চেষ্টা করুন।"
+}

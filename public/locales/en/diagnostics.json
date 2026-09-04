@@ -1,0 +1,16 @@
+{
+  "select_brand": "Select brand",
+  "select_model": "Select model",
+  "select_category": "Select problem category",
+  "next_question": "Next question",
+  "result_title": "Diagnostic Result",
+  "rule_based_label": "Rule-based preliminary read",
+  "ai_based_label": "AI analysis",
+  "confidence_label": "Confidence",
+  "confidence_high": "High",
+  "confidence_medium": "Medium",
+  "confidence_low": "Low",
+  "yes": "Yes",
+  "no": "No",
+  "start_over": "Start over"
+}

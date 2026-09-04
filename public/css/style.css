@@ -1,0 +1,118 @@
+/* ============================================================
+   MobileBuzz — Base Reset, Typography & Layout Primitives
+   ============================================================ */
+
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+html[data-fontsize="small"] { font-size: 14px; }
+html[data-fontsize="large"] { font-size: 18px; }
+
+img, svg { display: block; max-width: 100%; }
+
+h1, h2, h3 {
+  font-family: var(--font-display-bn);
+  line-height: 1.15;
+  margin: 0 0 var(--space-3);
+  font-weight: 700;
+}
+h1 { font-size: clamp(1.9rem, 5vw + 1rem, 3rem); }
+h2 { font-size: clamp(1.4rem, 3vw + 0.8rem, 2rem); margin-top: var(--space-7); }
+h3 { font-size: 1.1rem; margin-top: var(--space-5); }
+
+p { margin: 0 0 var(--space-4); color: var(--text-muted); }
+
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+code, .mono { font-family: var(--font-mono); }
+
+/* accessibility */
+.skip-link {
+  position: absolute; left: -999px; top: 0;
+  background: var(--accent); color: var(--text-on-accent);
+  padding: var(--space-2) var(--space-4); border-radius: var(--radius-sm);
+  z-index: 100; font-weight: 600;
+}
+.skip-link:focus { left: var(--space-3); top: var(--space-3); }
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
+
+/* layout */
+.container { max-width: 720px; margin: 0 auto; padding: 0 var(--space-4); }
+
+main { display: block; padding-bottom: calc(84px + env(safe-area-inset-bottom, 0px)); }
+
+.site-header {
+  display: flex; align-items: center; justify-content: space-between;
+  padding-top: var(--space-5); padding-bottom: var(--space-2);
+}
+.wordmark { font-family: var(--font-display-en); font-size: 1.3rem; letter-spacing: -0.01em; color: var(--text); }
+.wordmark__accent { color: var(--accent); }
+.site-header__actions { display: flex; align-items: center; gap: var(--space-2); }
+.icon-btn {
+  background: var(--surface-2); border: 1px solid var(--border); border-radius: 999px;
+  width: 44px; height: 44px; display: inline-flex; align-items: center; justify-content: center;
+  color: var(--text); cursor: pointer;
+}
+.icon-btn svg { width: 18px; height: 18px; }
+
+.overflow-menu {
+  position: absolute; right: var(--space-4); top: 64px; z-index: 60;
+  background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-md);
+  box-shadow: var(--shadow-card); display: flex; flex-direction: column; min-width: 160px; overflow: hidden;
+}
+.overflow-menu a {
+  padding: var(--space-3) var(--space-4); color: var(--text); font-size: 0.9rem;
+}
+.overflow-menu a:hover { background: var(--surface-2); text-decoration: none; }
+.overflow-menu[hidden] { display: none; }
+
+/* hero */
+.hero { position: relative; padding: var(--space-7) 0 var(--space-6); overflow: hidden; }
+.hero-trace {
+  position: absolute; inset: 0; width: 100%; height: 100%;
+  opacity: 0.35; pointer-events: none;
+}
+.hero-trace path {
+  fill: none; stroke: var(--accent); stroke-width: 1.5;
+  stroke-dasharray: 480; stroke-dashoffset: 480;
+  animation: draw-trace 2.4s ease-out forwards;
+}
+@keyframes draw-trace { to { stroke-dashoffset: 0; } }
+
+.hero__eyebrow {
+  font-family: var(--font-mono); font-size: 0.8rem; letter-spacing: 0.08em;
+  color: var(--accent); text-transform: uppercase; margin-bottom: var(--space-2);
+}
+.hero__title { position: relative; }
+.hero__tagline-en { font-family: var(--font-mono); font-size: 0.85rem; }
+
+/* type specimen helpers (design-system preview) */
+.type-sample-display { font-family: var(--font-display-bn); font-size: 1.6rem; font-weight: 700; color: var(--text); margin-bottom: var(--space-2); }
+.type-sample-body { font-family: var(--font-body); color: var(--text); }
+
+/* misc */
+.phase-status { margin-top: var(--space-6); color: var(--text-muted); font-size: 0.9rem; }

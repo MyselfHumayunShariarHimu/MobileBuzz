@@ -1,0 +1,16 @@
+{
+  "chat_title": "MobileBuzz AI",
+  "provider_label": "AI Provider",
+  "model_label": "Model",
+  "new_chat": "New chat",
+  "clear_chat": "Clear chat",
+  "copy": "Copy",
+  "regenerate": "Regenerate",
+  "translate_response": "Translate response",
+  "share": "Share",
+  "confidence_question": "How confident is this answer?",
+  "input_placeholder": "Describe your phone problem...",
+  "fallback_notice": "This answer was provided by {provider}.",
+  "demo_notice": "This is a DEMO RESPONSE \u2014 add an API key to get real AI answers.",
+  "rate_limited": "Slow down \u2014 please try again shortly."
+}

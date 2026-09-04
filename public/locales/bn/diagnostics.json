@@ -1,0 +1,16 @@
+{
+  "select_brand": "ব্র্যান্ড নির্বাচন করুন",
+  "select_model": "মডেল নির্বাচন করুন",
+  "select_category": "সমস্যার ধরন নির্বাচন করুন",
+  "next_question": "পরবর্তী প্রশ্ন",
+  "result_title": "ডায়াগনস্টিক ফলাফল",
+  "rule_based_label": "নিয়মভিত্তিক প্রাথমিক ধারণা",
+  "ai_based_label": "AI বিশ্লেষণ",
+  "confidence_label": "নিশ্চয়তা",
+  "confidence_high": "উচ্চ",
+  "confidence_medium": "মাঝারি",
+  "confidence_low": "নিম্ন",
+  "yes": "হ্যাঁ",
+  "no": "না",
+  "start_over": "নতুন করে শুরু করুন"
+}
