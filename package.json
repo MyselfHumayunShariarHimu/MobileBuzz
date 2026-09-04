@@ -5,6 +5,7 @@
   "description": "MobileBuzz — Bangla-first mobile repair diagnostic, learning & multi-AI assistant PWA",
   "scripts": {
     "dev": "vercel dev",
+    "test": "node tests/run.js",
     "check": "for f in $(find . -name '*.js' -not -path './node_modules/*'); do node --check \"$f\" || exit 1; done && echo 'All JS files OK'"
   }
 }

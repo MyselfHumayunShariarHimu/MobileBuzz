@@ -11,15 +11,16 @@ window.MobileBuzz.router = (function () {
   'use strict';
 
   var ROUTES = {
-    home: { file: 'pages/home.html', navId: 'home' },
-    search: { file: 'pages/search.html', navId: 'search' },
-    diagnose: { file: 'pages/diagnose.html', navId: 'diagnose' },
-    learn: { file: 'pages/learn.html', navId: 'learn' },
-    ai: { file: 'pages/ai.html', navId: 'ai' },
-    devices: { file: 'pages/devices.html', navId: null },
-    tools: { file: 'pages/tools.html', navId: null },
-    videos: { file: 'pages/videos.html', navId: null },
-    settings: { file: 'pages/settings.html', navId: null }
+    home: { file: 'pages/home.html', navId: 'home', titleKey: 'common.app_name' },
+    search: { file: 'pages/search.html', navId: 'search', titleKey: 'common.nav_search' },
+    diagnose: { file: 'pages/diagnose.html', navId: 'diagnose', titleKey: 'repair.action_diagnose' },
+    learn: { file: 'pages/learn.html', navId: 'learn', titleKey: 'common.nav_learn' },
+    ai: { file: 'pages/ai.html', navId: 'ai', titleKey: 'ai.chat_title' },
+    devices: { file: 'pages/devices.html', navId: null, titleKey: 'common.menu_devices' },
+    components: { file: 'pages/components.html', navId: null, titleKey: 'common.menu_components' },
+    tools: { file: 'pages/tools.html', navId: null, titleKey: 'common.menu_tools' },
+    videos: { file: 'pages/videos.html', navId: null, titleKey: 'common.menu_videos' },
+    settings: { file: 'pages/settings.html', navId: null, titleKey: 'settings.title' }
   };
 
   var hydrators = {}; // routeName -> function(container)
@@ -36,7 +37,9 @@ window.MobileBuzz.router = (function () {
   function updateBottomNavActive(routeName) {
     var navId = ROUTES[routeName].navId;
     document.querySelectorAll('.bottom-nav__item').forEach(function (item) {
-      item.classList.toggle('is-active', item.getAttribute('data-nav') === navId);
+      var isActive = item.getAttribute('data-nav') === navId;
+      item.classList.toggle('is-active', isActive);
+      if (isActive) item.setAttribute('aria-current', 'page'); else item.removeAttribute('aria-current');
     });
   }
 
@@ -48,6 +51,13 @@ window.MobileBuzz.router = (function () {
     }).then(function (html) { fragmentCache[file] = html; return html; });
   }
 
+  function updateDocumentTitle(routeName) {
+    var route = ROUTES[routeName];
+    var appName = window.MobileBuzz.i18n.t('common.app_name');
+    var pageTitle = window.MobileBuzz.i18n.t(route.titleKey);
+    document.title = routeName === 'home' ? appName : (pageTitle + ' \u2013 ' + appName);
+  }
+
   function render(routeName) {
     var route = ROUTES[routeName];
     mainEl.innerHTML = window.MobileBuzz.ui.loadingHtml();
@@ -56,6 +66,7 @@ window.MobileBuzz.router = (function () {
         mainEl.innerHTML = html;
         window.MobileBuzz.i18n.applyToDom(mainEl);
         updateBottomNavActive(routeName);
+        updateDocumentTitle(routeName);
         window.scrollTo(0, 0);
         if (hydrators[routeName]) return hydrators[routeName](mainEl);
       })
@@ -73,6 +84,7 @@ window.MobileBuzz.router = (function () {
   function init(mainElement) {
     mainEl = mainElement;
     window.addEventListener('hashchange', function () { render(currentRouteName()); });
+    window.MobileBuzz.i18n.onChange(function () { updateDocumentTitle(currentRouteName()); });
     document.querySelectorAll('.bottom-nav__item[data-nav]').forEach(function (item) {
       item.addEventListener('click', function () { navigate(item.getAttribute('data-nav')); });
     });

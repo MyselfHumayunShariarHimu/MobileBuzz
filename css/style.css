@@ -16,6 +16,8 @@ html, body {
   -webkit-font-smoothing: antialiased;
   transition: background 0.2s ease, color 0.2s ease;
 }
+html[data-fontsize="small"] { font-size: 14px; }
+html[data-fontsize="large"] { font-size: 18px; }
 
 img, svg { display: block; max-width: 100%; }
 

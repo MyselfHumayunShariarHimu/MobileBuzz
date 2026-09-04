@@ -33,6 +33,11 @@
     });
   }
 
+  function initFontSize() {
+    var saved = localStorage.getItem('mb_fontsize');
+    if (saved) root.setAttribute('data-fontsize', saved);
+  }
+
   function initOverflowMenu() {
     var btn = document.getElementById('menuToggle');
     var menu = document.getElementById('overflowMenu');
@@ -52,6 +57,7 @@
 
   document.addEventListener('DOMContentLoaded', function () {
     initTheme();
+    initFontSize();
     initOverflowMenu();
     window.MobileBuzz.i18n.init().then(function () {
       window.MobileBuzz.router.init(document.getElementById('main'));

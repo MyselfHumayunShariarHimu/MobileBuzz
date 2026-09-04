@@ -2,64 +2,51 @@
 
 **Diagnose • Learn • Repair | সমস্যা খুঁজুন • শিখুন • মেরামত করুন**
 
-বাংলা-ভিত্তিক মোবাইল রিপেয়ার ডায়াগনস্টিক, লার্নিং একাডেমি ও মাল্টি-AI সহায়ক প্ল্যাটফর্ম।
+বাংলা-ভিত্তিক মোবাইল রিপেয়ার ডায়াগনস্টিক, লার্নিং একাডেমি ও মাল্টি-AI সহায়ক প্ল্যাটফর্ম — সম্পূর্ণ ডেভেলপ করা।
 
-## স্ট্যাটাস
+## এখনই যা কাজ করে (কোনো সেটআপ ছাড়াই)
 
-🟢 **Phases 1–19, 21, 22 বাস্তবায়িত** (full detail: `docs/phase-reports/MASTER-REPORT.md`)
+```bash
+npx serve .
+```
 
-- সম্পূর্ণ architecture ও রোডম্যাপ: [`docs/MobileBuzz-System-Architecture.md`](docs/MobileBuzz-System-Architecture.md)
-- মাস্টার রিপোর্ট (সব phase-এর সারাংশ + known limitations): [`docs/phase-reports/MASTER-REPORT.md`](docs/phase-reports/MASTER-REPORT.md)
-- Security checklist status: [`docs/phase-reports/PHASE-19-security-checklist.md`](docs/phase-reports/PHASE-19-security-checklist.md)
-- Testing checklist: [`docs/phase-reports/PHASE-21-testing-checklist.md`](docs/phase-reports/PHASE-21-testing-checklist.md)
-- Deployment guide: [`docs/phase-reports/PHASE-22-deployment-guide.md`](docs/phase-reports/PHASE-22-deployment-guide.md)
+- বাংলা/English UI, Dark/Light theme, Font size — সব persist হয়
+- Home, Search (৬টা source), Diagnose (১০টা category, real decision tree), Learn (১২টা lesson + quiz + progress), Devices, Components (+ interactive diagrams), Tools (৫টা calculator + Multimeter Learning Lab)
+- Bookmarks, Recent Searches, Data Preferences
+- AI চ্যাট, YouTube, Web Search — key ছাড়াই real Knowledge Base-grounded DEMO mode-এ কাজ করে
+- Installable PWA, offline shell
 
-## যা কাজ করে (আজই টেস্টযোগ্য, কোনো API key ছাড়াই)
+**পূর্ণ বিস্তারিত রিপোর্ট: [`docs/phase-reports/MASTER-REPORT.md`](docs/phase-reports/MASTER-REPORT.md)** — কনটেন্ট ইনভেন্টরি, সব fix-এর তালিকা, honest limitations, সবকিছু।
 
-- বাংলা/English UI, পুরোপুরি অনুবাদযোগ্য (`locales/`)
-- Dark/Light theme (persist হয়)
-- Home, Search (multi-source), Diagnose (৩টা real decision tree: charging/power/display), Learn (৪টা lesson + quiz + progress), Devices, Tools (৪টা calculator + tool database)
-- AI চ্যাট পেজ — key ছাড়া DEMO RESPONSE দেখায়; key দিলে (নিচে দেখুন) real answer দেয়
-- PWA: installable, offline shell (service worker)
+## Automated Tests
 
-## AI Provider সাপোর্ট (Phase 9–15)
+```bash
+npm test
+```
+২৮টা টেস্ট — ডেটা integrity, diagnostic tree logic, calculator math, AI demo-matching, সব সত্যিকারে যাচাই করা (headless browser ছাড়াই সম্ভব যতটুকু)।
 
-OpenAI · Google Gemini · Anthropic Claude · xAI Grok · DeepSeek · OpenRouter — সবগুলোর adapter বাস্তবায়িত ও verified API shape ব্যবহার করে (`ai/providers/`), কিন্তু **কোনো key configure করা নেই** (আপনার নিজের key লাগবে)। কোনো key ছাড়াই পুরো app demo mode-এ চলে।
+## AI Providers (৬টাই বাস্তবায়িত, verified current API)
+
+OpenAI · Google Gemini · Anthropic Claude · xAI Grok · DeepSeek · OpenRouter — `ai/providers/`-এ। কোনো key configure করা নেই (আপনার নিজের key লাগবে, `.env.example` দেখুন)।
 
 ## টেক স্ট্যাক
 
-- Vanilla HTML5 / CSS3 / JavaScript — কোনো framework নেই
-- Vercel Serverless Functions (`/api`) — AI, YouTube, Web Search proxy; সব secret শুধু এখানে
-- GitHub + Vercel deployment
-- PWA (manifest + service worker)
+Vanilla HTML/CSS/JS, কোনো framework নেই। Vercel Serverless Functions (`/api`)। GitHub + Vercel deployment। PWA।
 
-## লোকালি চালানো
+## পূর্ণ AI/YouTube/Web Search টেস্টের জন্য
 
-**কোনো API key ছাড়া (static preview):**
-```bash
-npx serve .
-# অথবা
-python3 -m http.server 5173
-```
-এতে UI, i18n, Knowledge Base, Diagnose, Learn, Tools সব কাজ করবে। AI/Videos/Web Search demo mode দেখাবে কারণ `/api/*` route static server-এ available না।
-
-**AI/Videos/Web Search সহ পূর্ণ টেস্টের জন্য:**
 ```bash
 npm i -g vercel
 vercel dev
 ```
 
-## Environment Variables
+## Deployment
 
-`.env.example` দেখুন। বিস্তারিত: `docs/phase-reports/PHASE-22-deployment-guide.md`। `.env` কখনো commit হবে না।
+সম্পূর্ণ ধাপ: [`docs/phase-reports/PHASE-22-deployment-guide.md`](docs/phase-reports/PHASE-22-deployment-guide.md)
 
-## ফোল্ডার স্ট্রাকচার ও Data/JSON Schema
+## Documentation
 
-`docs/MobileBuzz-System-Architecture.md`-এর §11 ও §12; বাস্তব ফাইলগুলো `data/`, `locales/`, `ai/`, `api/`, `pages/`-এ।
-
-## Known Limitations (বিস্তারিত: MASTER-REPORT.md)
-
-- Knowledge Base/Devices/Components/Tools/Lessons-এ বাস্তব, কাজ-করা seed content আছে (১৪+৫+৬+৮+৪ আইটেম) — হাজার হাজার article-এর claim নয়, বরং একটা সৎ, সম্প্রসারণযোগ্য starting point
-- Diagnostic Engine-এ ৩টা category-র real decision tree আছে (charging/power/display); বাকি ৭টা category বর্তমানে Knowledge Base article-এ redirect করে
-- কোনো headless browser এই build environment-এ ছিল না, তাই সব JS/JSON syntax-validated ও logic-এ smoke-tested হয়েছে, কিন্তু full in-browser QA বাকি (checklist: PHASE-21)
-- Google Custom Search JSON API নতুন গ্রাহকদের জন্য বন্ধ — `api/search.js`-এর কমেন্টে বিকল্প উল্লেখ আছে
+- সম্পূর্ণ Architecture: [`docs/MobileBuzz-System-Architecture.md`](docs/MobileBuzz-System-Architecture.md)
+- Final Report: [`docs/phase-reports/MASTER-REPORT.md`](docs/phase-reports/MASTER-REPORT.md)
+- Security checklist: [`docs/phase-reports/PHASE-19-security-checklist.md`](docs/phase-reports/PHASE-19-security-checklist.md)
+- Testing checklist: [`docs/phase-reports/PHASE-21-testing-checklist.md`](docs/phase-reports/PHASE-21-testing-checklist.md)

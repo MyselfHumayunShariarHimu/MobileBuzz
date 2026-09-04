@@ -37,12 +37,29 @@ window.MobileBuzz.ui = (function () {
   }
 
   function openModal(contentHtml) {
+    var triggerEl = document.activeElement; // remember what had focus, to restore it on close
     var overlay = document.createElement('div');
     overlay.className = 'mb-modal-overlay';
-    overlay.innerHTML = '<div class="mb-modal" role="dialog" aria-modal="true">' + contentHtml + '</div>';
-    overlay.addEventListener('click', function (e) { if (e.target === overlay) close(); });
+    overlay.innerHTML =
+      '<div class="mb-modal" role="dialog" aria-modal="true" tabindex="-1">' +
+      '<button class="mb-modal-close" type="button" aria-label="Close">\u2715</button>' +
+      contentHtml + '</div>';
     document.body.appendChild(overlay);
-    function close() { overlay.remove(); }
+
+    var modalEl = overlay.querySelector('.mb-modal');
+    modalEl.focus();
+
+    function close() {
+      document.removeEventListener('keydown', onKeydown);
+      overlay.remove();
+      if (triggerEl && typeof triggerEl.focus === 'function') triggerEl.focus();
+    }
+    function onKeydown(e) { if (e.key === 'Escape') close(); }
+
+    overlay.addEventListener('click', function (e) { if (e.target === overlay) close(); });
+    overlay.querySelector('.mb-modal-close').addEventListener('click', close);
+    document.addEventListener('keydown', onKeydown);
+
     return { close: close, el: overlay };
   }
 

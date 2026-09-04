@@ -92,9 +92,18 @@ window.MobileBuzz.search = (function () {
     }).catch(function () { return []; });
   }
 
-  // Returns { knowledgeBase, devices, components, tools, lessons } — each
-  // resolved independently. Online sources (youtube, web) are merged in by
-  // js/videos.js and js/web-search.js when this is called from the Search page.
+  function searchErrorCodes(expanded) {
+    return fetch('data/error-codes.json').then(function (r) { return r.json(); }).then(function (d) {
+      return d.errorCodes.filter(function (e) {
+        return textMatches(e.code, expanded) || textMatches(e.manufacturer, expanded) ||
+          textMatches(e.meaning.bn, expanded) || textMatches(e.meaning.en, expanded);
+      });
+    }).catch(function () { return []; });
+  }
+
+  // Returns { knowledgeBase, devices, components, tools, lessons, errorCodes } —
+  // each resolved independently. Online sources (youtube, web) are merged in
+  // by js/videos.js and js/web-search.js when called from the Search page.
   function searchAll(query) {
     return expandQuery(query).then(function (expanded) {
       return Promise.all([
@@ -102,14 +111,16 @@ window.MobileBuzz.search = (function () {
         searchDevices(expanded),
         searchComponents(expanded),
         searchTools(expanded),
-        searchLessons(expanded)
+        searchLessons(expanded),
+        searchErrorCodes(expanded)
       ]).then(function (results) {
         return {
           knowledgeBase: results[0],
           devices: results[1],
           components: results[2],
           tools: results[3],
-          lessons: results[4]
+          lessons: results[4],
+          errorCodes: results[5]
         };
       });
     });

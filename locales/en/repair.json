@@ -25,5 +25,12 @@
   "beginner_learning": "Beginner Learning",
   "device_database": "Device Database",
   "tab_all": "All",
-  "tab_repair": "Repair"
+  "tab_repair": "Repair",
+  "components_intro": "What each component does, common failures, and safety notes.",
+  "tab_error_codes": "Error Codes",
+  "interactive_diagrams": "Interactive Diagrams",
+  "diagram_disclaimer": "These are generic concept diagrams — not an exact schematic for any specific model. Tap a colored node for details.",
+  "saved_items": "Saved",
+  "multimeter_lab": "Multimeter Learning Lab",
+  "simulation_disclaimer": "⚠️ This is an educational simulation — not a real measurement. An actual phone may read differently."
 }

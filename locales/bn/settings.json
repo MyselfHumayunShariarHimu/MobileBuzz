@@ -8,5 +8,9 @@
   "learning_mode": "লার্নিং মোড",
   "ai_provider_default": "ডিফল্ট AI Provider",
   "ai_fallback_toggle": "Provider না পাওয়া গেলে অন্য provider ব্যবহার করুন",
-  "data_preferences": "ডেটা প্রেফারেন্স"
+  "data_preferences": "ডেটা প্রেফারেন্স",
+  "clear_data": "সব লোকাল ডেটা মুছুন",
+  "data_summary": "{bookmarks}টা সংরক্ষিত আইটেম, {lessons}টা লেসন সম্পন্ন। সব ডেটা শুধু আপনার ডিভাইসে থাকে — কোনো সার্ভারে যায় না।",
+  "data_cleared": "সব লোকাল ডেটা মুছে ফেলা হয়েছে।",
+  "confirm_clear_data": "বুকমার্ক, লার্নিং progress ও recent search সহ সব লোকাল ডেটা মুছে যাবে। নিশ্চিত?"
 }

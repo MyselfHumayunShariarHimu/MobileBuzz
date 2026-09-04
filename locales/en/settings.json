@@ -8,5 +8,9 @@
   "learning_mode": "Learning Mode",
   "ai_provider_default": "Default AI Provider",
   "ai_fallback_toggle": "Use another provider if the selected one is unavailable",
-  "data_preferences": "Data Preferences"
+  "data_preferences": "Data Preferences",
+  "clear_data": "Clear All Local Data",
+  "data_summary": "{bookmarks} saved items, {lessons} lessons completed. All data stays only on your device — nothing is sent to a server.",
+  "data_cleared": "All local data has been cleared.",
+  "confirm_clear_data": "This will erase bookmarks, learning progress, and recent searches. Are you sure?"
 }

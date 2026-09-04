@@ -5,7 +5,7 @@
  * Network-only (never cached) for /api/* — AI/YouTube/Web results must
  * always be live and fresh, never silently served stale (§47).
  */
-var CACHE_NAME = 'mobilebuzz-shell-v1';
+var CACHE_NAME = 'mobilebuzz-shell-v4';
 
 var SHELL_FILES = [
   '/',
@@ -33,8 +33,8 @@ var SHELL_FILES = [
   '/js/app.js',
   '/locales/bn/common.json', '/locales/bn/repair.json', '/locales/bn/diagnostics.json', '/locales/bn/ai.json', '/locales/bn/settings.json',
   '/locales/en/common.json', '/locales/en/repair.json', '/locales/en/diagnostics.json', '/locales/en/ai.json', '/locales/en/settings.json',
-  '/data/problems.json', '/data/devices.json', '/data/components.json', '/data/tools.json', '/data/synonyms.json', '/data/diagnostic-trees.json', '/data/lessons.json', '/data/error-codes.json',
-  '/pages/home.html', '/pages/search.html', '/pages/diagnose.html', '/pages/learn.html', '/pages/ai.html', '/pages/devices.html', '/pages/tools.html', '/pages/videos.html', '/pages/settings.html'
+  '/data/problems.json', '/data/devices.json', '/data/components.json', '/data/tools.json', '/data/synonyms.json', '/data/diagnostic-trees.json', '/data/lessons.json', '/data/error-codes.json', '/data/diagrams.json', '/data/test-points.json',
+  '/pages/home.html', '/pages/search.html', '/pages/diagnose.html', '/pages/learn.html', '/pages/ai.html', '/pages/devices.html', '/pages/components.html', '/pages/tools.html', '/pages/videos.html', '/pages/settings.html'
 ];
 
 self.addEventListener('install', function (event) {

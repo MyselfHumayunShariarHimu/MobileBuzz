@@ -86,6 +86,12 @@ window.MobileBuzz.storage = (function () {
     });
   }
 
+  function clearStore(store) {
+    return getAll(store).then(function (items) {
+      return Promise.all(items.map(function (item) { return remove(store, item.id); }));
+    });
+  }
+
   // Convenience API
   return {
     bookmarkAdd: function (item) { return put('bookmarks', item); },
@@ -104,6 +110,14 @@ window.MobileBuzz.storage = (function () {
       return getAll('recentSearches').then(function (list) {
         return list.sort(function (a, b) { return b.ts - a.ts; }).slice(0, 10);
       });
+    },
+
+    // Clears bookmarks, learning progress, and recent searches — used by
+    // the Settings "Clear All Local Data" action. Does not touch
+    // localStorage-only preferences (theme/lang/mode/fontsize), since those
+    // are UI preferences, not "data" in the sense shown in that summary.
+    clearAll: function () {
+      return Promise.all(STORES.map(function (s) { return clearStore(s); }));
     }
   };
 })();

@@ -7,10 +7,22 @@
       "modelNumber": "SM-A525F",
       "platform": "Android",
       "chipset": "Snapdragon 720G",
-      "display": { "type": "Super AMOLED", "size": "6.5\"" },
-      "battery": { "capacity_mAh": 4500, "removable": false },
-      "charging": { "wired_W": 25, "wireless": false },
-      "commonProblems": ["phone-not-charging", "screen-flicker-lines"],
+      "display": {
+        "type": "Super AMOLED",
+        "size": "6.5\""
+      },
+      "battery": {
+        "capacity_mAh": 4500,
+        "removable": false
+      },
+      "charging": {
+        "wired_W": 25,
+        "wireless": false
+      },
+      "commonProblems": [
+        "phone-not-charging",
+        "screen-flicker-lines"
+      ],
       "repairGuides": [],
       "diagnosticNotes": {
         "bn": "এই মডেলে স্ক্রিন replace করার পর touch connector ঢিলা হওয়া একটি পরিচিত সমস্যা।",
@@ -24,10 +36,22 @@
       "modelNumber": "2201117TG",
       "platform": "Android",
       "chipset": "Snapdragon 680",
-      "display": { "type": "AMOLED", "size": "6.43\"" },
-      "battery": { "capacity_mAh": 5000, "removable": false },
-      "charging": { "wired_W": 33, "wireless": false },
-      "commonProblems": ["battery-drains-fast", "app-crashing-lag"],
+      "display": {
+        "type": "AMOLED",
+        "size": "6.43\""
+      },
+      "battery": {
+        "capacity_mAh": 5000,
+        "removable": false
+      },
+      "charging": {
+        "wired_W": 33,
+        "wireless": false
+      },
+      "commonProblems": [
+        "battery-drains-fast",
+        "app-crashing-lag"
+      ],
       "repairGuides": [],
       "diagnosticNotes": {
         "bn": "MIUI-এর aggressive battery optimization অনেক সময় background app বন্ধ করে দেয় — battery drain মনে হলেও এটা আলাদা করে যাচাই করা দরকার।",
@@ -41,10 +65,22 @@
       "modelNumber": "V2111",
       "platform": "Android",
       "chipset": "Helio P35",
-      "display": { "type": "IPS LCD", "size": "6.51\"" },
-      "battery": { "capacity_mAh": 5000, "removable": false },
-      "charging": { "wired_W": 10, "wireless": false },
-      "commonProblems": ["phone-not-charging", "slow-charging"],
+      "display": {
+        "type": "IPS LCD",
+        "size": "6.51\""
+      },
+      "battery": {
+        "capacity_mAh": 5000,
+        "removable": false
+      },
+      "charging": {
+        "wired_W": 10,
+        "wireless": false
+      },
+      "commonProblems": [
+        "phone-not-charging",
+        "slow-charging"
+      ],
       "repairGuides": [],
       "diagnosticNotes": {
         "bn": "এই মডেলে চার্জিং পোর্ট looseness একটি সাধারণভাবে রিপোর্ট করা সমস্যা।",
@@ -58,10 +94,22 @@
       "modelNumber": "A2111",
       "platform": "iOS",
       "chipset": "Apple A13 Bionic",
-      "display": { "type": "Liquid Retina LCD", "size": "6.1\"" },
-      "battery": { "capacity_mAh": 3110, "removable": false },
-      "charging": { "wired_W": 18, "wireless": true },
-      "commonProblems": ["battery-drains-fast", "no-display-black-screen"],
+      "display": {
+        "type": "Liquid Retina LCD",
+        "size": "6.1\""
+      },
+      "battery": {
+        "capacity_mAh": 3110,
+        "removable": false
+      },
+      "charging": {
+        "wired_W": 18,
+        "wireless": true
+      },
+      "commonProblems": [
+        "battery-drains-fast",
+        "no-display-black-screen"
+      ],
       "repairGuides": [],
       "diagnosticNotes": {
         "bn": "iOS-এ Battery Health শতাংশ Settings > Battery > Battery Health-এ সরাসরি দেখা যায়।",
@@ -75,14 +123,171 @@
       "modelNumber": "itel A48",
       "platform": "Android",
       "chipset": "Unisoc SC9832E",
-      "display": { "type": "IPS LCD", "size": "6.088\"" },
-      "battery": { "capacity_mAh": 4000, "removable": false },
-      "charging": { "wired_W": 10, "wireless": false },
-      "commonProblems": ["app-crashing-lag", "touch-not-working"],
+      "display": {
+        "type": "IPS LCD",
+        "size": "6.088\""
+      },
+      "battery": {
+        "capacity_mAh": 4000,
+        "removable": false
+      },
+      "charging": {
+        "wired_W": 10,
+        "wireless": false
+      },
+      "commonProblems": [
+        "app-crashing-lag",
+        "touch-not-working"
+      ],
       "repairGuides": [],
       "diagnosticNotes": {
         "bn": "এন্ট্রি-লেভেল RAM/storage-এর কারণে অনেক app একসাথে চালালে lag/crash সাধারণ।",
         "en": "Entry-level RAM/storage makes lag/crashes common when many apps run at once."
+      }
+    },
+    {
+      "id": "samsung-galaxy-s21-fe",
+      "brand": "Samsung",
+      "model": "Galaxy S21 FE",
+      "modelNumber": "SM-G990B",
+      "platform": "Android",
+      "chipset": "Snapdragon 888",
+      "display": {
+        "type": "Dynamic AMOLED 2X",
+        "size": "6.4\""
+      },
+      "battery": {
+        "capacity_mAh": 4500,
+        "removable": false
+      },
+      "charging": {
+        "wired_W": 25,
+        "wireless": true
+      },
+      "commonProblems": [
+        "battery-drains-fast",
+        "screen-flicker-lines"
+      ],
+      "repairGuides": [],
+      "diagnosticNotes": {
+        "bn": "এই মডেলে wireless charging coil connector-এর looseness একটি পরিচিত সমস্যা।",
+        "en": "A loose wireless charging coil connector is a known issue on this model."
+      }
+    },
+    {
+      "id": "oppo-a74",
+      "brand": "OPPO",
+      "model": "A74",
+      "modelNumber": "CPH2219",
+      "platform": "Android",
+      "chipset": "Snapdragon 662",
+      "display": {
+        "type": "IPS LCD",
+        "size": "6.43\""
+      },
+      "battery": {
+        "capacity_mAh": 5000,
+        "removable": false
+      },
+      "charging": {
+        "wired_W": 18,
+        "wireless": false
+      },
+      "commonProblems": [
+        "app-crashing-lag",
+        "wifi-not-turning-on"
+      ],
+      "repairGuides": [],
+      "diagnosticNotes": {
+        "bn": "ColorOS-এর battery optimization বেশ আক্রমণাত্মক — app crash-এর আগে এটি যাচাই করুন।",
+        "en": "ColorOS's battery optimization is fairly aggressive — worth checking before assuming an app crash is unrelated."
+      }
+    },
+    {
+      "id": "realme-8",
+      "brand": "Realme",
+      "model": "8",
+      "modelNumber": "RMX3085",
+      "platform": "Android",
+      "chipset": "Helio G95",
+      "display": {
+        "type": "Super AMOLED",
+        "size": "6.4\""
+      },
+      "battery": {
+        "capacity_mAh": 5000,
+        "removable": false
+      },
+      "charging": {
+        "wired_W": 30,
+        "wireless": false
+      },
+      "commonProblems": [
+        "phone-not-charging",
+        "camera-not-opening"
+      ],
+      "repairGuides": [],
+      "diagnosticNotes": {
+        "bn": "AMOLED প্যানেল হওয়ায় burn-in সম্ভাবনা বেশি দীর্ঘদিন static UI ব্যবহারে।",
+        "en": "Being AMOLED, this model has a higher burn-in risk with long-term static UI use."
+      }
+    },
+    {
+      "id": "google-pixel-6a",
+      "brand": "Google Pixel",
+      "model": "6a",
+      "modelNumber": "GB7N6",
+      "platform": "Android",
+      "chipset": "Google Tensor",
+      "display": {
+        "type": "OLED",
+        "size": "6.1\""
+      },
+      "battery": {
+        "capacity_mAh": 4306,
+        "removable": false
+      },
+      "charging": {
+        "wired_W": 18,
+        "wireless": false
+      },
+      "commonProblems": [
+        "random-restart",
+        "wifi-keeps-disconnecting"
+      ],
+      "repairGuides": [],
+      "diagnosticNotes": {
+        "bn": "কিছু ইউনিটে known Wi-Fi connectivity bug ছিল যা software update দিয়ে সমাধান হয়েছে — আগে আপডেট চেক করুন।",
+        "en": "Some units had a known Wi-Fi connectivity bug fixed via software update — check for updates first."
+      }
+    },
+    {
+      "id": "xiaomi-poco-x3-pro",
+      "brand": "POCO",
+      "model": "X3 Pro",
+      "modelNumber": "M2102J20SG",
+      "platform": "Android",
+      "chipset": "Snapdragon 860",
+      "display": {
+        "type": "IPS LCD",
+        "size": "6.67\""
+      },
+      "battery": {
+        "capacity_mAh": 5160,
+        "removable": false
+      },
+      "charging": {
+        "wired_W": 33,
+        "wireless": false
+      },
+      "commonProblems": [
+        "overheating",
+        "distorted-sound"
+      ],
+      "repairGuides": [],
+      "diagnosticNotes": {
+        "bn": "High-performance chipset হওয়ায় gaming-এর সময় overheating অন্য বাজেট ফোনের চেয়ে বেশি লক্ষণীয়।",
+        "en": "Being a high-performance chipset, gaming-related overheating is more noticeable than on other budget phones."
       }
     }
   ]

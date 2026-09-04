@@ -1,0 +1,45 @@
+{
+  "diagrams": [
+    {
+      "id": "charging-path",
+      "title": { "bn": "চার্জিং পাথ", "en": "Charging Path" },
+      "viewBox": "0 0 360 120",
+      "nodes": [
+        { "id": "adapter", "label": { "bn": "Adapter", "en": "Adapter" }, "x": 20, "y": 60, "componentId": null },
+        { "id": "cable", "label": { "bn": "Cable", "en": "Cable" }, "x": 90, "y": 60, "componentId": null },
+        { "id": "charging-port", "label": { "bn": "পোর্ট", "en": "Port" }, "x": 160, "y": 60, "componentId": "charging-port" },
+        { "id": "charging-ic", "label": { "bn": "চার্জিং IC", "en": "Charging IC" }, "x": 230, "y": 60, "componentId": "charging-ic" },
+        { "id": "pmic", "label": { "bn": "PMIC", "en": "PMIC" }, "x": 300, "y": 30, "componentId": "pmic" },
+        { "id": "battery-connector", "label": { "bn": "ব্যাটারি", "en": "Battery" }, "x": 300, "y": 90, "componentId": "battery-connector" }
+      ],
+      "edges": [["adapter", "cable"], ["cable", "charging-port"], ["charging-port", "charging-ic"], ["charging-ic", "pmic"], ["pmic", "battery-connector"]]
+    },
+    {
+      "id": "power-path",
+      "title": { "bn": "পাওয়ার পাথ", "en": "Power Path" },
+      "viewBox": "0 0 360 100",
+      "nodes": [
+        { "id": "battery-connector-2", "label": { "bn": "ব্যাটারি", "en": "Battery" }, "x": 20, "y": 50, "componentId": "battery-connector" },
+        { "id": "pmic-2", "label": { "bn": "PMIC", "en": "PMIC" }, "x": 120, "y": 50, "componentId": "pmic" },
+        { "id": "display-rail", "label": { "bn": "Display", "en": "Display" }, "x": 220, "y": 20, "componentId": "display-connector" },
+        { "id": "audio-rail", "label": { "bn": "Audio", "en": "Audio" }, "x": 220, "y": 50, "componentId": "audio-ic" },
+        { "id": "wifi-rail", "label": { "bn": "Wi-Fi/BT", "en": "Wi-Fi/BT" }, "x": 220, "y": 80, "componentId": "wifi-bt-ic" },
+        { "id": "cpu-rail", "label": { "bn": "CPU", "en": "CPU" }, "x": 320, "y": 50, "componentId": null }
+      ],
+      "edges": [["battery-connector-2", "pmic-2"], ["pmic-2", "display-rail"], ["pmic-2", "audio-rail"], ["pmic-2", "wifi-rail"], ["pmic-2", "cpu-rail"]]
+    },
+    {
+      "id": "display-path",
+      "title": { "bn": "ডিসপ্লে পাথ", "en": "Display Path" },
+      "viewBox": "0 0 360 100",
+      "nodes": [
+        { "id": "cpu-2", "label": { "bn": "CPU", "en": "CPU" }, "x": 20, "y": 50, "componentId": null },
+        { "id": "display-ic", "label": { "bn": "Display IC", "en": "Display IC" }, "x": 120, "y": 50, "componentId": null },
+        { "id": "display-connector-2", "label": { "bn": "কানেক্টর", "en": "Connector" }, "x": 220, "y": 50, "componentId": "display-connector" },
+        { "id": "touch-ic-2", "label": { "bn": "Touch IC", "en": "Touch IC" }, "x": 220, "y": 15, "componentId": "touch-ic" },
+        { "id": "panel", "label": { "bn": "প্যানেল", "en": "Panel" }, "x": 320, "y": 50, "componentId": null }
+      ],
+      "edges": [["cpu-2", "display-ic"], ["display-ic", "display-connector-2"], ["display-connector-2", "panel"], ["display-connector-2", "touch-ic-2"]]
+    }
+  ]
+}

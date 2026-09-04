@@ -315,7 +315,11 @@
           ],
           "tools": [],
           "repairCategory": "power",
-          "confidence": "medium"
+          "confidence": "medium",
+          "safetyStop": {
+            "bn": "⚠️ থামুন — অবিলম্বে চার্জে দেবেন না বা চালু করার চেষ্টা করবেন না। সম্পূর্ণ শুকাতে দিন, প্রয়োজনে পেশাদার টেকনিশিয়ানের কাছে নিন।",
+            "en": "⚠️ STOP — do not charge or try to power it on right away. Let it fully dry, and see a professional technician if in doubt."
+          }
         },
         "concl-drop-damage": {
           "possibleCauses": [
@@ -541,7 +545,11 @@
           ],
           "tools": [],
           "repairCategory": "battery",
-          "confidence": "high"
+          "confidence": "high",
+          "safetyStop": {
+            "bn": "⚠️ থামুন — ব্যবহার ও চার্জ এখনই বন্ধ করুন। ফোলা ব্যাটারিতে চাপ বা ছিদ্র করবেন না। দ্রুত একজন পেশাদার টেকনিশিয়ানের কাছে নিয়ে যান।",
+            "en": "⚠️ STOP — stop use and charging immediately. Do not press or puncture a swollen battery. Take it to a professional technician promptly."
+          }
         },
         "concl-app-drain": {
           "possibleCauses": [

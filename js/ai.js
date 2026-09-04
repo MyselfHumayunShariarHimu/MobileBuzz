@@ -110,7 +110,7 @@ window.MobileBuzz.ai = (function () {
         language: window.MobileBuzz.i18n.getLang(),
         task: opts.task || 'chat',
         context: opts.context,
-        allowFallback: opts.allowFallback !== false
+        allowFallback: opts.allowFallback !== undefined ? opts.allowFallback : (localStorage.getItem('mb_ai_fallback') === 'true')
       })
     })
       .then(function (r) {

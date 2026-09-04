@@ -1,29 +1,40 @@
 <section class="container">
   <h1 data-i18n="settings.title">Settings</h1>
 
-  <h3 data-i18n="settings.language">Language</h3>
+  <h2 data-i18n="settings.language">Language</h2>
   <div class="demo-row demo-row--tight">
     <button class="tab" data-lang="bn">বাংলা</button>
     <button class="tab" data-lang="en">English</button>
   </div>
 
-  <h3 data-i18n="settings.theme">Theme</h3>
+  <h2 data-i18n="settings.theme">Theme</h2>
   <div class="demo-row demo-row--tight">
     <button class="tab" data-theme-choice="dark" data-i18n="settings.theme_dark">Dark</button>
     <button class="tab" data-theme-choice="light" data-i18n="settings.theme_light">Light</button>
   </div>
 
-  <h3 data-i18n="settings.learning_mode">Learning Mode</h3>
+  <h2 data-i18n="settings.learning_mode">Learning Mode</h2>
   <div class="demo-row demo-row--tight">
     <button class="tab" data-mode="beginner" data-i18n="common.mode_beginner">Beginner</button>
     <button class="tab" data-mode="technician" data-i18n="common.mode_technician">Technician</button>
     <button class="tab" data-mode="advanced" data-i18n="common.mode_advanced">Advanced</button>
   </div>
 
-  <h3 data-i18n="settings.ai_provider_default">Default AI Provider</h3>
+  <h2 data-i18n="settings.font_size">Font Size</h2>
+  <div class="demo-row demo-row--tight">
+    <button class="tab" data-fontsize="small">A-</button>
+    <button class="tab" data-fontsize="medium">A</button>
+    <button class="tab" data-fontsize="large">A+</button>
+  </div>
+
+  <h2 data-i18n="settings.ai_provider_default">Default AI Provider</h2>
   <select id="settingsProviderSelect" class="calc-input"></select>
   <label style="display:flex;align-items:center;gap:var(--space-2);margin-top:var(--space-3);">
     <input type="checkbox" id="settingsFallbackToggle">
     <span data-i18n="settings.ai_fallback_toggle">Use another provider if the selected one is unavailable</span>
   </label>
+
+  <h2 data-i18n="settings.data_preferences">Data Preferences</h2>
+  <p class="phase-status" style="margin-top:0;" id="dataPreferencesSummary"></p>
+  <button class="btn btn-danger" id="clearLocalDataBtn" type="button" data-i18n="settings.clear_data">সব লোকাল ডেটা মুছুন</button>
 </section>

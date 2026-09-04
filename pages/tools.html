@@ -1,6 +1,20 @@
 <section class="container">
   <h1 data-i18n="common.menu_tools">Tools</h1>
 
+  <h2 data-i18n="repair.multimeter_lab">মাল্টিমিটার লার্নিং ল্যাব</h2>
+  <p class="phase-status" style="margin-top:0;color:var(--accent-warm);" data-i18n="repair.simulation_disclaimer">
+    \u26a0\ufe0f এটি একটি শিক্ষামূলক সিমুলেশন — বাস্তব measurement নয়। প্রকৃত ফোনে ভিন্ন রিডিং আসতে পারে।
+  </p>
+  <div class="demo-row">
+    <select id="labTestPoint" class="calc-input"></select>
+    <select id="labMode" class="calc-input">
+      <option value="voltage">Voltage</option>
+      <option value="continuity">Continuity</option>
+    </select>
+  </div>
+  <button class="btn btn-primary" id="labMeasureBtn" type="button">\ud83d\udd0b Measure (Simulated)</button>
+  <div id="labResult" style="margin-top:var(--space-4);"></div>
+
   <h2>Ohm's Law Calculator</h2>
   <p class="phase-status" style="margin-top:0;">এটি একটি হিসাবভিত্তিক estimate; বাস্তব measurement নয়।</p>
   <div class="demo-row">
@@ -18,6 +32,39 @@
   </div>
   <button class="btn btn-primary" id="battCalcBtn" type="button">Estimate</button>
   <p id="battResult" class="mono" style="margin-top:var(--space-3);"></p>
+
+  <h2>Charging Time Estimate</h2>
+  <div class="demo-row">
+    <input type="number" id="chgCapacity" placeholder="Capacity (mAh)" class="calc-input">
+    <input type="number" id="chgCurrent" placeholder="Charger current (mA)" class="calc-input">
+  </div>
+  <button class="btn btn-primary" id="chgCalcBtn" type="button">Estimate</button>
+  <p id="chgResult" class="mono" style="margin-top:var(--space-3);"></p>
+
+  <h2>Power Calculator (P = V \u00d7 I)</h2>
+  <div class="demo-row">
+    <input type="number" id="pwrVoltage" placeholder="Voltage (V)" class="calc-input">
+    <input type="number" id="pwrCurrent" placeholder="Current (A)" class="calc-input">
+  </div>
+  <button class="btn btn-primary" id="pwrCalcBtn" type="button">Calculate</button>
+  <p id="pwrResult" class="mono" style="margin-top:var(--space-3);"></p>
+
+  <h2>Unit Converter</h2>
+  <div class="demo-row">
+    <input type="number" id="convValue" placeholder="Value" class="calc-input">
+    <select id="convKind" class="calc-input">
+      <option value="voltage">Voltage</option>
+      <option value="current">Current</option>
+      <option value="resistance">Resistance</option>
+    </select>
+  </div>
+  <div class="demo-row">
+    <select id="convFrom" class="calc-input"></select>
+    <span style="align-self:center;">\u2192</span>
+    <select id="convTo" class="calc-input"></select>
+  </div>
+  <button class="btn btn-primary" id="convCalcBtn" type="button">Convert</button>
+  <p id="convResult" class="mono" style="margin-top:var(--space-3);"></p>
 
   <h2 data-i18n="common.menu_tools">Tool Database</h2>
   <div id="toolList" class="card-grid"></div>

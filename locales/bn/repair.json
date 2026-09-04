@@ -25,5 +25,12 @@
   "beginner_learning": "Beginner Learning",
   "device_database": "Device Database",
   "tab_all": "সব",
-  "tab_repair": "রিপেয়ার"
+  "tab_repair": "রিপেয়ার",
+  "components_intro": "প্রতিটি কম্পোনেন্টের কাজ, সাধারণ ত্রুটি ও নিরাপত্তা তথ্য।",
+  "tab_error_codes": "এরর কোড",
+  "interactive_diagrams": "ইন্টারঅ্যাক্টিভ ডায়াগ্রাম",
+  "diagram_disclaimer": "এগুলো সাধারণ ধারণাগত ডায়াগ্রাম — নির্দিষ্ট মডেলের সঠিক schematic নয়। রঙিন বিন্দুতে ট্যাপ করে বিস্তারিত দেখুন।",
+  "saved_items": "সংরক্ষিত",
+  "multimeter_lab": "মাল্টিমিটার লার্নিং ল্যাব",
+  "simulation_disclaimer": "⚠️ এটি একটি শিক্ষামূলক সিমুলেশন — বাস্তব measurement নয়। প্রকৃত ফোনে ভিন্ন রিডিং আসতে পারে।"
 }

@@ -4,45 +4,269 @@
       "manufacturer": "Samsung",
       "device": "Various Galaxy models",
       "code": "Black screen + recovery text \"Firmware upgrade encountered an issue\"",
-      "meaning": { "bn": "একটি software update বা flash প্রক্রিয়া মাঝপথে ব্যর্থ হয়েছে।", "en": "A software update or flash process failed partway through." },
+      "meaning": {
+        "bn": "একটি software update বা flash প্রক্রিয়া মাঝপথে ব্যর্থ হয়েছে।",
+        "en": "A software update or flash process failed partway through."
+      },
       "possibleCauses": [
-        { "bn": "Update-এর সময় ব্যাটারি কমে যাওয়া বা সংযোগ বিচ্ছিন্ন হওয়া", "en": "Battery ran low or connection dropped mid-update" }
+        {
+          "bn": "Update-এর সময় ব্যাটারি কমে যাওয়া বা সংযোগ বিচ্ছিন্ন হওয়া",
+          "en": "Battery ran low or connection dropped mid-update"
+        }
       ],
       "diagnostic": [
-        { "bn": "Recovery mode থেকে reboot/wipe cache চেষ্টা করুন", "en": "Try reboot / wipe cache from Recovery Mode" }
+        {
+          "bn": "Recovery mode থেকে reboot/wipe cache চেষ্টা করুন",
+          "en": "Try reboot / wipe cache from Recovery Mode"
+        }
       ],
-      "recommendedAction": { "bn": "Official firmware দিয়ে পুনরায় flash করার প্রয়োজন হতে পারে — advanced/technician-level কাজ।", "en": "Re-flashing with official firmware may be needed — an advanced/technician-level task." },
+      "recommendedAction": {
+        "bn": "Official firmware দিয়ে পুনরায় flash করার প্রয়োজন হতে পারে — advanced/technician-level কাজ।",
+        "en": "Re-flashing with official firmware may be needed — an advanced/technician-level task."
+      },
       "officialReference": "Samsung official support"
     },
     {
       "manufacturer": "Apple",
       "device": "iPhone (various)",
       "code": "4013 / 4014 (restore error in iTunes/Finder)",
-      "meaning": { "bn": "Restore বা update প্রক্রিয়ার সময় ডিভাইসের সাথে সংযোগ বিচ্ছিন্ন হয়েছে।", "en": "The device lost connection during a restore or update process." },
+      "meaning": {
+        "bn": "Restore বা update প্রক্রিয়ার সময় ডিভাইসের সাথে সংযোগ বিচ্ছিন্ন হয়েছে।",
+        "en": "The device lost connection during a restore or update process."
+      },
       "possibleCauses": [
-        { "bn": "USB কেবল বা পোর্ট সমস্যা", "en": "USB cable or port issue" },
-        { "bn": "হার্ডওয়্যার-স্তরের সমস্যা (কিছু ক্ষেত্রে)", "en": "Hardware-level fault (in some cases)" }
+        {
+          "bn": "USB কেবল বা পোর্ট সমস্যা",
+          "en": "USB cable or port issue"
+        },
+        {
+          "bn": "হার্ডওয়্যার-স্তরের সমস্যা (কিছু ক্ষেত্রে)",
+          "en": "Hardware-level fault (in some cases)"
+        }
       ],
       "diagnostic": [
-        { "bn": "ভিন্ন কেবল/পোর্ট ব্যবহার করে আবার চেষ্টা করুন", "en": "Retry with a different cable/USB port" }
+        {
+          "bn": "ভিন্ন কেবল/পোর্ট ব্যবহার করে আবার চেষ্টা করুন",
+          "en": "Retry with a different cable/USB port"
+        }
       ],
-      "recommendedAction": { "bn": "সমস্যা থেকে গেলে Apple official support-এর পরামর্শ নিন।", "en": "Consult Apple official support if the issue persists." },
+      "recommendedAction": {
+        "bn": "সমস্যা থেকে গেলে Apple official support-এর পরামর্শ নিন।",
+        "en": "Consult Apple official support if the issue persists."
+      },
       "officialReference": "Apple official support"
     },
     {
       "manufacturer": "Generic Android",
       "device": "Various",
       "code": "\"Unfortunately, [app] has stopped\"",
-      "meaning": { "bn": "নির্দিষ্ট অ্যাপ্লিকেশন ক্র্যাশ করেছে।", "en": "The specified application has crashed." },
+      "meaning": {
+        "bn": "নির্দিষ্ট অ্যাপ্লিকেশন ক্র্যাশ করেছে।",
+        "en": "The specified application has crashed."
+      },
       "possibleCauses": [
-        { "bn": "Corrupted app cache/data", "en": "Corrupted app cache/data" },
-        { "bn": "Android ভার্সনের সাথে অ্যাপ compatible না", "en": "App not compatible with the Android version" }
+        {
+          "bn": "Corrupted app cache/data",
+          "en": "Corrupted app cache/data"
+        },
+        {
+          "bn": "Android ভার্সনের সাথে অ্যাপ compatible না",
+          "en": "App not compatible with the Android version"
+        }
       ],
       "diagnostic": [
-        { "bn": "App cache clear করে দেখুন, তারপর app update করুন", "en": "Clear app cache first, then update the app" }
+        {
+          "bn": "App cache clear করে দেখুন, তারপর app update করুন",
+          "en": "Clear app cache first, then update the app"
+        }
       ],
-      "recommendedAction": { "bn": "সমস্যা থেকে গেলে app uninstall/reinstall বিবেচনা করুন।", "en": "Consider uninstall/reinstall if it persists." },
+      "recommendedAction": {
+        "bn": "সমস্যা থেকে গেলে app uninstall/reinstall বিবেচনা করুন।",
+        "en": "Consider uninstall/reinstall if it persists."
+      },
       "officialReference": "Android developer documentation"
+    },
+    {
+      "manufacturer": "Xiaomi",
+      "device": "Redmi/POCO (MIUI)",
+      "code": "\"Com.android.phone has stopped\"",
+      "meaning": {
+        "bn": "ফোন অ্যাপ ক্র্যাশ করেছে, প্রায়ই SIM বা network stack সমস্যায় হয়।",
+        "en": "The phone app has crashed, often related to SIM or network stack issues."
+      },
+      "possibleCauses": [
+        {
+          "bn": "SIM card সংক্রান্ত সফটওয়্যার conflict",
+          "en": "A SIM-card-related software conflict"
+        }
+      ],
+      "diagnostic": [
+        {
+          "bn": "SIM খুলে আবার বসিয়ে রিস্টার্ট করুন",
+          "en": "Remove and reseat the SIM, then restart"
+        }
+      ],
+      "recommendedAction": {
+        "bn": "সমস্যা থেকে গেলে system update যাচাই করুন।",
+        "en": "Check for a system update if it persists."
+      },
+      "officialReference": "Xiaomi/MIUI official support"
+    },
+    {
+      "manufacturer": "Samsung",
+      "device": "Various Galaxy models",
+      "code": "Error 0107 / 0x0107 (Kies/Smart Switch)",
+      "meaning": {
+        "bn": "ডিভাইস transfer/backup টুলের সাথে সংযোগে ব্যর্থ হয়েছে।",
+        "en": "The device failed to connect with the transfer/backup tool."
+      },
+      "possibleCauses": [
+        {
+          "bn": "USB driver সমস্যা বা cable ত্রুটি",
+          "en": "USB driver issue or a faulty cable"
+        }
+      ],
+      "diagnostic": [
+        {
+          "bn": "ভিন্ন USB পোর্ট/কেবল দিয়ে চেষ্টা করুন",
+          "en": "Try a different USB port/cable"
+        }
+      ],
+      "recommendedAction": {
+        "bn": "Samsung Smart Switch সর্বশেষ ভার্সনে আপডেট করুন।",
+        "en": "Update Samsung Smart Switch to the latest version."
+      },
+      "officialReference": "Samsung official support"
+    },
+    {
+      "manufacturer": "Generic Android",
+      "device": "Various",
+      "code": "\"Insufficient storage available\"",
+      "meaning": {
+        "bn": "App install/update-এর জন্য যথেষ্ট storage নেই।",
+        "en": "Not enough storage for an app install/update."
+      },
+      "possibleCauses": [
+        {
+          "bn": "Storage প্রায় পূর্ণ, বা cache partition ভরে গেছে",
+          "en": "Storage nearly full, or the cache partition is full"
+        }
+      ],
+      "diagnostic": [
+        {
+          "bn": "Settings > Storage-এ available space যাচাই করুন",
+          "en": "Check available space under Settings > Storage"
+        }
+      ],
+      "recommendedAction": {
+        "bn": "অপ্রয়োজনীয় ফাইল/অ্যাপ মুছে জায়গা খালি করুন।",
+        "en": "Free up space by removing unneeded files/apps."
+      },
+      "officialReference": "Android developer documentation"
+    },
+    {
+      "manufacturer": "Apple",
+      "device": "iPhone (various)",
+      "code": "9 (restore/update error)",
+      "meaning": {
+        "bn": "Restore প্রক্রিয়ার সময় সংযোগ বিচ্ছিন্ন হয়েছে।",
+        "en": "The connection was interrupted during the restore process."
+      },
+      "possibleCauses": [
+        {
+          "bn": "USB সংযোগ অস্থির বা security software হস্তক্ষেপ করছে",
+          "en": "Unstable USB connection or security software interference"
+        }
+      ],
+      "diagnostic": [
+        {
+          "bn": "সরাসরি কম্পিউটারের USB পোর্টে (হাবের মাধ্যমে না) সংযোগ করুন",
+          "en": "Connect directly to the computer's USB port (not through a hub)"
+        }
+      ],
+      "recommendedAction": {
+        "bn": "সমস্যা থেকে গেলে recovery mode-এ পুনরায় চেষ্টা করুন।",
+        "en": "Retry in recovery mode if it persists."
+      },
+      "officialReference": "Apple official support"
+    },
+    {
+      "manufacturer": "Vivo/OPPO",
+      "device": "Various (Funtouch/ColorOS)",
+      "code": "\"System UI has stopped\"",
+      "meaning": {
+        "bn": "Home screen/UI layer ক্র্যাশ করেছে।",
+        "en": "The home screen/UI layer has crashed."
+      },
+      "possibleCauses": [
+        {
+          "bn": "Launcher বা theme-সংক্রান্ত app conflict",
+          "en": "A launcher or theme-related app conflict"
+        }
+      ],
+      "diagnostic": [
+        {
+          "bn": "সম্প্রতি কোনো theme/launcher install করা হয়েছিল কিনা মনে করুন",
+          "en": "Recall whether a theme/launcher was recently installed"
+        }
+      ],
+      "recommendedAction": {
+        "bn": "সাম্প্রতিক theme/launcher uninstall করে পরীক্ষা করুন।",
+        "en": "Uninstall the recent theme/launcher and retest."
+      },
+      "officialReference": "Vivo/OPPO official support"
+    },
+    {
+      "manufacturer": "Generic Android",
+      "device": "Various",
+      "code": "\"Unfortunately, Google Play Services has stopped\"",
+      "meaning": {
+        "bn": "Play Services background প্রক্রিয়া ক্র্যাশ করেছে।",
+        "en": "The Play Services background process has crashed."
+      },
+      "possibleCauses": [
+        {
+          "bn": "Play Services cache করাপ্টেড বা পুরনো ভার্সন",
+          "en": "Corrupted Play Services cache or an outdated version"
+        }
+      ],
+      "diagnostic": [
+        {
+          "bn": "Settings > Apps > Google Play Services > Storage-এ cache clear করুন",
+          "en": "Clear cache under Settings > Apps > Google Play Services > Storage"
+        }
+      ],
+      "recommendedAction": {
+        "bn": "এরপরও সমস্যা থাকলে Play Services আপডেট করুন।",
+        "en": "Update Play Services if it still persists."
+      },
+      "officialReference": "Google Play Help"
+    },
+    {
+      "manufacturer": "Samsung",
+      "device": "Various Galaxy models",
+      "code": "\"Security policy restricts use of USB\"",
+      "meaning": {
+        "bn": "Enterprise/work profile policy USB ব্যবহার সীমিত করেছে।",
+        "en": "An enterprise/work-profile policy is restricting USB use."
+      },
+      "possibleCauses": [
+        {
+          "bn": "Knox/MDM policy সক্রিয়",
+          "en": "An active Knox/MDM policy"
+        }
+      ],
+      "diagnostic": [
+        {
+          "bn": "এই ফোন কোনো কর্মক্ষেত্রের managed profile-এ আছে কিনা যাচাই করুন",
+          "en": "Check whether this phone is on a workplace-managed profile"
+        }
+      ],
+      "recommendedAction": {
+        "bn": "Organization-এর IT/admin-এর সাথে যোগাযোগ করুন।",
+        "en": "Contact your organization's IT/admin."
+      },
+      "officialReference": "Samsung Knox documentation"
     }
   ]
 }

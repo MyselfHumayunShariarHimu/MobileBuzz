@@ -118,7 +118,16 @@
 .mb-modal {
   background: var(--surface); border-radius: var(--radius-lg) var(--radius-lg) 0 0;
   padding: var(--space-5); width: 100%; max-width: 480px; max-height: 80vh; overflow-y: auto;
+  position: relative;
 }
+.mb-modal:focus { outline: none; }
+.mb-modal-close {
+  position: absolute; top: var(--space-3); right: var(--space-3);
+  background: var(--surface-2); border: 1px solid var(--border); border-radius: 999px;
+  width: 32px; height: 32px; display: inline-flex; align-items: center; justify-content: center;
+  color: var(--text-muted); cursor: pointer; font-size: 1rem; z-index: 1;
+}
+.mb-modal-close:hover { color: var(--text); }
 @media (min-width: 768px) {
   .mb-modal-overlay { align-items: center; }
   .mb-modal { border-radius: var(--radius-lg); }
@@ -128,7 +137,7 @@
 .search-box { display: flex; gap: var(--space-2); margin-bottom: var(--space-5); }
 .search-box input {
   flex: 1; padding: var(--space-3) var(--space-4); border-radius: var(--radius-md);
-  border: 1px solid var(--border); background: var(--surface); color: var(--text); font-size: 1rem;
+  border: 1px solid var(--border); background: var(--surface); color: var(--text); font-size: 16px;
   font-family: var(--font-body);
 }
 .search-box input::placeholder { color: var(--text-muted); }
@@ -178,11 +187,18 @@
 .conclusion-block { margin-bottom: var(--space-4); }
 .conclusion-block__label { font-family: var(--font-mono); font-size: 0.72rem; text-transform: uppercase; color: var(--text-muted); margin-bottom: var(--space-1); }
 
+/* Interactive SVG diagrams (Components page) */
+.diagram-card { margin-bottom: var(--space-4); }
+.diagram-svg { width: 100%; height: auto; touch-action: manipulation; }
+.diagram-node.is-tappable circle { cursor: pointer; }
+.diagram-node.is-tappable:hover circle, .diagram-node.is-tappable:focus circle { stroke: var(--accent); stroke-width: 2.5; }
+.diagram-node text { font-family: var(--font-mono); user-select: none; }
+
 /* Calculators (Tools page) + standalone selects (Settings/AI pages) */
 .calc-input {
   padding: var(--space-3); border-radius: var(--radius-md); border: 1px solid var(--border);
   background: var(--surface); color: var(--text); font-family: var(--font-mono);
-  width: 100%; flex: 1 1 130px; min-width: 0; font-size: 1rem; /* 1rem avoids iOS auto-zoom on focus */
+  width: 100%; flex: 1 1 130px; min-width: 0; font-size: 16px; /* fixed, not rem-scaled: must stay >=16px to avoid iOS auto-zoom on focus regardless of the user's font-size setting */
 }
 
 /* AI chat page */
