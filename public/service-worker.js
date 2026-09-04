@@ -5,7 +5,7 @@
  * Network-only (never cached) for /api/* — AI/YouTube/Web results must
  * always be live and fresh, never silently served stale (§47).
  */
-var CACHE_NAME = 'mobilebuzz-shell-v4';
+var CACHE_NAME = 'mobilebuzz-shell-v5';
 
 var SHELL_FILES = [
   '/',
