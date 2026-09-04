@@ -9,6 +9,19 @@
  */
 window.MobileBuzz = window.MobileBuzz || {};
 
+// Keep the AI screen usable even if a stale service worker temporarily serves
+// an older shell without the optional model-registry asset.
+if (!window.MobileBuzz.modelRegistry) {
+  window.MobileBuzz.modelRegistry = {
+    anthropic: { label: 'Anthropic Claude', defaultModel: 'claude-sonnet-5', models: [{ id: 'claude-sonnet-5', label: 'Claude Sonnet 5' }] },
+    openai: { label: 'OpenAI', defaultModel: 'gpt-5.6-terra', models: [{ id: 'gpt-5.6-terra', label: 'GPT-5.6 Terra' }] },
+    gemini: { label: 'Google Gemini', defaultModel: 'gemini-3.7-flash', models: [{ id: 'gemini-3.7-flash', label: 'Gemini 3.7 Flash' }] },
+    xai: { label: 'xAI Grok', defaultModel: 'grok-4.6', models: [{ id: 'grok-4.6', label: 'Grok 4.6' }] },
+    deepseek: { label: 'DeepSeek', defaultModel: 'deepseek-v4-flash', models: [{ id: 'deepseek-v4-flash', label: 'DeepSeek V4 Flash' }] },
+    openrouter: { label: 'OpenRouter', defaultModel: 'anthropic/claude-sonnet-5', models: [{ id: 'anthropic/claude-sonnet-5', label: 'Claude Sonnet 5 via OpenRouter' }] }
+  };
+}
+
 window.MobileBuzz.ai = (function () {
   'use strict';
   var history = [];
